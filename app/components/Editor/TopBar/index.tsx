@@ -43,7 +43,7 @@ export default defineComponent({
             {$t('topBar.title')}
           </div>
 
-          <EditorTopBarLayoutActions class={cn('p-2')} />
+          <EditorTopBarLayoutActions class={cn('py-2 px-1')} />
 
           <EditorTopBarWindowActions />
         </header>

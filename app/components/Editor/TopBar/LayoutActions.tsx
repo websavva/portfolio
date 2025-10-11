@@ -49,7 +49,7 @@ export default defineComponent({
               >
                 <NuxtIcon
                   name={action.iconName}
-                  class={cn('size-5')}
+                  class={cn('size-4.5')}
                 />
               </button>
             );
