@@ -1,0 +1,15 @@
+{
+  "defaultLocale": "en",
+  "locales": [
+    {
+      "code": "ru",
+      "name": "Russian",
+      "file": "config/i18n/locales/ru.json"
+    },
+    {
+      "code": "en",
+      "name": "English",
+      "file": "config/i18n/locales/en.json"
+    }
+  ]
+}

@@ -2,12 +2,15 @@ import { NuxtIcon } from '#components';
 
 export default defineComponent({
   setup() {
+    const $t = useI18nTranslation();
+
     return () => {
       return (
-        <h1 class={cn('text-3xl font-bold text-primary flex')}>
-          Hello World
+        <h1
+          class={cn('text-3xl font-bold text-primary flex')}
+        >
+          {$t('foo.bar')}
           <NuxtIcon name="codicon:source-control" />
-
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
