@@ -1,4 +1,8 @@
 @import 'tailwindcss';
 
 @theme inline {
+    --color-editor-background: #1E2336;
+    --color-editor-fg: #A9B1D6;
+    --color-editor-border: #1B1E2E;
+    --color-editor-background-secondary: #31364d;
 }

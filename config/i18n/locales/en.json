@@ -1,6 +1,15 @@
 {
-  "hello": "Hello",
-  "foo": {
-    "bar": "Bar"
+  "topBar": {
+    "title": "Savva Prokofev - Portfolio",
+    "menu": [
+      "File",
+      "Edit",
+      "Selection",
+      "View",
+      "Go",
+      "Run",
+      "Terminal",
+      "Help"
+    ]
   }
 }

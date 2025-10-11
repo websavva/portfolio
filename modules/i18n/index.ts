@@ -37,10 +37,11 @@ export default defineNuxtModule<ModuleOptions>({
           (locale) => locale.code === defaultLocale,
         )!.file;
 
+        const typesPath = resolve('./runtime/types.ts');
+
         return [
-          `import type { ObjectKeyPaths } from '${resolve(
-            './runtime/types.ts',
-          )}';`,
+          `import type { ObjectKeyPaths } from '${typesPath}';`,
+          `export * from '${typesPath}';`,
           `import type { Ref, ComputedRef } from 'vue';`,
           `export type I18nDictionary = typeof import('${defaultLocalePath}');`,
           `export type I18nLocale = ${normalizedLocales
@@ -53,13 +54,6 @@ export default defineNuxtModule<ModuleOptions>({
               `'${locale.code}': () => import('${locale.file}'),`,
           ),
           '};',
-          'export type I18nContext = {',
-          'locale: Ref<I18nLocale>;',
-          'loadedDictionaries: Ref<Record<I18nLocale, I18nDictionary>>;',
-          'dictionary: ComputedRef<I18nDictionary>',
-          't: I18nLocaleTranslator;',
-          'setLocale(locale: I18nLocale): Promise<void>',
-          '}',
           `export const defaultLocale = ${JSON.stringify(
             options.defaultLocale,
           )};`,

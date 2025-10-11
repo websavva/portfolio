@@ -1,3 +1,12 @@
+import type { I18nDictionary } from '#i18n';
+
+type ExtractStringKeys<T extends Record<string, any>> =
+  Extract<keyof T, string>;
+
+type ExtractSimpleIterableKeys<
+  T extends Record<string, any>,
+> = Extract<keyof T, string | number>;
+
 type GenNode<
   K extends string | number,
   IsRoot extends boolean,
@@ -10,7 +19,9 @@ type GenNode<
 export type ObjectKeyPaths<
   T extends object,
   IsRoot extends boolean = true,
-  K extends keyof T = keyof T,
+  K extends keyof T = T extends Array<any>
+    ? Extract<keyof T, number>
+    : keyof T,
 > = K extends string | number
   ?
       | GenNode<K, IsRoot>
@@ -20,4 +31,15 @@ export type ObjectKeyPaths<
               false
             >}`
           : never)
+  : never;
+
+export type GetI18DictionaryValueByPath<
+  T extends Record<string, any>,
+  Path extends string,
+> = Path extends `${infer K}.${infer Rest}`
+  ? K extends keyof T
+    ? GetI18DictionaryValueByPath<T[K], Rest>
+    : never
+  : Path extends keyof T
+  ? T[Path]
   : never;
