@@ -28,6 +28,7 @@
     "@iconify-json/codicon": "^1.2.31",
     "@iconify-json/devicon": "^1.2.45",
     "@iconify-json/logos": "^1.2.9",
+    "@iconify-json/material-icon-theme": "^1.2.31",
     "@nuxt/icon": "^2.0.0",
     "@nuxt/kit": "^4.1.3",
     "@nuxtjs/tailwindcss": "7.0.0-beta.0",

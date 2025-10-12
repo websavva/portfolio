@@ -13,7 +13,12 @@ export default defineNuxtConfig({
     mode: 'svg',
     componentName: 'NuxtIcon',
     serverBundle: {
-      collections: ['codicon', 'devicon', 'logos'],
+      collections: [
+        'codicon',
+        'devicon',
+        'logos',
+        'material-icon-theme',
+      ],
     },
   },
 

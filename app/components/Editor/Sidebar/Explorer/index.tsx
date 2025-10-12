@@ -1,7 +1,10 @@
 import {
   NuxtIcon,
   EditorSidebarExplorerSection,
+  EditorSidebarExplorerTree,
 } from '#components';
+
+import { treeItems } from './Tree/types';
 
 export default defineComponent({
   name: 'EditorSidebarExplorer',
@@ -18,6 +21,12 @@ export default defineComponent({
 
     const contentElRef = ref<HTMLDivElement | null>(null);
     const availableContentHeight = ref(0);
+    const openedFolders = ref<string[]>([
+      'public',
+      'src',
+      'apps',
+      'packages',
+    ]);
 
     const isTreeOpened = ref(false);
 
@@ -109,7 +118,12 @@ export default defineComponent({
                   }),
                 default: () => (
                   <div>
-                    <h1>Hello</h1>
+                    <EditorSidebarExplorerTree
+                      v-model:openedFolders={
+                        openedFolders.value
+                      }
+                      items={treeItems}
+                    />
                   </div>
                 ),
               }}

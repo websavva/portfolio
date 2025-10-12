@@ -29,7 +29,7 @@ export default defineComponent({
           <div class={cn('flex items-center p-2')}>
             <NuxtIcon
               name="devicon:vscode"
-              class={cn('size-7 mr-3')}
+              class={cn('size-6 mr-3')}
             />
 
             <EditorTopBarNav items={$t('topBar.menu')} />

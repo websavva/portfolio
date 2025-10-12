@@ -32,12 +32,12 @@ export default defineComponent({
       return (
         <div
           class={cn(
-            'flex flex-col transition-duration-200 *:border *:border-transparent *:focus:border *:focus:border-editor-fg/30 *:px-0.5 group',
+            'flex flex-col transition-duration-200 *:border *:border-transparent *:focus:border *:focus:border-editor-fg/30 group',
             props.class,
           )}
         >
           <div
-            class={cn('flex items-center py-1.5 h-6.5', {
+            class={cn('flex items-center py-1.5 px-0.5 h-6.5', {
               'cursor-pointer': !props.disabled,
             })}
             onClick={onToggle}
