@@ -36,7 +36,7 @@ export default defineComponent({
                 key={action.iconName}
                 onClick={action.onClick}
                 class={cn(
-                  'p-3 hover:bg-editor-background-secondary transition flex items-center justify-center',
+                  'p-3 aspect-square hover:bg-editor-background-secondary transition flex items-center justify-center',
                   {
                     'cursor-pointer': action.onClick,
                   },

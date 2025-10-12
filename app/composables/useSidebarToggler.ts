@@ -1,7 +1,7 @@
 export const useSidebarToggler = () => {
   const isSidebarOpen = useState(
     'isSidebarOpen',
-    () => false,
+    () => true,
   );
 
   const toggleSidebar = () => {

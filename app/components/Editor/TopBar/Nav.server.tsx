@@ -6,20 +6,18 @@ export default defineComponent({
       type: String,
       default: '',
     },
+
+    items: {
+      type: Array as PropType<string[]>,
+      default: () => [],
+    },
   },
 
   setup(props) {
-    const $t = useI18nTranslation();
-
     return () => {
       return (
-        <nav
-          class={cn(
-            'flex items-center',
-            props.class,
-          )}
-        >
-          {$t('topBar.menu').map((name) => {
+        <nav class={cn('flex items-center', props.class)}>
+          {props.items.map((name) => {
             return (
               <button
                 key={name}

@@ -34,7 +34,7 @@ export default defineComponent({
 
     return () => {
       return (
-        <div class={cn('flex items-center space-x-1', props.class)}>
+        <div class={cn('flex items-center', props.class)}>
           {actions.value.map((action) => {
             return (
               <button

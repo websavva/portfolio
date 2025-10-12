@@ -1,8 +1,12 @@
 @import 'tailwindcss';
 
 @theme inline {
-    --color-editor-background: #1E2336;
-    --color-editor-fg: #A9B1D6;
-    --color-editor-border: #1B1E2E;
-    --color-editor-background-secondary: #31364d;
+  --color-editor-background: #1e2336;
+  --color-editor-fg: #a9b1d6;
+  --color-editor-border: #1b1e2e;
+  --color-editor-background-secondary: #31364d;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0;
 }

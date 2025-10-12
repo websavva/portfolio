@@ -32,7 +32,7 @@ export default defineComponent({
               class={cn('size-7 mr-3')}
             />
 
-            <EditorTopBarNav />
+            <EditorTopBarNav items={$t('topBar.menu')} />
           </div>
 
           <div
@@ -43,9 +43,11 @@ export default defineComponent({
             {$t('topBar.title')}
           </div>
 
-          <EditorTopBarLayoutActions class={cn('py-2 px-1')} />
+          <EditorTopBarLayoutActions
+            class={cn('py-2 px-1')}
+          />
 
-          <EditorTopBarWindowActions />
+          <EditorTopBarWindowActions class={cn('h-full')} />
         </header>
       );
     };

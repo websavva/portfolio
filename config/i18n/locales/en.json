@@ -11,5 +11,17 @@
       "Terminal",
       "Help"
     ]
+  },
+  "sidebar": {
+    "explorer": {
+      "title": "Explorer",
+      "sectionTitles": {
+        "openEditors": "Open Editors",
+        "repo": "Portfolio",
+        "outline": "Outline",
+        "timeline": "Timeline",
+        "scripts": "Scripts"
+      }
+    }
   }
 }
