@@ -17,19 +17,28 @@ export default defineComponent({
     return () => {
       return (
         <div
-          class={cn('flex flex-col h-screen', props.class)}
+          class={cn(
+            'h-screen max-h-screen grid grid-cols-[auto_1fr] grid-rows-[auto_1fr_auto]',
+            props.class,
+          )}
         >
-          <EditorTopBar class={cn('w-full')} />
+          <EditorTopBar
+            class={cn('w-full col-span-full')}
+          />
 
-          <div class={cn('flex-1 flex')}>
-            <EditorSidebar class={cn('h-full')} />
+          <EditorSidebar class={cn('h-full')} />
 
-            <main class={cn('flex-1')}>
-              {slots.default?.()}
-            </main>
-          </div>
+          <main
+            class={cn(
+              'flex-1 break-words w-full overflow-auto',
+            )}
+          >
+            {slots.default?.()}
+          </main>
 
-          <EditorFooter class={cn('w-full')} />
+          <EditorFooter
+            class={cn('w-full col-span-full')}
+          />
         </div>
       );
     };

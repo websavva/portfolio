@@ -10,3 +10,17 @@
 .hide-scrollbar::-webkit-scrollbar {
   width: 0;
 }
+
+::-webkit-scrollbar {
+  width: 10px
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-editor-background-secondary;
+}
