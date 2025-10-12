@@ -37,7 +37,7 @@ export default defineComponent({
           )}
         >
           <div
-            class={cn('flex items-center py-1.5 h-7', {
+            class={cn('flex items-center py-1.5 h-6.5', {
               'cursor-pointer': !props.disabled,
             })}
             onClick={onToggle}

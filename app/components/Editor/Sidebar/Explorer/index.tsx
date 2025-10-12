@@ -97,7 +97,7 @@ export default defineComponent({
                       <button
                         key={icon}
                         class={cn(
-                          'rounded-md p-1 hover:bg-editor-background-secondary transition',
+                          'rounded-md p-1 py-0.5 hover:bg-editor-background-secondary transition',
                         )}
                       >
                         <NuxtIcon
