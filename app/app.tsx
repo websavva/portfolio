@@ -1,19 +1,34 @@
-import { Editor } from '#components';
+import { Editor, ContentRenderer } from '#components';
 
 export default defineComponent({
-  setup() {
+  async setup() {
     useHead({
       htmlAttrs: {
         class: 'bg-editor-background text-white text-[1',
       },
     });
 
-    const $t = useI18nTranslation();
+    const route = useRoute();
+
+    const { data: page } = await useAsyncData(
+      route.path,
+      () => {
+        return queryCollection('pages')
+          .path(route.path)
+          .first();
+      },
+    );
 
     return () => {
-      return <Editor>
-        <h1>Editor</h1>
-      </Editor>
+      return (
+        <Editor>
+          {page.value ? (
+            <ContentRenderer value={page.value} />
+          ) : (
+            <div>Page not found</div>
+          )}
+        </Editor>
+      );
     };
   },
 });
