@@ -32,12 +32,12 @@ export default defineComponent({
       return (
         <div
           class={cn(
-            'flex flex-col transition-duration-200 *:border *:border-transparent *:focus:border *:focus:border-editor-fg/30 *:px-0.5',
+            'flex flex-col transition-duration-200 *:border *:border-transparent *:focus:border *:focus:border-editor-fg/30 *:px-0.5 group',
             props.class,
           )}
         >
           <div
-            class={cn('flex items-center py-1', {
+            class={cn('flex items-center py-1.5 h-7', {
               'cursor-pointer': !props.disabled,
             })}
             onClick={onToggle}
@@ -57,6 +57,12 @@ export default defineComponent({
             >
               {slots.title?.()}
             </span>
+
+            {slots.actions && (
+              <div class={cn('flex items-center opacity-0 group-hover:opacity-100 group-focus-within:opacity-100')}>
+                {slots.actions?.()}
+              </div>
+            )}
           </div>
 
           <div

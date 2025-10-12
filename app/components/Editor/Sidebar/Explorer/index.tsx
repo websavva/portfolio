@@ -36,6 +36,13 @@ export default defineComponent({
       isTreeOpened.value = true;
     });
 
+    const repoSectionActionIcons = [
+      'codicon:new-file',
+      'codicon:new-folder',
+      'codicon:refresh',
+      'codicon:collapse-all',
+    ];
+
     return () => {
       return (
         <div
@@ -84,6 +91,22 @@ export default defineComponent({
               {{
                 title: () =>
                   $t('sidebar.explorer.sectionTitles.repo'),
+                actions: () =>
+                  repoSectionActionIcons.map((icon) => {
+                    return (
+                      <button
+                        key={icon}
+                        class={cn(
+                          'rounded-md p-1 hover:bg-editor-background-secondary transition',
+                        )}
+                      >
+                        <NuxtIcon
+                          name={icon}
+                          class={cn('size-4')}
+                        />
+                      </button>
+                    );
+                  }),
                 default: () => (
                   <div>
                     <h1>Hello</h1>
