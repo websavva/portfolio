@@ -1,4 +1,4 @@
-import { NuxtIcon } from '#components';
+import { NuxtIcon, NuxtLink } from '#components';
 
 import {
   type ExplorerTreeFileItem,
@@ -41,6 +41,8 @@ const EditorSidebarExplorerTree = defineComponent({
   },
 
   setup(props, { emit }) {
+    const $route = useRoute();
+
     const compOpenedFolders = useCompValue(
       emit,
       props,
@@ -147,10 +149,25 @@ const EditorSidebarExplorerTree = defineComponent({
                 </>
               );
             } else {
+              const Component = item.path
+                ? NuxtLink
+                : 'div';
+
+              const props = item.path
+                ? {
+                    href: item.path,
+                  }
+                : null;
+
               return (
-                <div
+                <Component
+                  {...props}
                   key={item.id}
-                  class={cn(itemBaseClass)}
+                  class={cn(itemBaseClass, {
+                    ['bg-editor-background-secondary']:
+                      item.path &&
+                      $route.path === item.path,
+                  })}
                   data-item-type="file"
                   style={style}
                 >
@@ -164,7 +181,7 @@ const EditorSidebarExplorerTree = defineComponent({
                   <span class={cn('ml-2')}>
                     {item.name || item.id}
                   </span>
-                </div>
+                </Component>
               );
             }
           })}

@@ -75,13 +75,21 @@ export const treeItems = defineExplorerTree([
         children: [
           {
             id: 'Shortqix',
+            path: '/apps/shortqix',
             type: 'file',
             icon: 'material-icon-theme:nuxt',
           },
           {
             id: 'WebBid',
             type: 'file',
+            path: '/apps/webbid',
             icon: 'material-icon-theme:next',
+          },
+          {
+            id: 'HomeDash',
+            type: 'file',
+            path: '/apps/home-dash',
+            icon: 'material-icon-theme:react',
           },
         ],
       },
@@ -96,6 +104,7 @@ export const treeItems = defineExplorerTree([
           {
             id: 'nuxtignore-dev',
             type: 'file',
+            path: '/packages/nuxtignore-dev',
             icon: 'material-icon-theme:nuxt',
           },
         ],

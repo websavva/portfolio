@@ -4,7 +4,18 @@ import {
   EditorSidebarExplorerTree,
 } from '#components';
 
-import { treeItems } from './Tree/types';
+import {
+  treeItems,
+  type ExplorerTreeFileItem,
+  type ExplorerTreeFolderItem,
+} from './Tree/types';
+
+const repoSectionActionIcons = [
+  'codicon:new-file',
+  'codicon:new-folder',
+  'codicon:refresh',
+  'codicon:collapse-all',
+];
 
 export default defineComponent({
   name: 'EditorSidebarExplorer',
@@ -17,6 +28,7 @@ export default defineComponent({
   },
 
   setup(props) {
+    const $route = useRoute();
     const $t = useI18nTranslation();
 
     const contentElRef = ref<HTMLDivElement | null>(null);
@@ -45,12 +57,54 @@ export default defineComponent({
       isTreeOpened.value = true;
     });
 
-    const repoSectionActionIcons = [
-      'codicon:new-file',
-      'codicon:new-folder',
-      'codicon:refresh',
-      'codicon:collapse-all',
-    ];
+    function populateTreeBranchByPath(
+      treeItems: Array<
+        ExplorerTreeFileItem | ExplorerTreeFolderItem
+      >,
+      branch: string[],
+      path: string,
+    ) {
+      for (const item of treeItems) {
+        if (item.type === 'file' && item.path === path) {
+          branch.push(item.id);
+
+          return true;
+        } else if (
+          item.type === 'folder' &&
+          item.children
+        ) {
+          const doesContainPath = populateTreeBranchByPath(
+            item.children,
+            branch,
+            path,
+          );
+
+          if (doesContainPath) {
+            branch.push(item.id);
+
+            return true;
+          }
+        }
+      }
+    }
+
+    watch(
+      () => $route.path,
+      (newPath) => {
+        const branch: string[] = [];
+
+        populateTreeBranchByPath(
+          treeItems,
+          branch,
+          newPath,
+        );
+
+        for (const itemId of branch) {
+          if (!openedFolders.value.includes(itemId))
+            openedFolders.value.push(itemId);
+        }
+      },
+    );
 
     return () => {
       return (
