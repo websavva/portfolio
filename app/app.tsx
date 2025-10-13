@@ -4,7 +4,8 @@ export default defineComponent({
   async setup() {
     useHead({
       htmlAttrs: {
-        class: 'bg-editor-background text-white text-[16px]',
+        class:
+          'bg-editor-background text-white text-[16px] overflow-hidden',
       },
     });
 
@@ -59,14 +60,17 @@ export default defineComponent({
     return () => {
       return (
         <Editor>
-          {page.value ? (
-            <ContentRenderer
-              value={page.value}
-              data={pageContext.value}
-            />
-          ) : (
-            <div>Page not found</div>
-          )}
+          <div>
+            {page.value ? (
+              <ContentRenderer
+                value={page.value}
+                data={pageContext.value}
+              />
+            ) : (
+              <div>Page not found</div>
+            )}
+            {/* {'a'.repeat(1e6)} */}
+          </div>
         </Editor>
       );
     };

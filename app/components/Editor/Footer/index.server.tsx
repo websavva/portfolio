@@ -13,7 +13,7 @@ export default defineComponent({
     return () => (
       <footer
         class={cn(
-          'flex border-t-2 border-editor-border text-editor-fg space-x-1',
+          'flex border-t-2 border-editor-border text-editor-fg space-x-1 relative bg-editor-background',
           props.class,
         )}
       >

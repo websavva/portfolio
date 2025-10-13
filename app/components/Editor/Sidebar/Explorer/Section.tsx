@@ -37,7 +37,7 @@ export default defineComponent({
           )}
         >
           <div
-            class={cn('flex items-center py-1.5 px-0.5 h-6.5', {
+            class={cn('flex items-center py-1.5 px-0.5 h-[var(--editor-explorer-section-header-height)]', {
               'cursor-pointer': !props.disabled,
             })}
             onClick={onToggle}

@@ -18,26 +18,32 @@ export default defineComponent({
       return (
         <div
           class={cn(
-            'h-screen max-h-screen grid grid-cols-[auto_1fr] grid-rows-[auto_1fr_auto]',
+            'h-screen max-h-screen [--editor-top-bar-height:calc(var(--spacing)*12.5)] [--editor-footer-height:calc(var(--spacing)*7.5)] [--editor-body-height:calc(100vh-var(--editor-top-bar-height)-var(--editor-footer-height))]',
             props.class,
           )}
         >
           <EditorTopBar
-            class={cn('w-full col-span-full')}
+            class={cn(
+              'w-full col-span-full h-[var(--editor-top-bar-height)]',
+            )}
           />
 
-          <EditorSidebar class={cn('h-full')} />
+          <div class={cn('h-[var(--editor-body-height)] max-h-[var(--editor-body-height)] flex')}>
+            <EditorSidebar class={cn('h-full')} />
 
-          <main
-            class={cn(
-              'flex-1 break-words w-full overflow-auto',
-            )}
-          >
-            {slots.default?.()}
-          </main>
+            <main
+              class={cn(
+                'flex-1 break-words h-full overflow-auto',
+              )}
+            >
+              {slots.default?.()}
+            </main>
+          </div>
 
           <EditorFooter
-            class={cn('w-full col-span-full')}
+            class={cn(
+              'w-full col-span-full h-[var(--editor-footer-height)]',
+            )}
           />
         </div>
       );
