@@ -38,6 +38,7 @@
     "country-language": "^0.1.7",
     "ip3country": "^5.0.0",
     "motion-v": "^1.7.2",
-    "tailwindcss": "^4.1.14"
+    "tailwindcss": "^4.1.14",
+    "zod": "^3.25.76"
   }
 }

@@ -1,3 +1,4 @@
+import { z } from 'zod';
 import { createResolver } from '@nuxt/kit';
 import {
   defineCollection,
@@ -18,6 +19,17 @@ export default defineContentConfig({
           cwd: resolve('app/content'),
         },
       ],
+    }),
+
+    locales: defineCollection({
+      type: 'data',
+      source: [
+        {
+          include: '**/locales/*.json',
+          cwd: resolve('app/content'),
+        },
+      ],
+      schema: z.record(z.string(), z.any()),
     }),
   },
 });

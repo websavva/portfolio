@@ -45,8 +45,6 @@ async function loadInitialLocale(
               (language: any) => language.iso639_1,
             );
 
-            debugger;
-
             const countryLocale =
               availableLocales.find((locale) =>
                 countryLanguageCodes.includes(locale),
