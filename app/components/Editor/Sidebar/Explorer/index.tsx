@@ -94,7 +94,7 @@ export default defineComponent({
       return (
         <div
           class={cn(
-            'flex flex-col text-editor-fg overflow-hidden [--editor-explorer-header-height:calc(var(--spacing)*12.5)] [--editor-explorer-section-header-height:calc(var(--spacing)*5)] [--editor-explorer-available-content-height:calc(var(--editor-body-height)-var(--editor-explorer-header-height)-5*var(--editor-explorer-section-header-height)-10px)]',
+            'flex flex-col text-editor-fg overflow-hidden [--editor-explorer-header-height:calc(var(--spacing)*12.5)] [--editor-explorer-section-header-height:calc(var(--spacing)*6.5)] [--editor-explorer-available-content-height:calc(var(--editor-body-height)-var(--editor-explorer-header-height)-5*var(--editor-explorer-section-header-height)-15px)]',
             props.class,
           )}
         >
