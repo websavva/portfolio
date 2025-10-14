@@ -124,7 +124,7 @@ const EditorSidebarExplorerTree = defineComponent({
                     />
 
                     <NuxtIcon
-                      name={iconName}
+                      name={`material-icon-theme:${iconName}`}
                       class={cn('size-5')}
                     />
 
@@ -136,7 +136,7 @@ const EditorSidebarExplorerTree = defineComponent({
                       {item.name || item.id}
                     </span>
                   </div>
-                  {item.children?.length && (
+                  {!!item.children?.length && (
                     <EditorSidebarExplorerTree
                       v-show={isOpen}
                       v-model:openedFolders={
@@ -174,7 +174,7 @@ const EditorSidebarExplorerTree = defineComponent({
                   {levelDelimiters}
 
                   <NuxtIcon
-                    name={item.icon}
+                    name={`material-icon-theme:${item.icon}`}
                     class={cn('size-5')}
                   />
 

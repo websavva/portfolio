@@ -13,57 +13,52 @@ export default defineComponent({
 
     const { locale } = useI18n();
 
-    const pagePath = computed(() => {
-      return $route.path === '/' ? '/home' : $route.path;
-    });
-
     const pageContext = computed(() => {
       return {
-        $t: pageDictionary.value,
+        $t: pageResponse.value?.pageDictionary,
       };
     });
 
-    const [{ data: page }, { data: pageDictionary }] =
-      await Promise.all([
-        useAsyncData(
-          $route.path,
-          () => {
-            return queryCollection('pages')
-              .path(pagePath.value)
-              .first();
-          },
-          {
-            watch: [pagePath],
-          },
-        ),
-        useAsyncData(
-          'locales',
-          async () => {
-            const localePath =
-              `${pagePath.value}/locales/${locale.value}`.replace(
-                /^\//,
-                '',
-              );
+    const { data: pageResponse } = await useAsyncData(
+      () => `${$route.path}-${locale.value}`,
+      async () => {
+        const page = await queryCollection('pages')
+          .orWhere((query) =>
+            query
+              .where('path', '=', $route.path)
+              .where('realPath', '=', $route.path),
+          )
+          .first();
 
-            return queryCollection('locales')
-              .where('stem', '=', localePath)
-              .select('meta')
-              .first()
-              .then((res) => res?.meta.body);
-          },
-          {
-            watch: [locale, pagePath],
-          },
-        ),
-      ]);
+        if (!page) {
+          return null;
+        }
+
+        const localePath =
+          `${page.path}/locales/${locale.value}`.replace(
+            /^\//,
+            '',
+          );
+
+        const pageDictionary = await queryCollection(
+          'locales',
+        )
+          .where('stem', '=', localePath)
+          .select('meta')
+          .first()
+          .then((res) => res?.meta.body);
+
+        return { page, pageDictionary };
+      },
+    );
 
     return () => {
       return (
         <Editor>
           <div>
-            {page.value ? (
+            {pageResponse.value ? (
               <ContentRenderer
-                value={page.value}
+                value={pageResponse.value.page}
                 data={pageContext.value}
               />
             ) : (

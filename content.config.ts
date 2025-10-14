@@ -19,6 +19,19 @@ export default defineContentConfig({
           cwd: resolve('app/content'),
         },
       ],
+
+      schema: z.object({
+        id: z.string().optional(),
+        title: z.string(),
+        iconName: z.string(),
+        description: z.string(),
+        imageUrl: z.string().optional(),
+        repoUrl: z.string().optional(),
+        previewUrl: z.string().optional(),
+        year: z.number().optional(),
+        path: z.string(),
+        realPath: z.string().optional(),
+      }),
     }),
 
     locales: defineCollection({

@@ -3,13 +3,13 @@ import {
   EditorSidebarExplorerSection,
   EditorSidebarExplorerTree,
 } from '#components';
-import throttle from 'lodash-es/debounce';
 
 import {
-  treeItems,
   type ExplorerTreeFileItem,
   type ExplorerTreeFolderItem,
 } from './Tree/types';
+
+import { useExplorerTree } from './composable';
 
 const repoSectionActionIcons = [
   'codicon:new-file',
@@ -72,13 +72,15 @@ export default defineComponent({
       }
     }
 
+    const treeItems = useExplorerTree();
+
     watch(
       () => $route.path,
       (newPath) => {
         const branch: string[] = [];
 
         populateTreeBranchByPath(
-          treeItems,
+          treeItems.value,
           branch,
           newPath,
         );
@@ -149,7 +151,7 @@ export default defineComponent({
                     v-model:openedFolders={
                       openedFolders.value
                     }
-                    items={treeItems}
+                    items={treeItems.value}
                   />
                 </div>
               ),
