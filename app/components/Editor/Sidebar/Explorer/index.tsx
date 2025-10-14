@@ -96,7 +96,7 @@ export default defineComponent({
       return (
         <div
           class={cn(
-            'flex flex-col text-editor-fg overflow-hidden [--editor-explorer-header-height:calc(var(--spacing)*12.5)] [--editor-explorer-section-header-height:calc(var(--spacing)*6.5)] [--editor-explorer-available-content-height:calc(var(--editor-body-height)-var(--editor-explorer-header-height)-5*var(--editor-explorer-section-header-height)-15px)]',
+            'flex flex-col text-editor-fg overflow-hidden [--editor-explorer-header-height:calc(var(--spacing)*10)] [--editor-explorer-section-header-height:calc(var(--spacing)*6.5)] [--editor-explorer-available-content-height:calc(var(--editor-body-height)-var(--editor-explorer-header-height)-5*var(--editor-explorer-section-header-height)-(4*var(--editor-section-delimiter-width)))] [--editor-section-delimiter-width:2px]',
             props.class,
           )}
         >
@@ -124,7 +124,7 @@ export default defineComponent({
 
           <EditorSidebarExplorerSection
             v-model:isOpen={isTreeOpened.value}
-            class={cn('border-t border-editor-border')}
+            class={cn('border-t-(length:--editor-section-delimiter-width) border-editor-border')}
           >
             {{
               title: () =>
@@ -160,7 +160,7 @@ export default defineComponent({
 
           <EditorSidebarExplorerSection
             disabled
-            class={cn('border-t border-editor-border')}
+            class={cn('border-t-(length:--editor-section-delimiter-width) border-editor-border')}
           >
             {{
               title: () =>
@@ -172,7 +172,7 @@ export default defineComponent({
 
           <EditorSidebarExplorerSection
             disabled
-            class={cn('border-t border-editor-border')}
+            class={cn('border-t-(length:--editor-section-delimiter-width) border-editor-border')}
           >
             {{
               title: () =>
@@ -184,7 +184,7 @@ export default defineComponent({
 
           <EditorSidebarExplorerSection
             disabled
-            class={cn('border-t border-editor-border')}
+            class={cn('border-t-(length:--editor-section-delimiter-width) border-editor-border')}
           >
             {{
               title: () =>

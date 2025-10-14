@@ -32,14 +32,17 @@ export default defineComponent({
       return (
         <div
           class={cn(
-            'flex flex-col transition-duration-200 *:border *:border-transparent *:focus:border *:focus:border-editor-fg/30 group',
+            'flex flex-col group transition-duration-200 *:relative *:after:content-[""] *:after:absolute *:after:top-0 *:after:left-0 *:after:w-full *:after:h-full *:after:border *:after:border-editor-fg/30 *:after:hidden *:after:pointer-events-none *:focus:after:block',
             props.class,
           )}
         >
           <div
-            class={cn('flex items-center py-1.5 px-0.5 h-[var(--editor-explorer-section-header-height)]', {
-              'cursor-pointer': !props.disabled,
-            })}
+            class={cn(
+              'flex items-center py-1.5 px-0.5 h-[var(--editor-explorer-section-header-height)]',
+              {
+                'cursor-pointer': !props.disabled,
+              },
+            )}
             onClick={onToggle}
             tabindex={0}
           >
@@ -59,7 +62,11 @@ export default defineComponent({
             </span>
 
             {slots.actions && (
-              <div class={cn('flex items-center opacity-0 group-hover:opacity-100 group-focus-within:opacity-100')}>
+              <div
+                class={cn(
+                  'flex items-center opacity-0 group-hover:opacity-100 group-focus-within:opacity-100',
+                )}
+              >
                 {slots.actions?.()}
               </div>
             )}
