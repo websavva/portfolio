@@ -2,6 +2,7 @@ import {
   EditorTopBar,
   EditorFooter,
   EditorSidebar,
+  EditorTabsList,
 } from '#components';
 
 export default defineComponent({
@@ -28,16 +29,24 @@ export default defineComponent({
             )}
           />
 
-          <div class={cn('h-[var(--editor-body-height)] max-h-[var(--editor-body-height)] flex')}>
+          <div
+            class={cn(
+              'h-[var(--editor-body-height)] max-h-[var(--editor-body-height)] flex',
+            )}
+          >
             <EditorSidebar class={cn('h-full')} />
 
-            <main
-              class={cn(
-                'flex-1 break-words h-full overflow-auto',
-              )}
-            >
-              {slots.default?.()}
-            </main>
+            <div class={cn('flex flex-col flex-1 h-full')}>
+              <EditorTabsList class={cn('')} />
+
+              <main
+                class={cn(
+                  'flex-1 break-words h-full overflow-auto',
+                )}
+              >
+                {slots.default?.()}
+              </main>
+            </div>
           </div>
 
           <EditorFooter

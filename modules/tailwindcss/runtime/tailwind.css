@@ -5,6 +5,7 @@
   --color-editor-fg: #a9b1d6;
   --color-editor-border: #1b1e2e;
   --color-editor-background-secondary: #31364d;
+  --color-primary: #3db9c9;
 }
 
 .hide-scrollbar::-webkit-scrollbar {

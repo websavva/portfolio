@@ -32,7 +32,7 @@ export default defineComponent({
       return (
         <div
           class={cn(
-            'flex flex-col group transition-duration-200 *:relative *:after:content-[""] *:after:absolute *:after:top-0 *:after:left-0 *:after:w-full *:after:h-full *:after:border *:after:border-editor-fg/30 *:after:hidden *:after:pointer-events-none *:focus:after:block',
+            'flex flex-col group transition-duration-200 *:relative *:after:content-[""] *:after:absolute *:after:top-0 *:after:left-0 *:after:w-full *:after:h-full *:after:border *:after:border-editor-fg/20 *:after:hidden *:after:pointer-events-none *:focus:after:block',
             props.class,
           )}
         >
