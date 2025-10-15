@@ -106,7 +106,9 @@ const EditorSidebarExplorerTree = defineComponent({
                 <>
                   <div
                     key={item.id}
-                    class={cn(itemBaseClass)}
+                    class={cn(itemBaseClass, {
+                      'cursor-pointer': !item.disabled,
+                    })}
                     onClick={() =>
                       !item.disabled &&
                       onFolderToggle(item.id, !isOpen)
