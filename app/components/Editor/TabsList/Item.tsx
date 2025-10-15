@@ -42,7 +42,7 @@ export default defineComponent({
           class={cn(
             'flex items-center border-b-2 border-b-transparent px-2 pt-2 pb-2.5 group whitespace-nowrap',
             {
-              'border-b-primary': props.isActive,
+              'border-b-primary-muted': props.isActive,
             },
             props.class,
           )}
@@ -62,7 +62,7 @@ export default defineComponent({
 
           <button
             class={cn(
-              'ml-2 p-[calc(var(--spacing)*0.8)] translate-y-[2px] hover:bg-editor-background-secondary rounded-md cursor-pointer opacity-0 group-hover:opacity-100',
+              'ml-2 p-[calc(var(--spacing)*0.8)] hover:bg-editor-background-secondary rounded-md cursor-pointer opacity-0 group-hover:opacity-100',
               {
                 'opacity-100': props.isActive,
               },

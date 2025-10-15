@@ -19,7 +19,7 @@ export default defineComponent({
       >
         <button
           class={cn(
-            'py-1 px-2 bg-blue-400/50 hover:bg-editor-background-secondary transition text-white',
+            'py-1 px-2 bg-primary-muted hover:bg-editor-background-secondary transition text-white',
           )}
         >
           <NuxtIcon
