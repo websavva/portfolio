@@ -19,7 +19,7 @@ export default defineComponent({
       return (
         <div
           class={cn(
-            'h-screen max-h-screen [--editor-top-bar-height:calc(var(--spacing)*12.5)] [--editor-footer-height:calc(var(--spacing)*7.5)] [--editor-body-height:calc(100vh-var(--editor-top-bar-height)-var(--editor-footer-height))]',
+            'h-screen max-h-screen [--editor-top-bar-height:calc(var(--spacing)*12.5)] [--editor-footer-height:calc(var(--spacing)*7.5)] [--editor-body-height:calc(100vh-var(--editor-top-bar-height)-var(--editor-footer-height))] [--editor-body-tabs-list-height:calc(var(--spacing)*12)] [--editor-body-content-height:calc(var(--editor-body-height)-var(--editor-body-tabs-list-height))]',
             props.class,
           )}
         >
@@ -37,11 +37,11 @@ export default defineComponent({
             <EditorSidebar class={cn('h-full')} />
 
             <div class={cn('flex flex-col flex-1 h-full')}>
-              <EditorTabsList class={cn('')} />
+              <EditorTabsList class={cn('h-[var(--editor-body-tabs-list-height)]')} />
 
               <main
                 class={cn(
-                  'flex-1 break-words h-full overflow-auto',
+                  'break-words h-[var(--editor-body-content-height)] overflow-auto text-white',
                 )}
               >
                 {slots.default?.()}

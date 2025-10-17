@@ -1,6 +1,6 @@
 {
-  "hero": {
-    "title": "Shortqix",
-    "description": "Shortqix is a platform for creating and sharing short videos."
+  "intro": {
+    "lookingForJob": "Looking for job",
+    "description": "Software developer with a B.S. in Business Informatics with experience in Front-End and Back-End technologies."
   }
 }

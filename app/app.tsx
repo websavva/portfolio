@@ -13,16 +13,12 @@ export default defineComponent({
 
     const { locale } = useI18n();
 
-    const pageContext = computed(() => {
-      return {
-        $t: pageResponse.value?.pageDictionary,
-      };
-    });
+    provideCurrentPage(() => pageResponse.value!);
 
     const { data: pageResponse } = await useAsyncData(
       () => `${$route.path}-${locale.value}`,
       async () => {
-        const page = await queryCollection('pages')
+        const data = await queryCollection('pages')
           .orWhere((query) =>
             query
               .where('path', '=', $route.path)
@@ -30,25 +26,23 @@ export default defineComponent({
           )
           .first();
 
-        if (!page) {
+        if (!data) {
           return null;
         }
 
         const localePath =
-          `${page.path}/locales/${locale.value}`.replace(
+          `${data.path}/locales/${locale.value}`.replace(
             /^\//,
             '',
           );
 
-        const pageDictionary = await queryCollection(
-          'locales',
-        )
+        const dictionary = await queryCollection('locales')
           .where('stem', '=', localePath)
           .select('meta')
           .first()
           .then((res) => res?.meta.body);
 
-        return { page, pageDictionary };
+        return { data, dictionary } as CurrentPageContext;
       },
     );
 
@@ -58,13 +52,11 @@ export default defineComponent({
           <div>
             {pageResponse.value ? (
               <ContentRenderer
-                value={pageResponse.value.page}
-                data={pageContext.value}
+                value={pageResponse.value.data}
               />
             ) : (
               <div>Page not found</div>
             )}
-            {/* {'a'.repeat(1e6)} */}
           </div>
         </Editor>
       );

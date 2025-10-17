@@ -1,6 +1,6 @@
 {
-  "hero": {
-    "title": "Shortqix",
-    "description": "Shortqix - это платформа для сокращения ссылок."
+  "intro": {
+    "lookingForJob": "Ищу работу",
+    "description": "Разработчик с образованием в бизнесе и IT, имеющий опыт в Front-End и Back-End технологиях."
   }
 }

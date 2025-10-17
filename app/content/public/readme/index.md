@@ -9,4 +9,5 @@ year: 2025
 realPath: /
 ---
 
-# {{ $doc.title }}
+::HomePage
+::
