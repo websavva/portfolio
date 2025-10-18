@@ -2,6 +2,7 @@ import {
   Container,
   LetterGlitch,
   Contacts,
+  NuxtIcon,
 } from '#components';
 
 export default defineComponent({
@@ -105,6 +106,34 @@ export default defineComponent({
 
             <Contacts class={cn('mt-5 relative z-10')} />
           </Container>
+
+          <div
+            class={cn(
+              'absolute bottom-12 left-1/2 -translate-x-1/2',
+            )}
+          >
+            {Array.from({ length: 3 }).map((_, index) => (
+              <motion.div
+                key={index}
+                animate={{
+                  opacity: [0, 1, 0],
+                  y: [-15, 20],
+                }}
+                transition={{
+                  delay: index * -0.2,
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: 'easeIn',
+                }}
+                class={cn('-my-6')}
+              >
+                <NuxtIcon
+                  name="codicon:chevron-down"
+                  class={cn('size-8')}
+                />
+              </motion.div>
+            ))}
+          </div>
         </div>
       );
     };
