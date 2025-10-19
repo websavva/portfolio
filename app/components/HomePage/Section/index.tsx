@@ -66,6 +66,9 @@ const HomePageSection = defineComponent({
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1 }}
+              inViewOptions={{
+                margin: '0px 0px -150px',
+              }}
             >
               <NuxtIcon
                 name={props.iconName}
@@ -77,6 +80,9 @@ const HomePageSection = defineComponent({
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: .9 }}
+              inViewOptions={{
+                margin: '0px 0px -150px',
+              }}
               class={cn('text-2xl')}
             >
               {slots.title?.()}
@@ -87,6 +93,9 @@ const HomePageSection = defineComponent({
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: .7 }}
+            inViewOptions={{
+              margin: '0px 0px -150px',
+            }}
             class={cn(
               'text-5xl font-medium mt-10',
               props.class,
