@@ -52,7 +52,7 @@ export default defineComponent({
             />
           </motion.div>
 
-          <Container class={cn('relative z-10 w-4xl')}>
+          <Container class={cn('relative z-10')}>
             <div
               class={cn(
                 'bg-[radial-gradient(at_50%_50%,_var(--color-editor-background)_30%,_rgba(0,0,0,0)_80%)] w-[110%] h-[200%] absolute top-[-50%] left-[-30%]',

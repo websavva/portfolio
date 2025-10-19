@@ -79,7 +79,7 @@ const HomePageSection = defineComponent({
             <motion.h2
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: .9 }}
+              transition={{ duration: 0.9 }}
               inViewOptions={{
                 margin: '0px 0px -150px',
               }}
@@ -92,7 +92,7 @@ const HomePageSection = defineComponent({
           <motion.h3
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: .7 }}
+            transition={{ duration: 0.7 }}
             inViewOptions={{
               margin: '0px 0px -150px',
             }}
@@ -114,14 +114,24 @@ const HomePageSection = defineComponent({
 const HomePageSectionHighlight = defineComponent({
   name: 'HomePageSectionHighlight',
 
-  setup(_, { slots }) {
+  props: {
+    class: {
+      type: String,
+      default: '',
+    },
+  },
+
+  setup(props, { slots }) {
     return () => {
       return (
-        <PrimitiveSlot
-          class={cn('text-[var(--section-color)]')}
+        <span
+          class={cn(
+            'text-[var(--section-color)]',
+            props.class,
+          )}
         >
           {slots.default?.()}
-        </PrimitiveSlot>
+        </span>
       );
     };
   },

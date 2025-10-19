@@ -2,5 +2,31 @@
   "intro": {
     "lookingForJob": "Looking for job",
     "description": "Software developer with a B.S. in Business Informatics with experience in Front-End and Back-End technologies."
+  },
+  "aboutMe": {
+    "title": "About Me",
+    "languages": "Languages",
+    "subtitle": [
+      {
+        "text": "I'm a",
+        "isHighlighted": false
+      },
+      {
+        "text": "software developer",
+        "isHighlighted": true
+      },
+      {
+        "text": "specializing in building modern",
+        "isHighlighted": false
+      },
+      {
+        "text": "Web Applications",
+        "isHighlighted": true
+      }
+    ],
+    "description": [
+      "I'm a software engineer driven by turning complex challenges into elegant solutions.",
+      "Over the years, I've gained experience across both frontend and backend technologies."
+    ]
   }
 }

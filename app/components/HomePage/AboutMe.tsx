@@ -1,3 +1,5 @@
+import { Fragment } from 'vue';
+
 import { HomePageSection, Contacts } from '#components';
 
 export default defineComponent({
@@ -13,6 +15,8 @@ export default defineComponent({
   setup(props) {
     const bio = useBio();
 
+    const dictionary = useCurrentPageDictionary();
+
     return () => {
       return (
         <HomePageSection
@@ -21,14 +25,29 @@ export default defineComponent({
           color="green"
         >
           {{
-            title: () => 'About Me',
+            title: () => dictionary.value.aboutMe.title,
             subtitle: () => (
-              <div class={cn('w-3/4')}>
-                I'm a{' '}
-                <HomePageSection.Highlight>
-                  <span>software developer</span>
-                </HomePageSection.Highlight>{' '}
-                specialized on Web Applications
+              <div class={cn('w-8/12')}>
+                {dictionary.value.aboutMe.subtitle.map(
+                  ({
+                    text,
+                    isHighlighted,
+                  }: {
+                    text: string;
+                    isHighlighted: boolean;
+                  }) => {
+                    const Component = isHighlighted
+                      ? HomePageSection.Highlight
+                      : 'span';
+                    return (
+                      <Fragment key={text}>
+                        <Component key={text}>
+                          {text}
+                        </Component>{' '}
+                      </Fragment>
+                    );
+                  },
+                )}
               </div>
             ),
             default: () => (
@@ -43,27 +62,28 @@ export default defineComponent({
                       {bio.value.fullName}
                     </span>
 
-                    <HomePageSection.Highlight>
-                      <span class={cn('text-base mt-1')}>
-                        {bio.value.occupation}
-                      </span>
+                    <HomePageSection.Highlight
+                      class={cn('text-base mt-1 mb-10')}
+                    >
+                      {bio.value.occupation}
                     </HomePageSection.Highlight>
 
-                    <p
-                      class={cn(
-                        'text-lg my-5 text-editor-fg',
-                      )}
-                    >
-                      I'm an experienced software engineer
-                      who constantly seeks out innovative
-                      solutions to everyday problems.
-                    </p>
-
-                    <p class={cn('text-lg text-editor-fg')}>
-                      After numerous years in this industry
-                      I have worked with multiple front-end
-                      and back-end technologies.
-                    </p>
+                    {(
+                      dictionary.value.aboutMe
+                        .description as string[]
+                    ).map((description, index) => (
+                      <p
+                        key={description}
+                        class={cn(
+                          'text-lg text-editor-fg',
+                          {
+                            'mt-5': index > 0,
+                          },
+                        )}
+                      >
+                        {description}
+                      </p>
+                    ))}
                   </div>
 
                   <div
@@ -85,14 +105,12 @@ export default defineComponent({
                         margin: '0px 0px -150px',
                       }}
                     >
-                      <HomePageSection.Highlight>
-                        <span
-                          class={cn(
-                            'pl-2 border-l-2 border-current',
-                          )}
-                        >
-                          Languages
-                        </span>
+                      <HomePageSection.Highlight
+                        class={cn(
+                          'pl-2 border-l-2 border-current',
+                        )}
+                      >
+                        {dictionary.value.aboutMe.languages}
                       </HomePageSection.Highlight>
 
                       <ul
@@ -164,12 +182,7 @@ export default defineComponent({
                       </span>
 
                       <HomePageSection.Highlight>
-                        <span>
-                          {
-                            bio.value.collegeDegree
-                              .university
-                          }
-                        </span>
+                        {bio.value.collegeDegree.university}
                       </HomePageSection.Highlight>
                     </div>
                   </motion.div>
