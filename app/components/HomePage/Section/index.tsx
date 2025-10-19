@@ -59,30 +59,41 @@ const HomePageSection = defineComponent({
           <SectionDelimiter />
 
           <header class={cn('flex items-center mt-15')}>
-            <div
+            <motion.div
               class={cn(
                 'size-7 mr-5 text-[var(--section-color)] brightness-125 rounded-full relative after:content-[""] after:absolute after:top-0 after:left-0 after:size-full after:shadow-[2px_2px_25px_var(--section-color)] after:blur-[15px]',
               )}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1 }}
             >
               <NuxtIcon
                 name={props.iconName}
                 class={cn('size-full')}
               />
-            </div>
+            </motion.div>
 
-            <h2 class={cn('text-2xl', props.class)}>
+            <motion.h2
+              initial={{ opacity: 0, x: -10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: .9 }}
+              class={cn('text-2xl')}
+            >
               {slots.title?.()}
-            </h2>
+            </motion.h2>
           </header>
 
-          <h3
+          <motion.h3
+            initial={{ opacity: 0, x: -10 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: .7 }}
             class={cn(
               'text-5xl font-medium mt-10',
               props.class,
             )}
           >
             {slots.subtitle?.()}
-          </h3>
+          </motion.h3>
 
           <div class={cn('mt-18')}>{slots.default?.()}</div>
         </Container>

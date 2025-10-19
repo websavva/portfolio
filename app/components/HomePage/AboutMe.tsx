@@ -77,7 +77,11 @@ export default defineComponent({
                   class={cn('mt-15 flex justify-between')}
                 >
                   <div class={cn('flex-1')}>
-                    <div>
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 1 }}
+                    >
                       <HomePageSection.Highlight>
                         <span
                           class={cn(
@@ -116,12 +120,15 @@ export default defineComponent({
                           ),
                         )}
                       </ul>
-                    </div>
+                    </motion.div>
 
                     <Contacts class={cn('mt-5')} />
                   </div>
 
-                  <div
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1 }}
                     class={cn(
                       'flex gap-2 p-8 border border-editor-background-secondary rounded-2xl flex-1 ml-auto',
                     )}
@@ -151,7 +158,7 @@ export default defineComponent({
                         </span>
                       </HomePageSection.Highlight>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             ),
