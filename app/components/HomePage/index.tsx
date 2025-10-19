@@ -1,4 +1,4 @@
-import { HomePageIntro } from '#components';
+import { HomePageIntro, SectionDelimiter, HomePageAboutMe } from '#components';
 
 export default defineComponent({
   name: 'HomePage',
@@ -21,6 +21,8 @@ export default defineComponent({
               'min-h-[var(--editor-body-content-height)]',
             )}
           />
+
+          <HomePageAboutMe />
         </div>
       );
     };

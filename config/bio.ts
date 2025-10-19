@@ -31,10 +31,10 @@ export const bioConfig = {
 
   languages: [
     {
-      code: 'en',
+      code: 'ru',
       name: defineI18nWord({
-        en: 'English',
-        ru: 'Английский',
+        en: 'Russian',
+        ru: 'Русский',
       }),
       level: defineI18nWord({
         en: 'Native',
@@ -42,10 +42,14 @@ export const bioConfig = {
       }),
     },
     {
-      code: 'ru',
+      code: 'en',
       name: defineI18nWord({
-        en: 'Russian',
-        ru: 'Русский',
+        en: 'English',
+        ru: 'Английский',
+      }),
+      level: defineI18nWord({
+        en: 'Advanced',
+        ru: 'Продвинутый',
       }),
     },
   ],
@@ -59,5 +63,6 @@ export const bioConfig = {
       en: 'Saint-Petersburg State University',
       ru: 'Санкт-Петербургский государственный университет',
     }),
+    uniLogoUrl: '/uni-logo.svg'
   },
 };

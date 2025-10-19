@@ -62,11 +62,6 @@ const treeItems = defineExplorerTree([
     icon: 'nuxt',
   },
   {
-    id: 'nuxt.config.ts',
-    type: 'file',
-    icon: 'nuxt',
-  },
-  {
     id: 'package.json',
     type: 'file',
     icon: 'nodejs',
