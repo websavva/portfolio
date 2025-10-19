@@ -21,35 +21,12 @@ export default defineComponent({
       return (
         <HomePageSection
           class={props.class}
+          subtitle={dictionary.value.aboutMe.subtitle}
           iconName="codicon:account"
           color="green"
         >
           {{
             title: () => dictionary.value.aboutMe.title,
-            subtitle: () => (
-              <div class={cn('w-8/12')}>
-                {dictionary.value.aboutMe.subtitle.map(
-                  ({
-                    text,
-                    isHighlighted,
-                  }: {
-                    text: string;
-                    isHighlighted: boolean;
-                  }) => {
-                    const Component = isHighlighted
-                      ? HomePageSection.Highlight
-                      : 'span';
-                    return (
-                      <Fragment key={text}>
-                        <Component key={text}>
-                          {text}
-                        </Component>{' '}
-                      </Fragment>
-                    );
-                  },
-                )}
-              </div>
-            ),
             default: () => (
               <div>
                 <div

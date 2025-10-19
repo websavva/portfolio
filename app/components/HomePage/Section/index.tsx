@@ -1,3 +1,5 @@
+import { Fragment } from 'vue';
+
 import {
   Container,
   SectionDelimiter,
@@ -13,17 +15,19 @@ type Color =
   | 'orange'
   | 'yellow'
   | 'gray'
-  | 'white';
+  | 'white'
+  | 'primary';
 
 const colorsMap: Record<Color, string> = {
   green: '[--section-color:var(--color-green-400)]',
   blue: '[--section-color:var(--color-blue-400)]',
   purple: '[--section-color:var(--color-purple-400)]',
   red: '[--section-color:var(--color-red-400)]',
-  orange: 'bg-orange-500',
-  yellow: '[--section-color:var(--color-yellow-400)]',
+  orange: '[--section-color:var(--color-orange-400)]',
+  yellow: '[--section-color:var(--color-yellow-200)]',
   gray: '[--section-color:var(--color-gray-400)]',
   white: '[--section-color:var(--color-white-400)]',
+  primary: '[--section-color:var(--color-primary)]',
 };
 
 const HomePageSection = defineComponent({
@@ -43,6 +47,17 @@ const HomePageSection = defineComponent({
     color: {
       type: String as PropType<Color>,
       required: true,
+    },
+
+    subtitle: {
+      type: Array as PropType<
+        | {
+            text: string;
+            isHighlighted: boolean;
+          }[]
+        | null
+      >,
+      default: null,
     },
   },
 
@@ -101,7 +116,21 @@ const HomePageSection = defineComponent({
               props.class,
             )}
           >
-            {slots.subtitle?.()}
+            {props.subtitle?.length
+              ? props.subtitle.map((item) => {
+                  const Component = item.isHighlighted
+                    ? HomePageSectionHighlight
+                    : 'span';
+
+                  return (
+                    <Fragment key={item.text}>
+                      <Component key={item.text}>
+                        {item.text}
+                      </Component>{' '}
+                    </Fragment>
+                  );
+                })
+              : slots.subtitle?.()}
           </motion.h3>
 
           <div class={cn('mt-18')}>{slots.default?.()}</div>

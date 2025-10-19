@@ -1,4 +1,8 @@
-import { HomePageIntro, SectionDelimiter, HomePageAboutMe } from '#components';
+import {
+  HomePageIntro,
+  HomePageAboutMe,
+  HomePageJobExperience,
+} from '#components';
 
 export default defineComponent({
   name: 'HomePage',
@@ -23,6 +27,8 @@ export default defineComponent({
           />
 
           <HomePageAboutMe />
+
+          <HomePageJobExperience />
         </div>
       );
     };

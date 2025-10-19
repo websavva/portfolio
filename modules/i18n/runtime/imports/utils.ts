@@ -26,37 +26,36 @@ export const isI18nWord = (
   );
 };
 
-export type FlattenI18nWord<D extends Record<string, any>> =
-  {
-    [K in keyof D]: D[K] extends I18nWord
-      ? D[K][I18nLocale]
-      : D[K] extends Record<string, any>
-      ? FlattenI18nWord<D[K]>
-      : D[K];
-  };
+export type FlattenI18nWord<D> = D extends I18nWord
+  ? D[I18nLocale]
+  : D extends Record<string, any>
+  ? {
+      [K in keyof D]: FlattenI18nWord<D[K]>;
+    }
+  : D;
 
-export function flattenI18nWord<
-  D extends Record<string, any>,
->(obj: D, locale: I18nLocale): FlattenI18nWord<D> {
-  return Object.fromEntries(
-    Object.entries(obj).map(([key, value]) => {
-      if (isI18nWord(value)) {
-        return [key, value[locale]];
-      } else if (Array.isArray(value)) {
-        return [
-          key,
-          value.map((item) =>
-            flattenI18nWord(item, locale),
-          ),
-        ];
-      } else if (
-        typeof value === 'object' &&
-        value !== null
-      ) {
-        return [key, flattenI18nWord(value, locale)];
-      } else {
-        return [key, value];
-      }
-    }),
-  ) as FlattenI18nWord<D>;
+export function flattenI18nWord<D>(
+  value: D,
+  locale: I18nLocale,
+): FlattenI18nWord<D> {
+  let result: any;
+  
+  if (isI18nWord(value)) {
+    result = value[locale];
+  } else if (Array.isArray(value)) {
+    result = value.map((item) =>
+      flattenI18nWord(item, locale),
+    );
+  } else if (typeof value === 'object' && value !== null) {
+    result = Object.fromEntries(
+      Object.entries(value).map(([key, value]) => [
+        key,
+        flattenI18nWord(value, locale),
+      ]),
+    );
+  } else {
+    result = value;
+  }
+
+  return result;
 }

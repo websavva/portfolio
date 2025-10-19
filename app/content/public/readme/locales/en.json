@@ -28,5 +28,17 @@
       "I'm a software engineer driven by turning complex challenges into elegant solutions.",
       "Over the years, I've gained experience across both frontend and backend technologies."
     ]
+  },
+  "jobExperience": {
+    "title": "Job Experience",
+    "visitWebsite": "Visit the website",
+    "present": "Present",
+    "subtitle": [{
+      "text": "Middle Frontend Developer",
+      "isHighlighted": true
+    }, {
+      "text": "with 4 years of experience",
+      "isHighlighted": false
+    }]
   }
 }
