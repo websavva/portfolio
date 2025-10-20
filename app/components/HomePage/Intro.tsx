@@ -40,15 +40,6 @@ export default defineComponent({
               class={cn(
                 'absolute top-0 left-0 w-full h-full',
               )}
-              glitchColors={[
-                '#3db9c9',
-                '#3d64a1',
-                '#a9b1d6',
-              ]}
-              glitchSpeed={50}
-              outerVignette
-              centerVignette
-              smooth
             />
           </motion.div>
 
