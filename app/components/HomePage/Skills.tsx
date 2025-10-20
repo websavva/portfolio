@@ -90,14 +90,43 @@ export default defineComponent({
                 </div>
 
                 {/* Skills Grid */}
-                <ul
+                <motion.ul
+                  key={selectedSkillType.value || 'default'}
+                  initial="hidden"
+                  whileInView="visible"
+                  exit="exit"
+                  inViewOptions={{
+                    margin: '0px 0px -150px',
+                  }}
+                  variants={{
+                    hidden: { opacity: 0 },
+                    visible: {
+                      opacity: 1,
+                      transition: {
+                        staggerChildren: 0.05,
+                        delayChildren: 0.1,
+                      },
+                    },
+                    exit: {
+                      opacity: 0,
+                      transition: {
+                        staggerChildren: 0.03,
+                        staggerDirection: -1,
+                      },
+                    },
+                  }}
                   class={cn(
                     'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5',
                   )}
                 >
                   {filteredSkills.value.map((skill) => (
-                    <li
+                    <motion.li
                       key={skill.name}
+                      variants={{
+                        hidden: { opacity: 0, y: 20 },
+                        visible: { opacity: 1, y: 0 },
+                        exit: { opacity: 0, y: -20 },
+                      }}
                       class={cn(
                         'group relative',
                         'flex flex-col items-center gap-4',
@@ -150,9 +179,9 @@ export default defineComponent({
                       >
                         {skill.name}
                       </span>
-                    </li>
+                    </motion.li>
                   ))}
-                </ul>
+                </motion.ul>
               </div>
             ),
           }}
