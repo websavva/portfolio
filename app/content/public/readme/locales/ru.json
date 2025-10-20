@@ -41,21 +41,42 @@
     "title": "Навыки",
     "subtitle": [
       {
-        "text": "Разработчик современных",
+        "text": "Frontend",
         "isHighlighted": true
       },
       {
-        "text": "Web-приложений",
+        "text": "и",
         "isHighlighted": false
       },
       {
-        "text": "с опытом работы в",
+        "text": "Backend",
         "isHighlighted": true
       },
       {
-        "text": "Frontend и Backend технологиях",
-        "isHighlighted": true
+        "text": "технологии",
+        "isHighlighted": false
       }
     ]
+  },
+  "contactMe": {
+    "subtitle": [
+      {
+        "text": "Буду рад",
+        "isHighlighted": false
+      },
+      {
+        "text": "пообщаться",
+        "isHighlighted": true
+      }
+    ],
+    "labels": {
+      "name": "Имя",
+      "email": "Email",
+      "company": "Компания",
+      "message": "Сообщение"
+    },
+    "successMessage": "Сообщение отправлено успешно!",
+    "errorMessage": "Не удалось отправить сообщение. Пожалуйста, попробуйте снова.",
+    "submit": "Отправить"
   }
 }

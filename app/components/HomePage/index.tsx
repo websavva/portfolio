@@ -3,6 +3,7 @@ import {
   HomePageAboutMe,
   HomePageJobExperience,
   HomePageSkills,
+  HomePageContactMe,
 } from '#components';
 
 export default defineComponent({
@@ -32,6 +33,8 @@ export default defineComponent({
           <HomePageJobExperience />
 
           <HomePageSkills />
+
+          <HomePageContactMe />
         </div>
       );
     };
