@@ -35,5 +35,27 @@
         "isHighlighted": false
       }
     ]
+  },
+
+  "skills": {
+    "title": "Навыки",
+    "subtitle": [
+      {
+        "text": "Разработчик современных",
+        "isHighlighted": true
+      },
+      {
+        "text": "Web-приложений",
+        "isHighlighted": false
+      },
+      {
+        "text": "с опытом работы в",
+        "isHighlighted": true
+      },
+      {
+        "text": "Frontend и Backend технологиях",
+        "isHighlighted": true
+      }
+    ]
   }
 }

@@ -7,7 +7,8 @@ export const bioConfig = {
   }),
 
   birthDate: process.env.WS_PUBLIC_BIO_BIRTH_DATE!,
-  careerStartDate: process.env.WS_PUBLIC_BIO_CAREER_START_DATE!,
+  careerStartDate:
+    process.env.WS_PUBLIC_BIO_CAREER_START_DATE!,
 
   occupation: defineI18nWord({
     en: 'Frontend Developer',
@@ -150,5 +151,144 @@ export const bioConfig = {
         }),
       ],
     },
+  ],
+
+  skills: [
+    {
+      name: 'TypeScript',
+      icon: 'logos:typescript-icon',
+      type: 'Frontend',
+    },
+    {
+      name: 'Stylus',
+      icon: 'material-icon-theme:stylus',
+      type: 'Frontend',
+    },
+    {
+      name: 'Sass',
+      icon: 'logos:sass',
+      type: 'Frontend',
+    },
+    {
+      name: 'Tailwind CSS',
+      icon: 'logos:tailwindcss-icon',
+      type: 'Frontend',
+    },
+    {
+      name: 'Docker',
+      icon: 'logos:docker-icon',
+      type: 'Deployment',
+    },
+    {
+      name: 'React',
+      icon: 'logos:react',
+      type: 'Frontend',
+    },
+    {
+      name: 'Next.js',
+      icon: 'material-icon-theme:next',
+      type: 'Frontend',
+    },
+    {
+      name: 'Vue',
+      icon: 'logos:vue',
+      type: 'Frontend',
+    },
+    {
+      name: 'Nuxt',
+      icon: 'logos:nuxt-icon',
+      type: 'Frontend',
+    },
+    {
+      name: 'Socket.io',
+      icon: 'logos:socket-io',
+      type: 'Backend',
+    },
+    {
+      name: 'Github Actions',
+      icon: 'logos:github-actions',
+      type: 'Deployment',
+    },
+    {
+      name: 'Bash',
+      icon: 'logos:bash-icon',
+      type: 'Tools'
+    },
+    {
+      name: 'Git',
+      icon: 'logos:git-icon',
+      type: 'Tools',
+    },
+    {
+      name: 'PostgreSQL',
+      icon: 'logos:postgresql',
+      type: 'Backend',
+    },
+    {
+      name: 'Turborepo',
+      icon: 'material-icon-theme:turborepo',
+      type: 'Tools',
+    },
+    {
+      name: 'Node.js',
+      icon: 'logos:nodejs-icon',
+      type: 'Backend',
+    },
+    {
+      name: 'Vite',
+      icon: 'logos:vitejs',
+      type: 'Testing',
+    },
+    {
+      name: 'Vitest',
+      icon: 'logos:vitest',
+      type: 'Testing',
+    },
+    {
+      name: 'Playwright',
+      icon: 'logos:playwright',
+      type: 'Testing',
+    },
+    {
+      name: 'Jest',
+      icon: 'logos:jest',
+      type: 'Testing',
+    },
+    {
+      name: 'Eslint',
+      icon: 'logos:eslint',
+      type: 'Tools',
+    },
+    {
+      name: 'Webpack',
+      icon: 'logos:webpack',
+      type: 'Tools',
+    },
+    {
+      name: 'Stripe',
+      icon: 'logos:stripe',
+      type: 'Tools',
+    },
+    {
+      name: 'Postman',
+      icon: 'logos:postman',
+      type: 'Tools',
+    },
+    {
+      name: 'tRPC',
+      icon: 'logos:trpc',
+      type: 'Backend',
+    },
+    {
+      name: 'Express.js',
+      icon: 'logos:express',
+      inverted: true,
+      type: 'Backend',
+    },
+    {
+      name: 'Drizzle ORM',
+      icon: 'logos:drizzle',
+      type: 'Backend',
+    }
   ],
 };
