@@ -1,6 +1,8 @@
-import { Fragment } from 'vue';
-
-import { HomePageSection, Contacts } from '#components';
+import {
+  HomePageSection,
+  Contacts,
+  Card,
+} from '#components';
 
 export default defineComponent({
   name: 'HomePageAboutMe',
@@ -130,38 +132,45 @@ export default defineComponent({
                     inViewOptions={{
                       margin: '0px 0px -150px',
                     }}
-                    class={cn(
-                      'flex gap-2 p-8 border border-editor-background-secondary rounded-2xl flex-1 ml-auto',
-                    )}
+                    class={cn('flex-1 ml-auto')}
                   >
-                    <div
-                      class={cn(
-                        'size-28 bg-white rounded-3xl flex items-center justify-center shrink-0',
-                      )}
+                    <Card
+                      class="hover:shadow-green-500/30 flex"
+                      glowClassName="from-[#6bc072] to-[#6bc072]"
                     >
-                      <img
-                        src={
-                          bio.value.collegeDegree.uniLogoUrl
-                        }
-                        alt=""
-                        role="presentation"
-                        class={cn('size-[90%]')}
-                      />
-                    </div>
-
-                    <div class={cn('flex flex-col ml-5')}>
-                      <span
+                      <div
                         class={cn(
-                          'text-xl font-medium mb-1',
+                          'size-28 bg-white rounded-3xl flex items-center justify-center shrink-0',
                         )}
                       >
-                        {bio.value.collegeDegree.major}
-                      </span>
+                        <img
+                          src={
+                            bio.value.collegeDegree
+                              .uniLogoUrl
+                          }
+                          alt=""
+                          role="presentation"
+                          class={cn('size-[90%]')}
+                        />
+                      </div>
 
-                      <HomePageSection.Highlight>
-                        {bio.value.collegeDegree.university}
-                      </HomePageSection.Highlight>
-                    </div>
+                      <div class={cn('flex flex-col ml-5')}>
+                        <span
+                          class={cn(
+                            'text-xl font-medium mb-1',
+                          )}
+                        >
+                          {bio.value.collegeDegree.major}
+                        </span>
+
+                        <HomePageSection.Highlight>
+                          {
+                            bio.value.collegeDegree
+                              .university
+                          }
+                        </HomePageSection.Highlight>
+                      </div>
+                    </Card>
                   </motion.div>
                 </div>
               </div>

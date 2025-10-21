@@ -69,7 +69,7 @@ const HomePageSection = defineComponent({
     return () => {
       return (
         <Container
-          class={cn('py-16', colorClass.value, props.class)}
+          class={cn('py-16 [--card-color:var(--section-color)]', colorClass.value, props.class)}
         >
           <SectionDelimiter />
 
