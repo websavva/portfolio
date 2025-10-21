@@ -125,19 +125,18 @@ export default defineComponent({
                     <Contacts class={cn('mt-5')} />
                   </div>
 
-                  <motion.div
+                  <motion.a
+                    href={bio.value.collegeDegree.url}
+                    target="_blank"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}
                     inViewOptions={{
                       margin: '0px 0px -150px',
                     }}
-                    class={cn('flex-1 ml-auto')}
+                    class={cn('flex-1 ml-auto cursor-pointer')}
                   >
-                    <Card
-                      class="hover:shadow-green-500/30 flex"
-                      glowClassName="from-[#6bc072] to-[#6bc072]"
-                    >
+                    <Card class={cn('flex')}>
                       <div
                         class={cn(
                           'size-28 bg-white rounded-3xl flex items-center justify-center shrink-0',
@@ -171,7 +170,7 @@ export default defineComponent({
                         </HomePageSection.Highlight>
                       </div>
                     </Card>
-                  </motion.div>
+                  </motion.a>
                 </div>
               </div>
             ),

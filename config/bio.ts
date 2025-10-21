@@ -65,6 +65,8 @@ export const bioConfig = {
       ru: 'Санкт-Петербургский государственный университет',
     }),
     uniLogoUrl: '/uni-logo.svg',
+
+    url: 'https://diploma.spbu.ru/s/?rn=2011114&bd=19990221&h=b4eec686154e479e9ca261c9c29010f5',
   },
 
   jobExperience: [
