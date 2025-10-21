@@ -153,142 +153,206 @@ export const bioConfig = {
     },
   ],
 
-  skills: [
-    {
-      name: 'TypeScript',
-      icon: 'logos:typescript-icon',
-      type: 'Frontend',
+  skills: {
+    groups: {
+      frontend: defineI18nWord({
+        en: 'Frontend',
+        ru: 'Фронтенд',
+      }),
+      backend: defineI18nWord({
+        en: 'Backend',
+        ru: 'Бэкенд',
+      }),
+      testing: defineI18nWord({
+        en: 'Testing',
+        ru: 'Тестирование',
+      }),
+      tools: defineI18nWord({
+        en: 'Tools',
+        ru: 'Инструменты',
+      }),
+      deployment: defineI18nWord({
+        en: 'Deployment',
+        ru: 'Деплой',
+      }),
     },
-    {
-      name: 'Stylus',
-      icon: 'material-icon-theme:stylus',
-      type: 'Frontend',
+
+    list: {
+      frontend: [
+        {
+          name: 'TypeScript',
+          icon: 'logos:typescript-icon',
+        },
+        {
+          name: 'Stylus',
+          icon: 'material-icon-theme:stylus',
+        },
+        {
+          name: 'Sass',
+          icon: 'logos:sass',
+        },
+        {
+          name: 'Tailwind CSS',
+          icon: 'logos:tailwindcss-icon',
+        },
+        {
+          name: 'React',
+          icon: 'logos:react',
+        },
+        {
+          name: 'Next.js',
+          icon: 'material-icon-theme:next',
+        },
+        {
+          name: 'Vue',
+          icon: 'logos:vue',
+        },
+        {
+          name: 'Nuxt',
+          icon: 'logos:nuxt-icon',
+        },
+        {
+          name: 'Pinia',
+          icon: 'logos:pinia',
+        },
+        {
+          name: 'Vuex',
+          icon: 'material-icon-theme:vuex-store',
+        },
+        {
+          name: 'Zod',
+          icon: 'logos:zod',
+        },
+        {
+          name: 'Axios',
+          icon: 'logos:axios',
+        },
+        {
+          name: 'Chart.js',
+          icon: 'logos:chartjs',
+        },
+      ],
+      backend: [
+        {
+          name: 'PostgreSQL',
+          icon: 'logos:postgresql',
+        },
+        {
+          name: 'Node.js',
+          icon: 'logos:nodejs-icon',
+        },
+        {
+          name: 'tRPC',
+          icon: 'logos:trpc',
+        },
+        {
+          name: 'Express.js',
+          icon: 'logos:express',
+          inverted: true,
+        },
+        {
+          name: 'Nginx',
+          icon: 'logos:nginx',
+        },
+        {
+          name: 'Drizzle ORM',
+          icon: 'logos:drizzle',
+        },
+        {
+          name: 'Socket.io',
+          icon: 'logos:socket-io',
+        },
+      ],
+      tools: [
+        {
+          name: 'Bash',
+          icon: 'logos:bash-icon',
+        },
+        {
+          name: 'Git',
+          icon: 'logos:git-icon',
+        },
+        {
+          name: 'GitHub',
+          icon: 'codicon:github-inverted',
+        },
+        {
+          name: 'Turborepo',
+          icon: 'material-icon-theme:turborepo',
+        },
+        {
+          name: 'i18n',
+          icon: 'material-icon-theme:i18n',
+        },
+        {
+          name: 'Eslint',
+          icon: 'logos:eslint',
+        },
+        {
+          name: 'Prettier',
+          icon: 'logos:prettier',
+        },
+        {
+          name: 'Esbuild',
+          icon: 'material-icon-theme:esbuild',
+        },
+        {
+          name: 'Webpack',
+          icon: 'logos:webpack',
+        },
+        {
+          name: 'Vite',
+          icon: 'logos:vitejs',
+        },
+        {
+          name: 'Stripe',
+          icon: 'logos:stripe',
+        },
+        {
+          name: 'Bitcoin',
+          icon: 'logos:bitcoin',
+        },
+        {
+          name: 'Postman',
+          icon: 'logos:postman',
+        },
+        {
+          name: 'Google Recaptcha',
+          icon: 'logos:recaptcha',
+        },
+        {
+          name: 'Yarn',
+          icon: 'logos:yarn',
+        },
+        {
+          name: 'pnpm',
+          icon: 'logos:pnpm',
+        },
+      ],
+      testing: [
+        {
+          name: 'Vitest',
+          icon: 'logos:vitest',
+        },
+        {
+          name: 'Playwright',
+          icon: 'logos:playwright',
+        },
+        {
+          name: 'Jest',
+          icon: 'logos:jest',
+        },
+      ],
+      deployment: [
+        {
+          name: 'Docker',
+          icon: 'logos:docker-icon',
+        },
+        {
+          name: 'Github Actions',
+          icon: 'logos:github-actions',
+        },
+      ],
     },
-    {
-      name: 'Sass',
-      icon: 'logos:sass',
-      type: 'Frontend',
-    },
-    {
-      name: 'Tailwind CSS',
-      icon: 'logos:tailwindcss-icon',
-      type: 'Frontend',
-    },
-    {
-      name: 'Docker',
-      icon: 'logos:docker-icon',
-      type: 'Deployment',
-    },
-    {
-      name: 'React',
-      icon: 'logos:react',
-      type: 'Frontend',
-    },
-    {
-      name: 'Next.js',
-      icon: 'material-icon-theme:next',
-      type: 'Frontend',
-    },
-    {
-      name: 'Vue',
-      icon: 'logos:vue',
-      type: 'Frontend',
-    },
-    {
-      name: 'Nuxt',
-      icon: 'logos:nuxt-icon',
-      type: 'Frontend',
-    },
-    {
-      name: 'Socket.io',
-      icon: 'logos:socket-io',
-      type: 'Backend',
-    },
-    {
-      name: 'Github Actions',
-      icon: 'logos:github-actions',
-      type: 'Deployment',
-    },
-    {
-      name: 'Bash',
-      icon: 'logos:bash-icon',
-      type: 'Tools'
-    },
-    {
-      name: 'Git',
-      icon: 'logos:git-icon',
-      type: 'Tools',
-    },
-    {
-      name: 'PostgreSQL',
-      icon: 'logos:postgresql',
-      type: 'Backend',
-    },
-    {
-      name: 'Turborepo',
-      icon: 'material-icon-theme:turborepo',
-      type: 'Tools',
-    },
-    {
-      name: 'Node.js',
-      icon: 'logos:nodejs-icon',
-      type: 'Backend',
-    },
-    {
-      name: 'Vite',
-      icon: 'logos:vitejs',
-      type: 'Testing',
-    },
-    {
-      name: 'Vitest',
-      icon: 'logos:vitest',
-      type: 'Testing',
-    },
-    {
-      name: 'Playwright',
-      icon: 'logos:playwright',
-      type: 'Testing',
-    },
-    {
-      name: 'Jest',
-      icon: 'logos:jest',
-      type: 'Testing',
-    },
-    {
-      name: 'Eslint',
-      icon: 'logos:eslint',
-      type: 'Tools',
-    },
-    {
-      name: 'Webpack',
-      icon: 'logos:webpack',
-      type: 'Tools',
-    },
-    {
-      name: 'Stripe',
-      icon: 'logos:stripe',
-      type: 'Tools',
-    },
-    {
-      name: 'Postman',
-      icon: 'logos:postman',
-      type: 'Tools',
-    },
-    {
-      name: 'tRPC',
-      icon: 'logos:trpc',
-      type: 'Backend',
-    },
-    {
-      name: 'Express.js',
-      icon: 'logos:express',
-      inverted: true,
-      type: 'Backend',
-    },
-    {
-      name: 'Drizzle ORM',
-      icon: 'logos:drizzle',
-      type: 'Backend',
-    }
-  ],
+  },
 };

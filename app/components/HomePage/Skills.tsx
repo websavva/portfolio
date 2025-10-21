@@ -21,21 +21,19 @@ export default defineComponent({
     const dictionary = useCurrentPageDictionary();
 
     const allSkillTypes = computed(() => {
-      return [
-        ...new Set(
-          bio.value.skills.map((skill) => skill.type),
-        ),
-      ];
+      return Object.keys(
+        bio.value.skills.groups,
+      ) as (keyof typeof bio.value.skills.list)[];
     });
 
-    const selectedSkillType = ref<string | null>(
-      allSkillTypes.value[0]!,
-    );
+    const selectedSkillType = ref<
+      keyof typeof bio.value.skills.list | null
+    >(allSkillTypes.value[0]!);
 
     const filteredSkills = computed(() => {
-      return bio.value.skills.filter((skill) => {
-        return skill.type === selectedSkillType.value;
-      });
+      return selectedSkillType.value
+        ? bio.value.skills.list[selectedSkillType.value]
+        : [];
     });
 
     return () => {
@@ -83,7 +81,7 @@ export default defineComponent({
                           },
                         )}
                       >
-                        {type}
+                        {bio.value.skills.groups[type]}
                       </button>
                     );
                   })}
@@ -162,10 +160,6 @@ export default defineComponent({
                           'transition-all duration-300',
                           'group-hover:scale-110',
                           'text-gray-300 group-hover:text-primary-300',
-                          {
-                            '*:fill-current':
-                              skill.inverted,
-                          },
                         )}
                       />
 
