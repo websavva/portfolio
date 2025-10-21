@@ -42,6 +42,14 @@ const treeItems = defineExplorerTree([
         },
       },
       {
+        id: 'extensions',
+        type: 'folder',
+        icon: {
+          closed: 'folder-plugin',
+          open: 'folder-plugin-open',
+        },
+      },
+      {
         id: 'packages',
         type: 'folder',
         icon: {

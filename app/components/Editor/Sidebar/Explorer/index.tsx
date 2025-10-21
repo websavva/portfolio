@@ -37,6 +37,7 @@ export default defineComponent({
       'src',
       'apps',
       'packages',
+      'extensions',
     ]);
 
     const isTreeOpened = ref(true);
