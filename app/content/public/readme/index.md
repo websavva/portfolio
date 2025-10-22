@@ -1,7 +1,7 @@
 ---
 title: 'Home page'
 description: 'Just home page'
-iconName: readme
+iconName: material-icon-theme:readme
 parentFolder: public
 repoUrl: https://github.com/websavva/portfolio
 previewUrl: https://websavva.dev

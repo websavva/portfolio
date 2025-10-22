@@ -53,6 +53,9 @@ export default defineComponent({
             {pageResponse.value ? (
               <ContentRenderer
                 value={pageResponse.value.data}
+                data={{
+                  dictionary: pageResponse.value.dictionary,
+                }}
               />
             ) : (
               <div>Page not found</div>

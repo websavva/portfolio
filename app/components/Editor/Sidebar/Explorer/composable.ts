@@ -9,52 +9,52 @@ const treeItems = defineExplorerTree([
     id: '.nuxt',
     type: 'folder',
     disabled: true,
-    icon: 'folder-nuxt',
+    icon: 'material-icon-theme:folder-nuxt',
   },
   {
     id: 'node_modules',
     type: 'folder',
     disabled: true,
-    icon: 'folder-node',
+    icon: 'material-icon-theme:folder-node',
   },
   {
     id: 'public',
     type: 'folder',
     icon: {
-      closed: 'folder-public',
-      open: 'folder-public-open',
+      closed: 'material-icon-theme:folder-public',
+      open: 'material-icon-theme:folder-public-open',
     },
   },
   {
     id: 'src',
     type: 'folder',
     icon: {
-      closed: 'folder-src',
-      open: 'folder-src-open',
+      closed: 'material-icon-theme:folder-src',
+      open: 'material-icon-theme:folder-src-open',
     },
     children: [
       {
         id: 'apps',
         type: 'folder',
         icon: {
-          closed: 'folder-app',
-          open: 'folder-app-open',
+          closed: 'material-icon-theme:folder-app',
+          open: 'material-icon-theme:folder-app-open',
         },
       },
       {
         id: 'extensions',
         type: 'folder',
         icon: {
-          closed: 'folder-plugin',
-          open: 'folder-plugin-open',
+          closed: 'material-icon-theme:folder-plugin',
+          open: 'material-icon-theme:folder-plugin-open',
         },
       },
       {
         id: 'packages',
         type: 'folder',
         icon: {
-          closed: 'folder-packages',
-          open: 'folder-packages-open',
+          closed: 'material-icon-theme:folder-packages',
+          open: 'material-icon-theme:folder-packages-open',
         },
       },
     ],
@@ -62,27 +62,27 @@ const treeItems = defineExplorerTree([
   {
     id: '.gitignore',
     type: 'file',
-    icon: 'git',
+    icon: 'material-icon-theme:git',
   },
   {
     id: 'nuxt.config.ts',
     type: 'file',
-    icon: 'nuxt',
+    icon: 'material-icon-theme:nuxt',
   },
   {
     id: 'package.json',
     type: 'file',
-    icon: 'nodejs',
+    icon: 'material-icon-theme:nodejs',
   },
   {
     id: 'pnpm-lock.yaml',
     type: 'file',
-    icon: 'pnpm',
+    icon: 'material-icon-theme:pnpm',
   },
   {
     id: 'tsconfig.json',
     type: 'file',
-    icon: 'tsconfig',
+    icon: 'material-icon-theme:tsconfig',
   },
 ]);
 

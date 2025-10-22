@@ -21,6 +21,7 @@
       "За годы работы я получил обширный опыт работы с Frontend и Backend технологиями."
     ]
   },
+  
   "jobExperience": {
     "title": "Опыт работы",
     "visitWebsite": "Посетить сайт",
@@ -32,6 +33,20 @@
       },
       {
         "text": "с 4 годами опыта работы",
+        "isHighlighted": false
+      }
+    ]
+  },
+
+  "works": {
+    "title": "Мои работы",
+    "subtitle": [
+      {
+        "text": "Приложения",
+        "isHighlighted": true
+      },
+      {
+        "text": "написанные с нуля",
         "isHighlighted": false
       }
     ]

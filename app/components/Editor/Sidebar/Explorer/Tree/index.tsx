@@ -126,7 +126,7 @@ const EditorSidebarExplorerTree = defineComponent({
                     />
 
                     <NuxtIcon
-                      name={`material-icon-theme:${iconName}`}
+                      name={iconName}
                       class={cn('size-5')}
                     />
 
@@ -176,7 +176,7 @@ const EditorSidebarExplorerTree = defineComponent({
                   {levelDelimiters}
 
                   <NuxtIcon
-                    name={`material-icon-theme:${item.icon}`}
+                    name={item.icon}
                     class={cn('size-5')}
                   />
 

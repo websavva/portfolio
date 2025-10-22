@@ -330,6 +330,14 @@ export const bioConfig = {
           name: 'pnpm',
           icon: 'logos:pnpm',
         },
+        {
+          name: 'Lighthouse',
+          icon: 'logos:lighthouse',
+        },
+        {
+          name: 'Bugsnag',
+          icon: 'logos:bugsnag',
+        },
       ],
       testing: [
         {

@@ -25,7 +25,7 @@ export default defineContentConfig({
         title: z.string(),
         iconName: z.string(),
         description: z.string(),
-        imageUrl: z.string().optional(),
+        imageUrl: z.string(),
         repoUrl: z.string().optional(),
         previewUrl: z.string().optional(),
         year: z.number().optional(),

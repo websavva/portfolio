@@ -48,7 +48,7 @@ export default defineComponent({
           )}
         >
           <NuxtIcon
-            name={`material-icon-theme:${props.iconName}`}
+            name={props.iconName}
             class={cn('size-5 mr-2')}
           />
 

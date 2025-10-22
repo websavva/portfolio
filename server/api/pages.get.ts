@@ -10,6 +10,7 @@ const fieldsToSelect = [
   'year',
   'path',
   'realPath',
+  'imageUrl',
 ] as const;
 
 export default defineEventHandler(async (event) => {

@@ -2,6 +2,7 @@ import {
   HomePageIntro,
   HomePageAboutMe,
   HomePageJobExperience,
+  HomePageWorks,
   HomePageSkills,
   HomePageContactMe,
 } from '#components';
@@ -31,6 +32,8 @@ export default defineComponent({
           <HomePageAboutMe />
 
           <HomePageJobExperience />
+
+          <HomePageWorks />
 
           <HomePageSkills />
 

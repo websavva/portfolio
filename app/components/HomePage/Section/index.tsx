@@ -16,18 +16,21 @@ type Color =
   | 'yellow'
   | 'gray'
   | 'white'
-  | 'primary';
+  | 'primary'
+  | 'indigo'
+  ;
 
 const colorsMap: Record<Color, string> = {
   green: '[--section-color:var(--color-green-400)]',
   blue: '[--section-color:var(--color-blue-400)]',
-  purple: '[--section-color:var(--color-purple-400)]',
-  red: '[--section-color:var(--color-red-400)]',
-  orange: '[--section-color:var(--color-orange-400)]',
+  purple: '[--section-color:var(--color-purple-300)]',
+  red: '[--section-color:var(--color-red-300)]',
+  orange: '[--section-color:var(--color-orange-300)]',
   yellow: '[--section-color:var(--color-yellow-200)]',
   gray: '[--section-color:var(--color-gray-400)]',
   white: '[--section-color:var(--color-white-400)]',
-  primary: '[--section-color:var(--color-primary)]',
+  primary: '[--section-color:var(--color-primary)]',  
+  indigo: '[--section-color:var(--color-indigo-400)]',
 };
 
 const HomePageSection = defineComponent({

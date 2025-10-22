@@ -1,8 +1,4 @@
-import {
-  HomePageSection,
-  SectionDelimiter,
-  NuxtIcon,
-} from '#components';
+import { HomePageSection, NuxtIcon } from '#components';
 
 export default defineComponent({
   name: 'HomePageSkills',

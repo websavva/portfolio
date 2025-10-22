@@ -29,6 +29,21 @@
       "Over the years, I've gained experience across both frontend and backend technologies."
     ]
   },
+
+  "works": {
+    "title": "Works",
+    "subtitle": [
+      {
+        "text": "Applications",
+        "isHighlighted": true
+      },
+      {
+        "text": "written from scratch",
+        "isHighlighted": false
+      }
+    ]
+  },
+
   "jobExperience": {
     "title": "Job Experience",
     "visitWebsite": "Visit the website",
