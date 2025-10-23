@@ -1,97 +1,99 @@
 {
-  "intro": {
-    "lookingForJob": "Ищу работу",
-    "description": "Разработчик с образованием в бизнесе и IT, имеющий опыт в Front-End и Back-End технологиях."
-  },
-  "aboutMe": {
-    "title": "Обо мне",
-    "languages": "Языки",
-    "subtitle": [
-      {
-        "text": "Разработчик современных",
-        "isHighlighted": false
-      },
-      {
-        "text": "Web-приложений",
-        "isHighlighted": true
-      }
-    ],
-    "description": [
-      "Я разработчик, способный решать сложные задачи простыми и качественными решениями.",
-      "За годы работы я получил обширный опыт работы с Frontend и Backend технологиями."
-    ]
-  },
-  
-  "jobExperience": {
-    "title": "Опыт работы",
-    "visitWebsite": "Посетить сайт",
-    "present": "По настоящее время",
-    "subtitle": [
-      {
-        "text": "Middle Frontend Разработчик",
-        "isHighlighted": true
-      },
-      {
-        "text": "с 4 годами опыта работы",
-        "isHighlighted": false
-      }
-    ]
-  },
-
-  "works": {
-    "title": "Мои работы",
-    "subtitle": [
-      {
-        "text": "Приложения",
-        "isHighlighted": true
-      },
-      {
-        "text": "написанные с нуля",
-        "isHighlighted": false
-      }
-    ]
-  },
-
-  "skills": {
-    "title": "Навыки",
-    "subtitle": [
-      {
-        "text": "Frontend",
-        "isHighlighted": true
-      },
-      {
-        "text": "и",
-        "isHighlighted": false
-      },
-      {
-        "text": "Backend",
-        "isHighlighted": true
-      },
-      {
-        "text": "технологии",
-        "isHighlighted": false
-      }
-    ]
-  },
-  "contactMe": {
-    "subtitle": [
-      {
-        "text": "Буду рад",
-        "isHighlighted": false
-      },
-      {
-        "text": "пообщаться",
-        "isHighlighted": true
-      }
-    ],
-    "labels": {
-      "name": "Имя",
-      "email": "Email",
-      "company": "Компания",
-      "message": "Сообщение"
+  "content": {
+    "intro": {
+      "lookingForJob": "Ищу работу",
+      "description": "Разработчик с образованием в бизнесе и IT, имеющий опыт в Front-End и Back-End технологиях."
     },
-    "successMessage": "Сообщение отправлено успешно!",
-    "errorMessage": "Не удалось отправить сообщение. Пожалуйста, попробуйте снова.",
-    "submit": "Отправить"
+    "aboutMe": {
+      "title": "Обо мне",
+      "languages": "Языки",
+      "subtitle": [
+        {
+          "text": "Разработчик современных",
+          "isHighlighted": false
+        },
+        {
+          "text": "Web-приложений",
+          "isHighlighted": true
+        }
+      ],
+      "description": [
+        "Я разработчик, способный решать сложные задачи простыми и качественными решениями.",
+        "За годы работы я получил обширный опыт работы с Frontend и Backend технологиями."
+      ]
+    },
+
+    "jobExperience": {
+      "title": "Опыт работы",
+      "visitWebsite": "Посетить сайт",
+      "present": "По настоящее время",
+      "subtitle": [
+        {
+          "text": "Middle Frontend Разработчик",
+          "isHighlighted": true
+        },
+        {
+          "text": "с 4 годами опыта работы",
+          "isHighlighted": false
+        }
+      ]
+    },
+
+    "works": {
+      "title": "Мои работы",
+      "subtitle": [
+        {
+          "text": "Приложения",
+          "isHighlighted": true
+        },
+        {
+          "text": "написанные с нуля",
+          "isHighlighted": false
+        }
+      ]
+    },
+
+    "skills": {
+      "title": "Навыки",
+      "subtitle": [
+        {
+          "text": "Frontend",
+          "isHighlighted": true
+        },
+        {
+          "text": "и",
+          "isHighlighted": false
+        },
+        {
+          "text": "Backend",
+          "isHighlighted": true
+        },
+        {
+          "text": "технологии",
+          "isHighlighted": false
+        }
+      ]
+    },
+    "contactMe": {
+      "subtitle": [
+        {
+          "text": "Буду рад",
+          "isHighlighted": false
+        },
+        {
+          "text": "пообщаться",
+          "isHighlighted": true
+        }
+      ],
+      "labels": {
+        "name": "Имя",
+        "email": "Email",
+        "company": "Компания",
+        "message": "Сообщение"
+      },
+      "successMessage": "Сообщение отправлено успешно!",
+      "errorMessage": "Не удалось отправить сообщение. Пожалуйста, попробуйте снова.",
+      "submit": "Отправить"
+    }
   }
 }

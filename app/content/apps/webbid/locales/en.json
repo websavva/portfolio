@@ -1,6 +1,8 @@
 {
-  "hero": {
-    "title": "Shortqix",
-    "description": "Shortqix is a platform for creating and sharing short videos."
+  "content": {
+    "hero": {
+      "title": "WebBid",
+      "description": "WebBid is a digital marketplace for buying and selling various products."
+    }
   }
 }

@@ -17,18 +17,18 @@ export default defineComponent({
   setup(props) {
     const bio = useBio();
 
-    const dictionary = useCurrentPageDictionary();
+    const content = useCurrentPageContent();
 
     return () => {
       return (
         <HomePageSection
           class={props.class}
-          subtitle={dictionary.value.aboutMe.subtitle}
+          subtitle={content.value.aboutMe.subtitle}
           iconName="codicon:account"
           color="green"
         >
           {{
-            title: () => dictionary.value.aboutMe.title,
+            title: () => content.value.aboutMe.title,
             default: () => (
               <div>
                 <div
@@ -48,7 +48,7 @@ export default defineComponent({
                     </HomePageSection.Highlight>
 
                     {(
-                      dictionary.value.aboutMe
+                      content.value.aboutMe
                         .description as string[]
                     ).map((description, index) => (
                       <p
@@ -89,7 +89,7 @@ export default defineComponent({
                           'pl-2 border-l-2 border-current',
                         )}
                       >
-                        {dictionary.value.aboutMe.languages}
+                        {content.value.aboutMe.languages}
                       </HomePageSection.Highlight>
 
                       <ul

@@ -18,7 +18,7 @@ export default defineComponent({
   setup(props) {
     const bio = useBio();
 
-    const dictionary = useCurrentPageDictionary();
+    const content = useCurrentPageContent();
 
     return () => {
       return (
@@ -71,7 +71,7 @@ export default defineComponent({
               )}
             >
               <div class={cn('flex items-baseline')}>
-                {dictionary.value.intro.lookingForJob}
+                {content.value.intro.lookingForJob}
 
                 <span
                   class={cn(
@@ -92,7 +92,7 @@ export default defineComponent({
             </div>
 
             <p class={cn('mt-5 max-w-2/4 relative z-10')}>
-              {dictionary.value.intro.description}
+              {content.value.intro.description}
             </p>
 
             <Contacts class={cn('mt-5 relative z-10')} />

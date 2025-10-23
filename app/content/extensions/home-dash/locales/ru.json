@@ -1,6 +1,9 @@
 {
-  "hero": {
-    "title": "Shortqix",
-    "description": "Shortqix - это платформа для сокращения ссылок."
+  "description": "Chrome расширение для управление и быстрого доступа к сохраненным ссылкам",
+  "content": {
+    "hero": {
+      "title": "Shortqix",
+      "description": "HomeDash - это Chrome Extension для улучшенного опыта новой вкладки."
+    }
   }
 }

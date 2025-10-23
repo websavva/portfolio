@@ -1,3 +1,3 @@
 export default defineEventHandler((event) => {
-  return getAllPages(event);
+  return getPage(event);
 });

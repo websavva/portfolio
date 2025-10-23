@@ -11,10 +11,8 @@ export default defineComponent({
   },
 
   setup(props) {
-    const { locale } = useI18n();
-
     const bio = useBio();
-    const dictionary = useCurrentPageDictionary();
+    const content = useCurrentPageContent();
 
     const allSkillTypes = computed(() => {
       return Object.keys(
@@ -38,10 +36,10 @@ export default defineComponent({
           class={props.class}
           iconName="codicon:book"
           color="yellow"
-          subtitle={dictionary.value.skills.subtitle}
+          subtitle={content.value.skills.subtitle}
         >
           {{
-            title: () => dictionary.value.skills.title,
+            title: () => content.value.skills.title,
             default: () => (
               <div class={cn('flex flex-col gap-8')}>
                 {/* Skill Type Selector */}

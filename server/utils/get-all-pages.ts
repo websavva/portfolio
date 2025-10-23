@@ -1,0 +1,58 @@
+import { type H3Event, getQuery } from 'h3';
+import { queryCollection } from '@nuxt/content/server';
+
+import {
+  getPageSelectionParamsFromQuery,
+  getPageDictionaryPath,
+} from './common';
+
+import type { Page } from '#server/types';
+
+export const fieldsToSelect = [
+  'id',
+  'title',
+  'iconName',
+  'repoUrl',
+  'description',
+  'previewUrl',
+  'date',
+  'path',
+  'realPath',
+  'imageUrl',
+  'component',
+] as const;
+
+export async function getAllPages(event: H3Event) {
+  const { locale } = getPageSelectionParamsFromQuery(
+    getQuery(event),
+  );
+
+  const [allPages, allPageDictionaries] = await Promise.all(
+    [
+      queryCollection(event, 'pages')
+        .select(...fieldsToSelect)
+        .all(),
+      queryCollection(event, 'locales')
+        .select('stem', 'meta')
+        .all(),
+    ],
+  );
+
+  for (const page of allPages) {
+    const pageDictionary = allPageDictionaries.find(
+      (dictionary) =>
+        dictionary.stem ===
+        getPageDictionaryPath(page.path, locale),
+    );
+
+    Object.assign(
+      page,
+      (pageDictionary?.meta.body as Record<string, any>) ||
+        {},
+    );
+  }
+
+  return allPages as Array<
+    Pick<Page, (typeof fieldsToSelect)[number]>
+  >;
+}

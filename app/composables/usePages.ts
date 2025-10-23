@@ -1,15 +1,12 @@
 import type { InternalApi } from 'nitropack/types';
 
-export type Pages = InternalApi['/api/pages']['get'];
-
-export type Page = Pages[number];
-
 export const usePages = () => {
   const $nuxtApp = useNuxtApp();
 
   return computed({
     get: () => {
-      return $nuxtApp.payload.pages as Pages;
+      return $nuxtApp.payload
+        .pages as InternalApi['/api/pages']['get'];
     },
 
     set: (newVal) => {

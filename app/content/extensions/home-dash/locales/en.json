@@ -1,6 +1,8 @@
 {
-  "hero": {
-    "title": "Shortqix",
-    "description": "Shortqix is a platform for creating and sharing short videos."
+  "content": {
+    "hero": {
+      "title": "HomeDash",
+      "description": "HomeDash is a Chrome Extension for enhanced new tab experience."
+    }
   }
 }

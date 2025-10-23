@@ -33,6 +33,7 @@ export default defineNuxtConfig({
 
   alias: {
     '#config': resolve('config'),
+    '#server': resolve('server'),
   },
 
   typescript: {

@@ -16,7 +16,7 @@ export default defineComponent({
   },
 
   setup(props) {
-    const dictionary = useCurrentPageDictionary();
+    const content = useCurrentPageContent();
 
     const pages = usePages();
 
@@ -33,12 +33,12 @@ export default defineComponent({
       return (
         <HomePageSection
           class={props.class}
-          subtitle={dictionary.value.works.subtitle}
+          subtitle={content.value.works.subtitle}
           iconName="codicon:layers"
           color='indigo'
         >
           {{
-            title: () => dictionary.value.works.title,
+            title: () => content.value.works.title,
             default: () => (
               <ul
                 class={cn(
@@ -141,7 +141,7 @@ export default defineComponent({
                             {work.title}
                           </h3>
 
-                          {/* {work.description && (
+                          {work.description && (
                             <p
                               class={cn(
                                 'text-gray-400 leading-relaxed',
@@ -150,7 +150,7 @@ export default defineComponent({
                             >
                               {work.description}
                             </p>
-                          )} */}
+                          )}
                         </div>
                       </Card>
                     </NuxtLink>

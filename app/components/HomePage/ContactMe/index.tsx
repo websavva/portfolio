@@ -34,7 +34,7 @@ export default defineComponent({
   setup(props) {
     const $t = useI18nTranslation();
 
-    const dictionary = useCurrentPageDictionary();
+    const content = useCurrentPageContent();
 
     const form = ref(getDefaultForm());
 
@@ -78,7 +78,7 @@ export default defineComponent({
         });
 
         showToast(
-          dictionary.value.contactMe.successMessage,
+          content.value.contactMe.successMessage,
           'success',
         );
         form.value = getDefaultForm();
@@ -87,7 +87,7 @@ export default defineComponent({
 
         showToast(
           error.data?.message ||
-            dictionary.value.contactMe.errorMessage,
+            content.value.contactMe.errorMessage,
           'error',
         );
       } finally {
@@ -100,7 +100,7 @@ export default defineComponent({
         <HomePageSection
           iconName="codicon:mail"
           color="blue"
-          subtitle={dictionary.value.contactMe.subtitle}
+          subtitle={content.value.contactMe.subtitle}
           class={props.class}
         >
           {{
@@ -115,16 +115,14 @@ export default defineComponent({
                   <div class={cn('flex flex-col')}>
                     <HomePageContactMeInput
                       label={
-                        dictionary.value.contactMe.labels
-                          .name
+                        content.value.contactMe.labels.name
                       }
                       id="name"
                       v-model={form.value.name}
                     />
                     <HomePageContactMeInput
                       label={
-                        dictionary.value.contactMe.labels
-                          .email
+                        content.value.contactMe.labels.email
                       }
                       id="email"
                       type="email"
@@ -132,7 +130,7 @@ export default defineComponent({
                     />
                     <HomePageContactMeInput
                       label={
-                        dictionary.value.contactMe.labels
+                        content.value.contactMe.labels
                           .company
                       }
                       id="company"
@@ -141,7 +139,7 @@ export default defineComponent({
                     />
                     <HomePageContactMeInput
                       label={
-                        dictionary.value.contactMe.labels
+                        content.value.contactMe.labels
                           .message
                       }
                       id="message"
@@ -163,7 +161,7 @@ export default defineComponent({
                       'disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed',
                     )}
                   >
-                    {dictionary.value.contactMe.submit}
+                    {content.value.contactMe.submit}
                   </button>
                 </form>
 

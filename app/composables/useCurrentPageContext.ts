@@ -1,9 +1,7 @@
-import type { PagesCollectionItem } from '@nuxt/content';
+import type { InternalApi } from 'nitropack/types';
 
-export type CurrentPageContext = {
-  data: PagesCollectionItem;
-  dictionary: Record<string, any>;
-};
+export type CurrentPageContext =
+  InternalApi['/api/page']['get'];
 
 export const currentPageContextInjectionKey = Symbol(
   'currentPage',
@@ -22,8 +20,8 @@ export const useCurrentPageContext = () => {
   return inject(currentPageContextInjectionKey)!;
 };
 
-export const useCurrentPageDictionary = () => {
-  return computed(
-    () => useCurrentPageContext().value.dictionary,
-  );
+export const useCurrentPageContent = () => {
+  const context = useCurrentPageContext();
+
+  return computed(() => context.value.content);
 };

@@ -1,5 +1,14 @@
 import { Editor, ContentRenderer } from '#components';
 
+export const PAGES_COMPONENTS = {
+  HomePage: defineAsyncComponent(
+    () => import('@/components/HomePage'),
+  ),
+  ArticlePage: defineAsyncComponent(
+    () => import('@/components/ArticlePage'),
+  ),
+};
+
 export default defineComponent({
   async setup() {
     useHead({
@@ -15,34 +24,26 @@ export default defineComponent({
 
     provideCurrentPage(() => pageResponse.value!);
 
-    const { data: pageResponse } = await useAsyncData(
-      () => `${$route.path}-${locale.value}`,
-      async () => {
-        const data = await queryCollection('pages')
-          .orWhere((query) =>
-            query
-              .where('path', '=', $route.path)
-              .where('realPath', '=', $route.path),
-          )
-          .first();
+    const PageComponent = computed(() => {
+      return (
+        PAGES_COMPONENTS[
+          pageResponse.value
+            ?.component as keyof typeof PAGES_COMPONENTS
+        ] || PAGES_COMPONENTS.ArticlePage
+      );
+    });
 
-        if (!data) {
-          return null;
-        }
+    const pageQuery = computed(() => {
+      return {
+        path: $route.path,
+        locale: locale.value,
+      };
+    });
 
-        const localePath =
-          `${data.path}/locales/${locale.value}`.replace(
-            /^\//,
-            '',
-          );
-
-        const dictionary = await queryCollection('locales')
-          .where('stem', '=', localePath)
-          .select('meta')
-          .first()
-          .then((res) => res?.meta.body);
-
-        return { data, dictionary } as CurrentPageContext;
+    const { data: pageResponse } = await useFetch(
+      '/api/page',
+      {
+        query: pageQuery,
       },
     );
 
@@ -51,12 +52,7 @@ export default defineComponent({
         <Editor>
           <div>
             {pageResponse.value ? (
-              <ContentRenderer
-                value={pageResponse.value.data}
-                data={{
-                  dictionary: pageResponse.value.dictionary,
-                }}
-              />
+              <PageComponent.value />
             ) : (
               <div>Page not found</div>
             )}

@@ -18,7 +18,7 @@ export default defineComponent({
     const { locale } = useI18n();
 
     const bio = useBio();
-    const dictionary = useCurrentPageDictionary();
+    const content = useCurrentPageContent();
 
     return () => {
       return (
@@ -26,11 +26,10 @@ export default defineComponent({
           class={props.class}
           iconName="codicon:briefcase"
           color="primary"
-          subtitle={dictionary.value.jobExperience.subtitle}
+          subtitle={content.value.jobExperience.subtitle}
         >
           {{
-            title: () =>
-              dictionary.value.jobExperience.title,
+            title: () => content.value.jobExperience.title,
             default: () => (
               <ul
                 class={cn(
@@ -72,8 +71,8 @@ export default defineComponent({
                                   job.timerange.end,
                                   locale.value,
                                 )
-                              : dictionary.value
-                                  .jobExperience.present}
+                              : content.value.jobExperience
+                                  .present}
                           </span>
                           <img
                             src={job.companyImageUrl}
@@ -130,7 +129,7 @@ export default defineComponent({
                             />
 
                             {
-                              dictionary.value.jobExperience
+                              content.value.jobExperience
                                 .visitWebsite
                             }
                           </a>

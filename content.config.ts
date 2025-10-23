@@ -15,22 +15,22 @@ export default defineContentConfig({
       // Load every file inside the `content` directory
       source: [
         {
-          include: '**/*.md',
+          include: '**/*.yaml',
           cwd: resolve('app/content'),
         },
       ],
 
       schema: z.object({
-        id: z.string().optional(),
         title: z.string(),
-        iconName: z.string(),
         description: z.string(),
+        iconName: z.string(),
         imageUrl: z.string(),
-        repoUrl: z.string().optional(),
-        previewUrl: z.string().optional(),
-        year: z.number().optional(),
+        repoUrl: z.string(),
+        previewUrl: z.string(),
+        date: z.string().date(),
         path: z.string(),
         realPath: z.string().optional(),
+        component: z.string().optional(),
       }),
     }),
 

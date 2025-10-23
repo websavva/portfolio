@@ -1,6 +1,9 @@
 {
-  "hero": {
-    "title": "Shortqix",
-    "description": "Shortqix - это платформа для сокращения ссылок."
+  "description": "Простой и быстрый URL-shortener для длинных ссылок",
+  "content": {
+    "hero": {
+      "title": "Shortqix",
+      "description": "Shortqix - это платформа для сокращения ссылок."
+    }
   }
 }

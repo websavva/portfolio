@@ -1,13 +1,7 @@
----
-id: shortqix
 title: 'Shortqix'
-description: 'URL-Shortener'
+description: Simple and fast URL-shortener for your links
 iconName: material-icon-theme:nuxt
 imageUrl: https://sqix.pro/og.png
 repoUrl: https://github.com/websavva/shortqix
 previewUrl: https://sqix.pro
-year: 2025
----
-
-
-# {{ $doc.title }}
+date: 2025-09-25
