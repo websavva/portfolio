@@ -1,8 +1,29 @@
 {
-  "content": {
-    "hero": {
-      "title": "WebBid",
-      "description": "WebBid is a digital marketplace for buying and selling various products."
+  "content": [
+    {
+      "tag": "div",
+      "children": [
+        {
+          "tag": "p",
+          "children": ["WebBid is a comprehensive digital marketplace platform built with modern web technologies. It enables users to buy and sell digital products like icon sets, wallpapers, and other digital assets through a secure Stripe payment system."]
+        },
+        {
+          "tag": "p",
+          "children": ["The platform features Stripe API integration for secure payments, email-based authentication and authorization system, comprehensive product catalog with search and filtering capabilities, fully responsive design for all devices, persistent shopping cart functionality, and an admin panel powered by Payload CMS."]
+        },
+        {
+          "tag": "p",
+          "children": ["Built with a robust technology stack including Next.js for the frontend with ShadCN UI components and Tailwind CSS styling, Payload CMS for headless content management, tRPC for end-to-end typesafe APIs, PostgreSQL database, and Express.js backend framework."]
+        },
+        {
+          "tag": "p",
+          "children": ["The project includes comprehensive development tools with Tsup for fast TypeScript bundling, Playwright for end-to-end testing, Vitest for unit testing, and ESLint for code quality. Deployment is handled through GitHub Actions with custom Docker Registry and Docker Swarm orchestration, supporting seamless updates with rollback capabilities."]
+        },
+        {
+          "tag": "p",
+          "children": ["WebBid represents a mature, production-ready application with a 96% TypeScript codebase, demonstrating modern React patterns, component-driven development, and optimal state management with Zustand."]
+        }
+      ]
     }
-  }
+  ]
 }

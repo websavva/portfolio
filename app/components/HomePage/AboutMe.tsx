@@ -136,7 +136,7 @@ export default defineComponent({
                     }}
                     class={cn('flex-1 ml-auto cursor-pointer')}
                   >
-                    <Card class={cn('flex')}>
+                    <Card class={cn('flex p-10')}>
                       <div
                         class={cn(
                           'size-28 bg-white rounded-3xl flex items-center justify-center shrink-0',

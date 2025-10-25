@@ -25,5 +25,15 @@
     }
   },
 
-  "contactMe": "Написать"
+  "contactMe": "Написать",
+
+  "article": {
+    "year": "Год",
+    "service": "Тип проекта",
+    "industry": "Сфера",
+    "technologies": "Технологии",
+    "visitWebsite": "Просмотреть сайт",
+    "overview": "Описание",
+    "visitRepository": "Исходный код"
+  }
 }

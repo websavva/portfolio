@@ -20,6 +20,10 @@ export const fieldsToSelect = [
   'realPath',
   'imageUrl',
   'component',
+  'service',
+  'technologies',
+  'service',
+  'industry',
 ] as const;
 
 export async function getAllPages(event: H3Event) {
@@ -52,7 +56,5 @@ export async function getAllPages(event: H3Event) {
     );
   }
 
-  return allPages as Array<
-    Pick<Page, (typeof fieldsToSelect)[number]>
-  >;
+  return allPages as Array<Page>;
 }

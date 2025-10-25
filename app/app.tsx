@@ -1,4 +1,6 @@
-import { Editor, ContentRenderer } from '#components';
+import { Editor } from '#components';
+
+import type { Page } from '#server/types';
 
 export const PAGES_COMPONENTS = {
   HomePage: defineAsyncComponent(
@@ -22,7 +24,7 @@ export default defineComponent({
 
     const { locale } = useI18n();
 
-    provideCurrentPage(() => pageResponse.value!);
+    provideCurrentPage(() => pageResponse.value! as Page);
 
     const PageComponent = computed(() => {
       return (
@@ -52,7 +54,9 @@ export default defineComponent({
         <Editor>
           <div>
             {pageResponse.value ? (
-              <PageComponent.value />
+              <PageComponent.value
+                key={pageResponse.value?.id}
+              />
             ) : (
               <div>Page not found</div>
             )}

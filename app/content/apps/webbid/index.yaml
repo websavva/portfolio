@@ -1,7 +1,65 @@
 title: 'WebBid'
 iconName: material-icon-theme:next
-description: Digital marketplace for buying and selling various products
+description: Digital marketplace for buying and selling various virtual products
+service: Digital marketplace
+industry: E-commerce
 imageUrl: https://webbid.store/og.png
 repoUrl: https://github.com/websavva/webbid
 previewUrl: https://webbid.store
 date: 2024-11-01
+technologies:
+  - icon: logos:typescript-icon
+    name: TypeScript
+
+  - icon: material-icon-theme:react
+    name: React
+
+  - icon: material-icon-theme:next
+    name: Next.js
+
+  - icon: logos:tailwindcss-icon
+    name: Tailwind CSS
+
+  - icon: local:shadcn
+    name: Shadcn
+
+  - icon: local:zustand
+    name: Zustand
+
+  - icon: logos:postgresql
+    name: PostgreSQL
+    
+  - icon: logos:express  
+    name: Express.js
+    inverted: true
+
+  - icon: logos:trpc  
+    name: tRPC
+
+  - icon: logos:esbuild
+    name: Esbuild
+
+  - icon: logos:eslint
+    name: ESLint
+
+  - icon: logos:prettier
+    name: Prettier
+    
+  - icon: logos:playwright  
+    name: Playwright
+    
+  - icon: logos:vitest  
+    name: Vitest
+    
+  - icon: logos:nginx
+    name: Nginx
+  
+  - icon: logos:docker-icon  
+    name: Docker
+
+  - icon: logos:github-actions  
+    name: GitHub Actions
+
+  - icon: logos:stripe  
+    name: Stripe
+    

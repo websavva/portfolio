@@ -26,3 +26,73 @@
 ::-webkit-scrollbar-thumb {
   @apply bg-editor-background-secondary;
 }
+
+/* Markdown Content Rendering */
+.article-page-overview {
+  @apply text-editor-fg leading-relaxed;
+}
+
+.article-page-overview p {
+  @apply mb-4 last:mb-0;
+}
+
+.article-page-overview ul {
+  @apply mb-4 pl-6;
+}
+
+.article-page-overview ol {
+  @apply mb-4 pl-6;
+}
+
+.article-page-overview li {
+  @apply mb-2 last:mb-0;
+}
+
+.article-page-overview ul li {
+  @apply list-disc;
+}
+
+.article-page-overview ol li {
+  @apply list-decimal;
+}
+
+.article-page-overview blockquote {
+  @apply border-l-4 border-primary/30 pl-4 py-2 mb-4 italic text-editor-fg/80;
+}
+
+.article-page-overview code {
+  @apply bg-editor-background-secondary px-2 py-1 rounded text-sm font-mono;
+}
+
+.article-page-overview pre {
+  @apply bg-editor-background-secondary p-4 rounded-lg mb-4 overflow-x-auto;
+}
+
+.article-page-overview pre code {
+  @apply bg-transparent p-0;
+}
+
+.article-page-overview a {
+  @apply text-primary hover:text-primary/80 underline;
+}
+
+.article-page-overview img {
+  @apply max-w-full h-auto rounded-lg mb-4;
+}
+
+.article-page-overview table {
+  @apply w-full border-collapse mb-4;
+}
+
+.article-page-overview th,
+.article-page-overview td {
+  @apply border border-editor-border px-3 py-2 text-left;
+}
+
+.article-page-overview th {
+  @apply bg-editor-background-secondary font-semibold;
+}
+
+.article-page-overview hr {
+  @apply border-editor-border my-6;
+}

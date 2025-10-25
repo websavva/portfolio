@@ -12,7 +12,6 @@ export default defineNuxtPlugin({
     const localeFetch = useRequestFetch();
 
     async function loadPages(locale: I18nLocale) {
-      const localeFetch = useRequestFetch();
       const loadedPages = await localeFetch('/api/pages', {
         query: {
           locale,

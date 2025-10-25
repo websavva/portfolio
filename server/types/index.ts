@@ -14,6 +14,9 @@ export interface Page
     | 'imageUrl'
     | 'description'
     | 'component'
+    | 'service'
+    | 'technologies'
+    | 'industry'
   > {
-  content: Record<string, any>;
+  content: any;
 }

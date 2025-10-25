@@ -15,6 +15,12 @@ export default defineNuxtConfig({
   icon: {
     mode: 'svg',
     componentName: 'NuxtIcon',
+    customCollections: [
+      {
+        prefix: 'local',
+        dir: resolve('./app/icons'),
+      },
+    ],
     serverBundle: {
       collections: [
         'codicon',

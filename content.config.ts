@@ -31,6 +31,13 @@ export default defineContentConfig({
         path: z.string(),
         realPath: z.string().optional(),
         component: z.string().optional(),
+        industry: z.string(),
+        service: z.string(),
+        technologies: z.array(z.object({
+          icon: z.string(),
+          name: z.string(),
+          inverted: z.boolean().optional(),
+        })),
       }),
     }),
 

@@ -25,5 +25,16 @@
     }
   },
   
-  "contactMe": "Contact Me"
+  "contactMe": "Contact Me",
+
+  "article": {
+    "year": "Year",
+    "service": "Service",
+    "industry": "Industry",
+    "overview": "Overview",
+    "technologies": "Technologies",
+    "description": "Description",
+    "visitWebsite": "Live Preview",
+    "visitRepository": "Source code"
+  }
 }

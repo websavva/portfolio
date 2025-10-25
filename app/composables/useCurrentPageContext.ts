@@ -1,7 +1,6 @@
-import type { InternalApi } from 'nitropack/types';
+import type { Page } from '#server/types';
 
-export type CurrentPageContext =
-  InternalApi['/api/page']['get'];
+export type CurrentPageContext = Page;
 
 export const currentPageContextInjectionKey = Symbol(
   'currentPage',

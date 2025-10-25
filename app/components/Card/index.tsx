@@ -54,7 +54,7 @@ export default defineComponent({
         onMousemove={onMouseMove}
         style={style.value}
         class={cn(
-          'overflow-hidden p-6 sm:p-8 lg:p-12 relative rounded-2xl border border-editor-background-secondary hover:shadow-lg select-none hover:shadow-(color:--card-color)/50 [transition:box-shadow_300ms_ease-out]',
+          'overflow-hidden p-6 relative rounded-2xl border border-editor-background-secondary hover:shadow-lg select-none hover:shadow-(color:--card-color)/50 [transition:box-shadow_300ms_ease-out]',
           'before:content-[""] before:absolute before:inset-0 before:bg-gradient-to-r before:blur-lg before:opacity-0 hover:before:opacity-20 before:transition before:duration-700 before:from-[var(--card-color)] before:to-[var(--card-color)] before:pointer-events-none',
           'before:mask-[radial-gradient(calc(0.75*var(--card-width))_at_var(--card-mouse-x)_var(--card-mouse-y),var(--card-color),transparent)]',
           props.class,

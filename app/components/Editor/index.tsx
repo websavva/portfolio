@@ -15,6 +15,24 @@ export default defineComponent({
     },
   },
   setup(props, { slots }) {
+    const $router = useRouter();
+
+    const mainElRef =
+      useTemplateRef<HTMLDivElement>('main');
+
+    onMounted(() => {
+      $router.beforeEach((to, from) => {
+        if (to.path !== from.path) {
+          setTimeout(() => {
+            mainElRef.value?.scrollTo({
+              top: 0,
+              behavior: 'smooth',
+            });
+          }, 50);
+        }
+      });
+    });
+
     return () => {
       return (
         <div
@@ -37,9 +55,14 @@ export default defineComponent({
             <EditorSidebar class={cn('h-full')} />
 
             <div class={cn('flex flex-col flex-1 h-full')}>
-              <EditorTabsList class={cn('h-[var(--editor-body-tabs-list-height)]')} />
+              <EditorTabsList
+                class={cn(
+                  'h-[var(--editor-body-tabs-list-height)]',
+                )}
+              />
 
               <main
+                ref="main"
                 class={cn(
                   'break-words h-[var(--editor-body-content-height)] overflow-auto text-white',
                 )}
