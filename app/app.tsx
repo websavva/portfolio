@@ -1,4 +1,4 @@
-import { Editor } from '#components';
+import { Editor, PageHead } from '#components';
 
 import type { Page } from '#server/types';
 
@@ -65,6 +65,8 @@ export default defineComponent({
       return (
         <Editor>
           <div>
+            {pageResponse.value && <PageHead />}
+
             {pageResponse.value ? (
               <PageComponent.value
                 key={pageResponse.value?.id}
