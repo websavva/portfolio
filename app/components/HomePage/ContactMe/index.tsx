@@ -5,7 +5,7 @@ import {
   HomePageContactMeInput,
 } from '#components';
 
-import type { ContactDto } from '@@/server/dtos';
+import type { ContactDto } from '#server/dtos';
 
 const getDefaultForm = (): ContactDto => {
   return {
