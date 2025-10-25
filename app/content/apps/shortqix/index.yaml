@@ -1,7 +1,60 @@
 title: 'Shortqix'
 description: Simple and fast URL-shortener for your links
 iconName: material-icon-theme:nuxt
+industry: Social media
+service: URL shortening
 imageUrl: https://sqix.pro/og.png
 repoUrl: https://github.com/websavva/shortqix
 previewUrl: https://sqix.pro
 date: 2025-09-25
+technologies:
+  - icon: logos:typescript-icon
+    name: TypeScript
+
+  - icon: logos:nuxt-icon
+    name: Nuxt 4
+
+  - icon: logos:vue
+    name: Vue 3
+
+  - icon: logos:pinia
+    name: Pinia
+
+  - icon: logos:tailwindcss-icon
+    name: Tailwind CSS
+
+  - icon: local:shadcn
+    name: Shadcn
+  
+  - icon: logos:postgresql
+    name: PostgreSQL
+
+  - icon: logos:drizzle
+    name: Drizzle ORM
+
+  - icon: logos:socket-io
+    name: Socket.io
+  
+  - icon: local:nitro
+    name: Nitro
+
+  - icon: logos:eslint
+    name: ESLint
+
+  - icon: logos:prettier
+    name: Prettier
+    
+  - icon: logos:playwright  
+    name: Playwright
+    
+  - icon: logos:vitest  
+    name: Vitest
+    
+  - icon: logos:nginx
+    name: Nginx
+  
+  - icon: logos:docker-icon  
+    name: Docker
+
+  - icon: logos:github-actions  
+    name: GitHub Actions

@@ -1,8 +1,87 @@
 {
-  "content": {
-    "hero": {
-      "title": "Shortqix",
-      "description": "Shortqix is a platform for creating and sharing short videos."
+  "content": [
+    {
+      "tag": "p",
+      "children": [
+        "Shortqix is a URL shortening service built with Nuxt 4, Vue 3, and TypeScript. The application uses PostgreSQL with Drizzle ORM for data persistence, Nitro server for API endpoints, and Tailwind CSS for styling."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The frontend is built with Nuxt 4 and Vue 3 Composition API. Authentication uses magic links sent via Nodemailer with Vue Email templates. Real-time features are implemented with WebSocket connections, and the database schema is managed through Drizzle ORM migrations."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "Payment processing is handled through Bitcoin integration for premium subscriptions. The application generates QR codes for short links using a dedicated library, and analytics data is stored in PostgreSQL with real-time updates via WebSocket."
+      ]
+    },
+    {
+      "tag": "ul",
+      "children": [
+        {
+          "tag": "li",
+          "children": [
+            "Nuxt 4 with Vue 3 and TypeScript frontend"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "PostgreSQL database with Drizzle ORM"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Nitro server with H3 for API routes"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Magic link authentication via Nodemailer"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Bitcoin payment integration for subscriptions"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": ["WebSocket real-time updates"]
+        },
+        {
+          "tag": "li",
+          "children": ["Vue Email for transactional emails"]
+        },
+        {
+          "tag": "li",
+          "children": ["Tailwind CSS for styling"]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Docker containerization with Docker Compose"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "Testing is implemented with Vitest for unit tests and Playwright for end-to-end testing. The build process uses Tsup for TypeScript bundling, and deployment is handled through Docker with GitHub Actions CI/CD pipeline."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The codebase is 51.3% TypeScript, 46.3% Vue, with ESLint for code quality. Database migrations are automated, and the application supports both development and production environments with environment-specific configurations."
+      ]
     }
-  }
+  ]
 }

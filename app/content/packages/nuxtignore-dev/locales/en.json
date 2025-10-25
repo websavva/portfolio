@@ -1,8 +1,93 @@
 {
-  "content": {
-    "hero": {
-      "title": "NuxtIgnoreDev",
-      "description": "NuxtIgnoreDev is a tool for ignoring files in development."
+  "content": [
+    {
+      "tag": "p",
+      "children": [
+        "Nuxtignore Dev is a Nuxt module built with TypeScript that extends the functionality of .nuxtignore for development purposes only. The module uses a .nuxtignore.dev file, analogous to .env.dev, to selectively ignore pages and routes during development builds, helping developers work with large projects more efficiently."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The module is developed using TypeScript (81.8% of codebase) with Vue components (13.9%) and JavaScript (4.3%). It supports both Nuxt 2 and Nuxt 3 versions, providing backward compatibility and future-proofing for different project setups. The codebase follows modern development practices with automated releases and comprehensive testing."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The primary use case is optimizing development builds for large Nuxt applications with numerous pages. By allowing developers to specify which pages to ignore during development, the module significantly reduces build times and improves developer experience when working on specific features or sections of the application."
+      ]
+    },
+    {
+      "tag": "ul",
+      "children": [
+        {
+          "tag": "li",
+          "children": [
+            "TypeScript-based Nuxt module development"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Support for both Nuxt 2 and Nuxt 3"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Development-only page ignoring functionality"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Custom file path configuration"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Strict mode for error handling"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Pages extend hook integration"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Environment-based enabling/disabling"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "NPM package distribution"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Automated release management"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The module provides flexible configuration options including custom file paths, strict mode for error handling, and integration with Nuxt's pages:extend hook. It can be conditionally enabled based on environment variables and supports custom ignore file locations for different deployment scenarios."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The project uses pnpm workspaces for monorepo management with separate packages for core functionality and playground testing. Development workflow includes automated releases through GitHub Actions with release-please for version management, ensuring consistent and reliable package updates for the Nuxt ecosystem."
+      ]
     }
-  }
+  ]
 }

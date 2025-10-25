@@ -42,6 +42,18 @@ export default defineComponent({
       };
     });
 
+    watch(
+      () => $route.hash,
+      (newHash) => {
+        if (import.meta.server || !newHash) return;
+
+        scrollToElement(newHash.slice(1));
+      },
+      {
+        immediate: true,
+      },
+    );
+
     const { data: pageResponse } = await useFetch(
       '/api/page',
       {

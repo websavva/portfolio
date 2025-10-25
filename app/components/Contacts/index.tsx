@@ -15,6 +15,10 @@ export default defineComponent({
 
     const bio = useBio();
 
+    function onContactMeClick() {
+      scrollToElement('contact-form');
+    }
+
     return () => {
       return (
         <div
@@ -58,6 +62,7 @@ export default defineComponent({
                 'after:w-0 after:bg-current after:transition-all after:duration-300',
                 'hover:after:w-full',
               )}
+              onClick={onContactMeClick}
             >
               {$t('contactMe')}
 

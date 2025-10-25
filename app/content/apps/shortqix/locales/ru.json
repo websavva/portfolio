@@ -1,9 +1,90 @@
 {
   "description": "Простой и быстрый URL-shortener для длинных ссылок",
-  "content": {
-    "hero": {
-      "title": "Shortqix",
-      "description": "Shortqix - это платформа для сокращения ссылок."
+  "service": "Сокращение ссылок",
+  "industry": "Социальные сети",
+  "content": [
+    {
+      "tag": "p",
+      "children": [
+        "Shortqix — это сервис сокращения ссылок, построенный на Nuxt 4, Vue 3 и TypeScript. Приложение использует PostgreSQL с Drizzle ORM для хранения данных, Nitro сервер для API эндпоинтов и Tailwind CSS для стилизации."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "Фронтенд построен на Nuxt 4 и Vue 3 Composition API. Аутентификация использует магические ссылки, отправляемые через Nodemailer с шаблонами Vue Email. Функции реального времени реализованы через WebSocket соединения, а схема базы данных управляется через миграции Drizzle ORM."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "Обработка платежей осуществляется через интеграцию с Bitcoin для премиум подписок. Приложение генерирует QR-коды для коротких ссылок с помощью специальной библиотеки, а аналитические данные хранятся в PostgreSQL с обновлениями в реальном времени через WebSocket."
+      ]
+    },
+    {
+      "tag": "ul",
+      "children": [
+        {
+          "tag": "li",
+          "children": [
+            "Фронтенд на Nuxt 4 с Vue 3 и TypeScript"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "База данных PostgreSQL с Drizzle ORM"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Nitro сервер с H3 для API маршрутов"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Аутентификация через магические ссылки с Nodemailer"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Интеграция платежей Bitcoin для подписок"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": ["WebSocket обновления в реальном времени"]
+        },
+        {
+          "tag": "li",
+          "children": ["Vue Email для транзакционных писем"]
+        },
+        {
+          "tag": "li",
+          "children": ["Tailwind CSS для стилизации"]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Контейнеризация с Docker и Docker Compose"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "Тестирование реализовано с Vitest для модульных тестов и Playwright для end-to-end тестирования. Процесс сборки использует Tsup для бандлинга TypeScript, а развертывание осуществляется через Docker с CI/CD пайплайном GitHub Actions."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "Кодовая база состоит на 51.3% из TypeScript, на 46.3% из Vue, с ESLint для качества кода. Миграции базы данных автоматизированы, и приложение поддерживает как development, так и production окружения с конфигурациями для конкретных сред."
+      ]
     }
-  }
+  ]
 }

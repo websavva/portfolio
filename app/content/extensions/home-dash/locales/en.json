@@ -1,8 +1,93 @@
 {
-  "content": {
-    "hero": {
-      "title": "HomeDash",
-      "description": "HomeDash is a Chrome Extension for enhanced new tab experience."
+  "content": [
+    {
+      "tag": "p",
+      "children": [
+        "HomeDash is a Chrome extension built with React, TypeScript, and Vite.js that replaces the default Chrome new tab page with an organized bookmark management system. The extension provides a structured interface for managing bookmarks with groups and individual bookmark organization."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The extension is developed using React with TypeScript for type safety, Vite.js for fast development and building, and CSS Modules with Sass for styling. The project includes comprehensive testing with Vitest and follows modern development practices with ESLint for code quality."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The codebase is 93.4% TypeScript with 5.3% SCSS, demonstrating a strong focus on type safety and maintainable styling. The extension supports full CRUD operations for both bookmark groups and individual bookmarks, with drag-and-drop reordering functionality and responsive design for all screen sizes."
+      ]
+    },
+    {
+      "tag": "ul",
+      "children": [
+        {
+          "tag": "li",
+          "children": [
+            "React with TypeScript frontend"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Vite.js for build tooling and development"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "CSS Modules with Sass preprocessing"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Vitest for unit testing"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Chrome Extension Manifest V3"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Fully responsive design"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Drag-and-drop bookmark reordering"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Bookmark group management"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Chrome Web Store distribution"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The project uses multiple Vite configurations for different parts of the extension including background scripts, content scripts, and popup pages. Development workflow includes automated releases through GitHub Actions with release-please for version management and changelog generation."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The extension architecture separates concerns with dedicated Vite configs for background scripts (vite.background.config.ts), base configuration (vite.base.config.ts), and page-specific builds (vite.page.config.ts), enabling efficient development and optimized production builds."
+      ]
     }
-  }
+  ]
 }

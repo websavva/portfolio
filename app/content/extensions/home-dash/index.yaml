@@ -1,8 +1,35 @@
 title: HomeDash
 description: Chrome Extension for enhanced new tab experience
 iconName: material-icon-theme:react
-id: home-dash
+industry: Browser extensions
+service: Bookmark manager
 repoUrl: https://github.com/websavva/home-dash
 previewUrl: https://chromewebstore.google.com/detail/homedash-enhanced-new-tab/ndnbhanjlibkgnalfbojjmjlpnnedojf
 date: 2024-12-20
 imageUrl: /home-dash.png
+technologies:
+  - icon: logos:typescript-icon
+    name: TypeScript
+
+  - icon: logos:css-3
+    name: CSS Modules
+
+  - icon: logos:sass
+    name: Sass
+
+  - icon: logos:react
+    name: React
+
+  - icon: logos:vitejs
+    name: Vite
+
+  - icon: logos:eslint
+    name: ESLint
+
+  - icon: logos:prettier
+    name: Prettier
+    
+    name: Vitest
+  
+  - icon: logos:github-actions  
+    name: GitHub Actions

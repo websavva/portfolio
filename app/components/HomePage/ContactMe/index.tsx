@@ -108,6 +108,7 @@ export default defineComponent({
             default: () => (
               <>
                 <form
+                  id="contact-form"
                   onSubmit={withModifiers(onSubmit, [
                     'prevent',
                   ])}

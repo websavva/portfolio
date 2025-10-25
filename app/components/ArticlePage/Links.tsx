@@ -48,7 +48,7 @@ export default defineComponent({
               <Card
                 class={cn(
                   'group',
-                  'relative overflow-hidden',
+                  'relative overflow-hidden h-full',
                   'bg-editor-sidebar-bg/50 backdrop-blur-sm',
                   'border-1 border-editor-fg/20',
                   'rounded-xl p-10',
