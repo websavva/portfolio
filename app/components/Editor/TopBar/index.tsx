@@ -4,6 +4,12 @@ import {
   EditorTopBarLayoutActions,
   EditorTopBarWindowActions,
 } from '#components';
+import type { I18nLocale } from '#i18n';
+
+const I18N_NAMES: Record<I18nLocale, string> = {
+  en: process.env.WS_PUBLIC_BIO_FULL_NAME_EN!,
+  ru: process.env.WS_PUBLIC_BIO_FULL_NAME_RU!,
+};
 
 export default defineComponent({
   name: 'EditorTopBar',
@@ -16,6 +22,8 @@ export default defineComponent({
   },
 
   setup(props) {
+    const { locale } = useI18n();
+
     const $t = useI18nTranslation();
 
     return () => {
@@ -40,7 +48,9 @@ export default defineComponent({
               'flex-1 mx-2 flex justify-center items-center text-sm',
             )}
           >
-            {$t('topBar.title')}
+            {formatString($t('topBar.titleTemplate'), [
+              I18N_NAMES[locale.value],
+            ])}
           </div>
 
           <EditorTopBarLayoutActions

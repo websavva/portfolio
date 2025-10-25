@@ -42,7 +42,6 @@ export default defineNuxtModule<ModuleOptions>({
         return [
           `import type { ObjectKeyPaths } from '${typesPath}';`,
           `export * from '${typesPath}';`,
-          `import type { Ref, ComputedRef } from 'vue';`,
           `export type I18nDictionary = typeof import('${defaultLocalePath}');`,
           `export type I18nLocale = ${normalizedLocales
             .map(({ code }) => `'${code}'`)

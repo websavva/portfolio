@@ -1,7 +1,7 @@
 {
   "titleTemplate": "%s | WebSavva's Portfolio",
   "topBar": {
-    "title": "Savva Prokofev - Portfolio",
+    "titleTemplate": "%s - Portfolio",
     "menu": [
       "File",
       "Edit",
