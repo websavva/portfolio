@@ -24,6 +24,7 @@ export const fieldsToSelect = [
   'technologies',
   'service',
   'industry',
+  'priority',
 ] as const;
 
 export async function getAllPages(event: H3Event) {
@@ -35,6 +36,7 @@ export async function getAllPages(event: H3Event) {
     [
       queryCollection(event, 'pages')
         .select(...fieldsToSelect)
+        .order('priority', 'ASC')
         .all(),
       queryCollection(event, 'locales')
         .select('stem', 'meta')

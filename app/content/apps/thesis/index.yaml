@@ -1,0 +1,28 @@
+title: Thesis
+description: My thesis project for the Saint-Petersburg State University
+iconName: material-icon-theme:nuxt
+industry: Education
+service: Thesis
+imageUrl: https://websavva.github.io/thesis/og-image.jpg
+repoUrl: https://github.com/websavva/thesis
+previewUrl: https://websavva.github.io/thesis/
+date: 2023-08-01
+priority: 999
+technologies:
+  - icon: logos:typescript-icon
+    name: TypeScript
+
+  - icon: logos:nuxt-icon
+    name: Nuxt 3
+
+  - icon: logos:vue
+    name: Vue 3
+
+  - icon: material-icon-theme:stylus
+    name: Stylus
+
+  - icon: logos:chartjs
+    name: Chart.js
+
+  - icon: logos:github-actions  
+    name: GitHub Actions

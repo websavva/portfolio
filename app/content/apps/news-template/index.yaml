@@ -1,0 +1,25 @@
+title: News Template
+description: Comlex news template
+iconName: material-icon-theme:javascript
+industry: Media
+service: News
+imageUrl: /news-template.png
+repoUrl: https://github.com/websavva/news
+previewUrl: https://websavva.github.io/news/
+date: 2021-09-25
+priority: 999
+technologies:
+  - icon: logos:html-5
+    name: HTML5
+
+  - icon: logos:sass
+    name: Sass
+
+  - icon: logos:javascript
+    name: JavaScript
+
+  - icon: logos:babel
+    name: Babel
+
+  - icon: logos:webpack
+    name: Webpack

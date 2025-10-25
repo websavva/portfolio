@@ -1,0 +1,93 @@
+{
+  "content": [
+    {
+      "tag": "p",
+      "children": [
+        "Thesis Website is an interactive presentation website built with Nuxt.js to showcase academic research results in a user-friendly and engaging format. The project combines modern web technologies with data visualization to create an authentic and visually striking presentation of thesis findings."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The website is developed using Nuxt.js as the primary framework with JavaScript (74.8% of codebase), TypeScript (9.7%), Vue components (5.8%), HTML (4.9%), and Stylus (4.8%) for styling. The project integrates Reveal.js for creating interactive presentations and Chart.js for data visualization, providing a comprehensive platform for academic content presentation."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The core functionality includes an interactive SVG map of the Russian Federation, an economic dashboard displaying industry losses data, and an animated presentation system with vivid functionality. The website also provides access to the complete thesis text and reviews in a dedicated section, making it a comprehensive academic presentation platform."
+      ]
+    },
+    {
+      "tag": "ul",
+      "children": [
+        {
+          "tag": "li",
+          "children": [
+            "Nuxt.js full-stack application framework"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Reveal.js for interactive presentations"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Chart.js for data visualization"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Interactive SVG map of Russian Federation"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Economic dashboard with industry data"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Animated presentation functionality"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Thesis text and reviews section"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Stylus for CSS preprocessing"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "TypeScript for type safety"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The project structure includes dedicated directories for components, composables, modules, data, and static pages, demonstrating a well-organized codebase. The website leverages Nuxt.js features for server-side rendering, static site generation, and component-based architecture to deliver optimal performance and user experience."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The development workflow includes automated deployment through GitHub Actions, comprehensive project organization with separate directories for different concerns, and modern development practices with Prettier for code formatting and TypeScript for enhanced development experience. The project serves as both an academic presentation tool and a demonstration of modern web development capabilities."
+      ]
+    }
+  ]
+}

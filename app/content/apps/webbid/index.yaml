@@ -7,6 +7,7 @@ imageUrl: https://webbid.store/og.png
 repoUrl: https://github.com/websavva/webbid
 previewUrl: https://webbid.store
 date: 2024-11-01
+priority: 2
 technologies:
   - icon: logos:typescript-icon
     name: TypeScript

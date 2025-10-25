@@ -38,6 +38,7 @@ export default defineContentConfig({
           name: z.string(),
           inverted: z.boolean().optional(),
         })),
+        priority: z.number(),
       }),
     }),
 

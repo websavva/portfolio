@@ -1,0 +1,93 @@
+{
+  "content": [
+    {
+      "tag": "p",
+      "children": [
+        "News Website Template is a modern recreation of the HotMagazine template built with vanilla web technologies. While visually similar to the original 2015 template, this implementation features significant architectural improvements and modern CSS techniques for enhanced responsiveness and performance."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The project is developed using HTML (76.5% of codebase), SCSS (14.7%), JavaScript (8.5%), and CSS (0.3%) with Webpack for build tooling and Babel for JavaScript transpilation. The template focuses on custom implementations rather than external libraries, providing better control over functionality and performance optimization."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "Key improvements over the original template include custom carousel implementations developed from scratch with full customization and responsiveness support, modern CSS technologies like Flexbox and CSS Grid for complete responsive design, and optimized build process with Webpack for efficient asset bundling and code splitting."
+      ]
+    },
+    {
+      "tag": "ul",
+      "children": [
+        {
+          "tag": "li",
+          "children": [
+            "HTML5 semantic markup structure"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "SCSS for advanced CSS preprocessing"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Vanilla JavaScript for carousel functionality"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Webpack with Babel for build optimization"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Custom carousel implementations"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Flexbox and CSS Grid layouts"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Fully responsive design"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "PostCSS configuration for CSS processing"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Modern CSS architecture"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The template architecture emphasizes custom development over library dependencies, ensuring lightweight performance and full control over interactive elements. All carousels are built from scratch with comprehensive customization options and mobile-first responsive design principles."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The development workflow includes Webpack configuration for asset bundling, PostCSS for CSS processing and optimization, and modern JavaScript features with Babel transpilation. The project serves as both a functional news website template and a demonstration of modern vanilla web development practices without external framework dependencies."
+      ]
+    }
+  ]
+}

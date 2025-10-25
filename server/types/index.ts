@@ -17,6 +17,7 @@ export interface Page
     | 'service'
     | 'technologies'
     | 'industry'
+    | 'priority'
   > {
   content: any;
 }
