@@ -1,5 +1,6 @@
-title: 'Home page'
-description: 'Just home page'
+title: Home page
+fileName: README.md
+description: WebSavva's portfolio - modern portfolio website showcasing full-stack development expertise with interactive design and comprehensive project showcase
 iconName: material-icon-theme:readme
 parentFolder: public
 repoUrl: https://github.com/websavva/portfolio

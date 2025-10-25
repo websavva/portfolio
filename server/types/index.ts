@@ -18,6 +18,7 @@ export interface Page
     | 'technologies'
     | 'industry'
     | 'priority'
+    | 'fileName'
   > {
   content: any;
 }

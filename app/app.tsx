@@ -13,12 +13,15 @@ export const PAGES_COMPONENTS = {
 
 export default defineComponent({
   async setup() {
-    useHead({
+    const $t = useI18nTranslation();
+
+    useHead(() => ({
+      titleTemplate: $t('titleTemplate'),
       htmlAttrs: {
         class:
           'bg-editor-background text-white text-[16px] overflow-hidden',
       },
-    });
+    }));
 
     const $route = useRoute();
 

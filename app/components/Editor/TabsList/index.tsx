@@ -31,11 +31,17 @@ export default defineComponent({
             page.realPath === historyPath,
         )!;
 
-        const { id, title, iconName, path, realPath } =
-          page || {};
+        const {
+          id,
+          title,
+          iconName,
+          path,
+          realPath,
+          fileName,
+        } = page || {};
 
         return {
-          name: title,
+          name: fileName || title,
           iconName,
           path: realPath || path,
           isActive: historyPath === $route.path,

@@ -1,4 +1,6 @@
 {
+  "titleTemplate": "%s | Портфолио WebSavva",
+  
   "topBar": {
     "title": "Савва Прокофьев - Портфолио",
     "menu": [

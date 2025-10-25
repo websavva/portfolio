@@ -25,6 +25,7 @@ export const fieldsToSelect = [
   'service',
   'industry',
   'priority',
+  'fileName',
 ] as const;
 
 export async function getAllPages(event: H3Event) {

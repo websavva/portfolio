@@ -1,3 +1,5 @@
+import type { InternalApi } from 'nitropack/types';
+
 import {
   defineExplorerTree,
   type ExplorerTreeFolderItem,
@@ -87,11 +89,11 @@ const treeItems = defineExplorerTree([
 ]);
 
 function transformPageToTreeItem(
-  page: Page,
+  page: InternalApi['/api/pages']['get'][number],
 ): ExplorerTreeFileItem {
   return {
     id: page.id || page.path,
-    name: page.title,
+    name: page.fileName || page.title,
     type: 'file',
     icon: page.iconName,
     path: page.realPath || page.path,
@@ -102,7 +104,7 @@ function addPagesToTree(
   treeItems: Array<
     ExplorerTreeFileItem | ExplorerTreeFolderItem
   >,
-  allPages: Pages,
+  allPages: InternalApi['/api/pages']['get'],
 ): Array<ExplorerTreeFileItem | ExplorerTreeFolderItem> {
   return treeItems.map((treeItem) => {
     if (treeItem.type === 'folder') {

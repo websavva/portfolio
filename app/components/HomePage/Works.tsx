@@ -26,7 +26,7 @@ export default defineComponent({
           ({ path, realPath }) =>
             path !== '/' && realPath !== '/',
         )
-        .slice(0, 5);
+        .slice(0, 4);
     });
 
     return () => {
