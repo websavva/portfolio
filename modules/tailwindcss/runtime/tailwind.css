@@ -19,8 +19,10 @@
   width: var(--scrollbar-width, 10px);
 }
 
-svg {
-  transform: translateZ(0);
+@layer base {
+  svg {
+    transform: translateZ(0);
+  }
 }
 
 .hide-scrollbar {

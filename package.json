@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^3.7.1",
+    "accept-language": "^3.0.20",
     "clsx": "^2.1.1",
     "lodash-es": "^4.17.21",
     "nuxt": "4.1.3",

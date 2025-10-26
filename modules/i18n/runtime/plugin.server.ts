@@ -1,12 +1,17 @@
 import { defineNuxtPlugin, useRequestEvent } from '#app';
-import { getRequestIP, type H3Event } from 'h3';
+import {
+  getRequestIP,
+  type H3Event,
+  getRequestHeader,
+  getRequestHost,
+} from 'h3';
 import ip3country from 'ip3country';
+import acceptLanguage from 'accept-language';
 // @ts-expect-error missing types
 import { getCountryLanguages } from 'country-language';
 
 import {
   type I18nLocale,
-  type I18nDictionary,
   i18nLocalesLoaders,
   defaultLocale,
   availableLocales,
@@ -15,49 +20,78 @@ import {
 import { createI18nContext } from './imports';
 
 ip3country.init();
+acceptLanguage.languages(availableLocales);
 
-async function loadInitialLocale(
-  event?: H3Event,
-): Promise<I18nLocale> {
+const isAvailableLocale = (
+  locale: unknown,
+): locale is I18nLocale =>
+  availableLocales.includes(locale as I18nLocale);
+
+async function loadInitialLocale(event?: H3Event) {
   if (!event) return defaultLocale;
 
-  const ipAddress = getRequestIP(event!, {
-    xForwardedFor: true,
+  const host = getRequestHost(event!, {
+    xForwardedHost: true,
   });
 
-  if (!ipAddress) return defaultLocale;
+  const [localeFromHost] = host.split('.');
 
-  const countryCode = ip3country.lookupStr(ipAddress);
+  if (isAvailableLocale(localeFromHost)) {
+    return localeFromHost;
+  }
 
-  if (!countryCode) return defaultLocale;
-
-  const locale = await new Promise<I18nLocale | null>(
-    (resolve) => {
-      getCountryLanguages(
-        countryCode,
-        (err: any, languages: any) => {
-          if (err) {
-            console.error(err);
-
-            resolve(null);
-          } else {
-            const countryLanguageCodes = languages.map(
-              (language: any) => language.iso639_1,
-            );
-
-            const countryLocale =
-              availableLocales.find((locale) =>
-                countryLanguageCodes.includes(locale),
-              ) || null;
-
-            resolve(countryLocale as I18nLocale | null);
-          }
-        },
-      );
-    },
+  const acceptLanguageHeaderValue = getRequestHeader(
+    event!,
+    'accept-language',
   );
 
-  return locale || defaultLocale;
+  if (acceptLanguageHeaderValue) {
+    const localeFromAcceptLanguage = acceptLanguage.get(
+      acceptLanguageHeaderValue,
+    );
+
+    return isAvailableLocale(localeFromAcceptLanguage)
+      ? localeFromAcceptLanguage
+      : defaultLocale;
+  } else {
+    const ipAddress = getRequestIP(event!, {
+      xForwardedFor: true,
+    });
+
+    if (!ipAddress) return defaultLocale;
+
+    const countryCode = ip3country.lookupStr(ipAddress);
+
+    if (!countryCode) return defaultLocale;
+
+    const locale = await new Promise<I18nLocale | null>(
+      (resolve) => {
+        getCountryLanguages(
+          countryCode,
+          (err: any, languages: any) => {
+            if (err) {
+              console.error(err);
+
+              resolve(null);
+            } else {
+              const countryLanguageCodes = languages.map(
+                (language: any) => language.iso639_1,
+              );
+
+              const countryLocale =
+                availableLocales.find((locale) =>
+                  countryLanguageCodes.includes(locale),
+                ) || null;
+
+              resolve(countryLocale as I18nLocale | null);
+            }
+          },
+        );
+      },
+    );
+
+    return locale || defaultLocale;
+  }
 }
 
 export default defineNuxtPlugin(async (nuxtApp) => {

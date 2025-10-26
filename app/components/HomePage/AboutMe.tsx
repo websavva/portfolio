@@ -73,7 +73,7 @@ export default defineComponent({
                 </div>
 
                 <div
-                  class={cn('mt-15 flex justify-between max-lg:flex-col-reverse max-xs:flex-col')}
+                  class={cn('mt-15 flex justify-between max-xl:flex-col-reverse max-xs:flex-col')}
                 >
                   <div class={cn('flex-1')}>
                     <motion.div
@@ -95,8 +95,8 @@ export default defineComponent({
 
                       <ul
                         class={cn(
-                          'mt-3 flex items-center gap-5 border-b border-t border-editor-background-secondary py-3 text-lg w-max max-lg:w-full',
-                          'max-lg:flex-col max-lg:items-start'
+                          'mt-3 flex items-center gap-5 border-b border-t border-editor-background-secondary py-3 text-lg w-max max-xl:w-full',
+                          'max-xl:flex-col max-xl:items-start'
                         )}
                       >
                         {bio.value.languages.map(
@@ -137,7 +137,7 @@ export default defineComponent({
                       margin: '0px 0px -150px',
                       once: true,
                     }}
-                    class={cn('flex-1 ml-auto cursor-pointer max-lg:ml-0 max-lg:mb-10 max-xs:mb-0 max-xs:mt-10')}
+                    class={cn('flex-1 ml-auto cursor-pointer max-xl:ml-0 max-xl:mb-10 max-xs:mb-0 max-xs:mt-10')}
                   >
                     <Card class={cn('flex p-10 max-sm:p-5 max-xs:flex-col max-xs:items-center max-xs:py-8')}>
                       <div

@@ -35,14 +35,19 @@ export default defineComponent({
             props.class,
           )}
         >
-          <NuxtIcon
-            name="codicon:loading"
-            class={cn(
-              'size-12',
-              'text-primary animate-spin',
-              'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2',
-            )}
-          />
+          <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <span
+              class={cn(
+                'size-12 block',
+                'text-primary animate-spin',
+              )}
+            >
+              <NuxtIcon
+                name="codicon:loading"
+                class="size-full"
+              />
+            </span>
+          </div>
 
           <img
             src={page.value.imageUrl}
