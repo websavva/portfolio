@@ -1,4 +1,8 @@
-import { Editor, PageHead } from '#components';
+import {
+  TheApp,
+  PageHead,
+  ErrorPageContent,
+} from '#components';
 
 import type { Page } from '#server/types';
 
@@ -13,16 +17,6 @@ export const PAGES_COMPONENTS = {
 
 export default defineComponent({
   async setup() {
-    const $t = useI18nTranslation();
-
-    useHead(() => ({
-      titleTemplate: $t('titleTemplate'),
-      htmlAttrs: {
-        class:
-          'bg-editor-background overflow-hidden text-white [--root-font-size:16px] max-3xl:[--root-font-size:12px] text-(length:--root-font-size)',
-      },
-    }));
-
     const $route = useRoute();
 
     const { locale } = useI18n();
@@ -57,16 +51,14 @@ export default defineComponent({
       },
     );
 
-    const { data: pageResponse } = await useFetch(
-      '/api/page',
-      {
+    const { data: pageResponse, error: pageError } =
+      await useFetch('/api/page', {
         query: pageQuery,
-      },
-    );
+      });
 
     return () => {
       return (
-        <Editor>
+        <TheApp>
           <div>
             {pageResponse.value && <PageHead />}
 
@@ -75,10 +67,12 @@ export default defineComponent({
                 key={pageResponse.value?.id}
               />
             ) : (
-              <div>Page not found</div>
+              <ErrorPageContent
+                error={pageError.value as any}
+              />
             )}
           </div>
-        </Editor>
+        </TheApp>
       );
     };
   },

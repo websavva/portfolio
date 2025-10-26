@@ -21,7 +21,13 @@ export default defineComponent({
 
     const allPages = usePages();
 
-    const historyPaths = ref<string[]>([$route.path]);
+    const { path: initialPath } = $route;
+
+    const initialHistoryPaths = doesPathExist(initialPath)
+      ? [initialPath]
+      : [];
+
+    const historyPaths = ref<string[]>(initialHistoryPaths);
 
     const tabs = computed(() => {
       return historyPaths.value.map((historyPath) => {
@@ -32,7 +38,6 @@ export default defineComponent({
         )!;
 
         const {
-          id,
           title,
           iconName,
           path,
@@ -57,6 +62,13 @@ export default defineComponent({
         }
       },
     );
+
+    function doesPathExist(path: string) {
+      return allPages.value.some(
+        (page) =>
+          page.path === path || page.realPath === path,
+      );
+    }
 
     function onHistoryPathDelete(path: string) {
       if (historyPaths.value.length <= 1) return;
@@ -83,7 +95,11 @@ export default defineComponent({
             props.class,
           )}
         >
-          <div class={cn('flex items-center hide-scrollbar max-w-full overflow-x-auto')}>
+          <div
+            class={cn(
+              'flex items-center hide-scrollbar max-w-full overflow-x-auto',
+            )}
+          >
             {tabs.value.map((tab) => {
               return (
                 <EditorTabsListItem
@@ -98,7 +114,11 @@ export default defineComponent({
             })}
           </div>
 
-          <div class={cn('flex items-center space-x-1 max-xs:hidden')}>
+          <div
+            class={cn(
+              'flex items-center space-x-1 max-xs:hidden',
+            )}
+          >
             {actionIconsNames.map((iconName) => {
               return (
                 <button
