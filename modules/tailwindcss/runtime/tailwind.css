@@ -7,25 +7,41 @@
   --color-editor-background-secondary: #31364d;
   --color-primary: #4ccdde;
   --color-primary-muted: #3d64a1;
+
+  --breakpoint-2xs: 25rem;
+  --breakpoint-xs: 31.25rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 110rem;
+  --breakpoint-4xl: 120rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: var(--scrollbar-width, 10px);
+}
+
+svg {
+  transform: translateZ(0);
+}
+
+.hide-scrollbar {
+  scrollbar-width: none !important;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  width: 0;
-}
-
-::-webkit-scrollbar {
-  width: 10px
+  width: 0 !important;
+  display: none !important;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
+.custom-scrollbar::-webkit-scrollbar-track {
   @apply bg-transparent;
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+.custom-scrollbar::-webkit-scrollbar-thumb {
   @apply bg-editor-background-secondary;
 }
+
 
 /* Markdown Content Rendering */
 .article-page-overview {

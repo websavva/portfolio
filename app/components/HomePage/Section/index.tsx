@@ -72,11 +72,11 @@ const HomePageSection = defineComponent({
     return () => {
       return (
         <Container
-          class={cn('py-16 [--card-color:var(--section-color)]', colorClass.value, props.class)}
+          class={cn('py-16 max-sm:py-10 [--card-color:var(--section-color)]', colorClass.value, props.class)}
         >
           <SectionDelimiter />
 
-          <header class={cn('flex items-center mt-15')}>
+          <header class={cn('flex items-center mt-15 max-sm:mt-10')}>
             <motion.div
               class={cn(
                 'size-7 mr-5 text-[var(--section-color)] brightness-125 rounded-full relative after:content-[""] after:absolute after:top-0 after:left-0 after:size-full after:shadow-[2px_2px_25px_var(--section-color)] after:blur-[15px]',
@@ -115,7 +115,7 @@ const HomePageSection = defineComponent({
               margin: '0px 0px -150px',
             }}
             class={cn(
-              'text-5xl font-medium mt-10',
+              'text-5xl font-medium mt-10 max-sm:text-4xl max-sm:mt-5',
               props.class,
             )}
           >
@@ -136,7 +136,7 @@ const HomePageSection = defineComponent({
               : slots.subtitle?.()}
           </motion.h3>
 
-          <div class={cn('mt-18')}>{slots.default?.()}</div>
+          <div class={cn('mt-18 max-sm:mt-15')}>{slots.default?.()}</div>
         </Container>
       );
     };

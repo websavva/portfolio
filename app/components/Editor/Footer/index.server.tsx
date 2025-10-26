@@ -54,7 +54,7 @@ export default defineComponent({
 
         <button
           class={cn(
-            'py-1 px-1.5 flex items-center space-x-1 hover:bg-editor-background-secondary transition mr-auto',
+            'py-1 px-1.5 flex items-center space-x-1 hover:bg-editor-background-secondary transition mr-auto max-xs:hidden',
           )}
         >
           <NuxtIcon
@@ -74,7 +74,7 @@ export default defineComponent({
 
         <button
           class={cn(
-            'py-1 px-2 flex items-center hover:bg-editor-background-secondary transition text-sm',
+            'py-1 px-2 flex items-center hover:bg-editor-background-secondary transition text-sm max-lg:hidden',
           )}
         >
           Spaces: 2
@@ -82,7 +82,7 @@ export default defineComponent({
 
         <button
           class={cn(
-            'py-1 px-2 flex items-center hover:bg-editor-background-secondary transition text-sm',
+            'py-1 px-2 flex items-center hover:bg-editor-background-secondary transition text-sm max-lg:hidden',
           )}
         >
           UTF-8
@@ -90,7 +90,7 @@ export default defineComponent({
 
         <button
           class={cn(
-            'py-1 px-2 flex items-center hover:bg-editor-background-secondary transition text-sm',
+            'py-1 px-2 flex items-center hover:bg-editor-background-secondary transition text-sm max-lg:hidden',
           )}
         >
           CRLF
@@ -98,7 +98,7 @@ export default defineComponent({
 
         <button
           class={cn(
-            'py-1 px-2 flex items-center hover:bg-editor-background-secondary transition text-sm',
+            'py-1 px-2 flex items-center hover:bg-editor-background-secondary transition text-sm max-lg:hidden',
           )}
         >
           <NuxtIcon
@@ -113,7 +113,7 @@ export default defineComponent({
 
         <button
           class={cn(
-            'py-1 px-2 flex items-center hover:bg-editor-background-secondary transition text-sm',
+            'py-1 px-2 flex items-center hover:bg-editor-background-secondary transition text-sm max-xs:ml-auto',
           )}
         >
           <NuxtIcon

@@ -30,7 +30,7 @@ export default defineComponent({
           class={cn(
             'overflow-hidden relative rounded-2xl',
             'border-2 border-primary/20',
-            'w-full h-[600px] ',
+            'w-full h-128 max-lg:h-96 max-md:h-60',
             'group',
             props.class,
           )}

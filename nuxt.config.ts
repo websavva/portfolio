@@ -35,6 +35,11 @@ export default defineNuxtConfig({
 
   vite: {
     define: publicDefine,
+    resolve: {
+      alias: {
+        bowser: resolve('node_modules/bowser/bundled.js'),
+      },
+    },
   },
 
   alias: {

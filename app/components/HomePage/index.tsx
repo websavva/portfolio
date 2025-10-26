@@ -25,7 +25,7 @@ export default defineComponent({
         <div class={cn(props.class)}>
           <HomePageIntro
             class={cn(
-              'min-h-[var(--editor-body-content-height)]',
+              'lg:min-h-[var(--editor-body-content-height)] max-h-[var(--editor-body-content-height)] max-lg:min-h-[450px]',
             )}
           />
 

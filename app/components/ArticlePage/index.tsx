@@ -21,8 +21,8 @@ export default defineComponent({
   setup(props) {
     return () => {
       return (
-        <div class={cn('py-20', props.class)}>
-          <Container class="max-w-5xl">
+        <div class={cn('py-20 max-lg:py-10', props.class)}>
+          <Container class="max-w-5xl max-lg:max-w-4xl">
             {/* Header Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}

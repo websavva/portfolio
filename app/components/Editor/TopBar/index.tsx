@@ -3,6 +3,7 @@ import {
   NuxtIcon,
   EditorTopBarLayoutActions,
   EditorTopBarWindowActions,
+  EditorTopBarMobileSidebarToggler,
 } from '#components';
 import type { I18nLocale } from '#i18n';
 
@@ -40,12 +41,19 @@ export default defineComponent({
               class={cn('size-6 mr-3')}
             />
 
-            <EditorTopBarNav items={$t('topBar.menu')} />
+            <EditorTopBarMobileSidebarToggler
+              class={cn('md:hidden ml-3')}
+            />
+
+            <EditorTopBarNav
+              items={$t('topBar.menu')}
+              class={cn('max-md:hidden')}
+            />
           </div>
 
           <div
             class={cn(
-              'flex-1 mx-2 flex justify-center items-center text-sm',
+              'flex-1 mx-2 flex justify-center items-center text-sm max-lg:hidden',
             )}
           >
             {formatString($t('topBar.titleTemplate'), [
@@ -54,7 +62,7 @@ export default defineComponent({
           </div>
 
           <EditorTopBarLayoutActions
-            class={cn('py-2 px-1')}
+            class={cn('py-2 px-1 ml-auto')}
           />
 
           <EditorTopBarWindowActions class={cn('h-full')} />

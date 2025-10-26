@@ -32,9 +32,9 @@ export default defineComponent({
             default: () => (
               <div>
                 <div
-                  class={cn('flex gap-10 justify-between')}
+                  class={cn('flex gap-10 justify-between max-sm:flex-col')}
                 >
-                  <div class={cn('flex flex-col w-1/2')}>
+                  <div class={cn('flex flex-col sm:w-1/2')}>
                     <span
                       class={cn('text-2xl font-medium')}
                     >
@@ -42,7 +42,7 @@ export default defineComponent({
                     </span>
 
                     <HomePageSection.Highlight
-                      class={cn('text-base mt-1 mb-10')}
+                      class={cn('text-base mt-1 mb-10 max-sm:mb-5')}
                     >
                       {bio.value.occupation}
                     </HomePageSection.Highlight>
@@ -67,13 +67,13 @@ export default defineComponent({
 
                   <div
                     class={cn(
-                      'size-48 bg-white/50 rounded-full mr-10',
+                      'size-48 bg-white/50 rounded-full mr-10 max-sm:self-center',
                     )}
                   />
                 </div>
 
                 <div
-                  class={cn('mt-15 flex justify-between')}
+                  class={cn('mt-15 flex justify-between max-lg:flex-col-reverse max-xs:flex-col')}
                 >
                   <div class={cn('flex-1')}>
                     <motion.div
@@ -94,7 +94,8 @@ export default defineComponent({
 
                       <ul
                         class={cn(
-                          'mt-3 flex items-center gap-5 border-b border-t border-editor-background-secondary py-3 text-lg w-max',
+                          'mt-3 flex items-center gap-5 border-b border-t border-editor-background-secondary py-3 text-lg w-max max-lg:w-full',
+                          'max-lg:flex-col max-lg:items-start'
                         )}
                       >
                         {bio.value.languages.map(
@@ -134,12 +135,12 @@ export default defineComponent({
                     inViewOptions={{
                       margin: '0px 0px -150px',
                     }}
-                    class={cn('flex-1 ml-auto cursor-pointer')}
+                    class={cn('flex-1 ml-auto cursor-pointer max-lg:ml-0 max-lg:mb-10 max-xs:mb-0 max-xs:mt-10')}
                   >
-                    <Card class={cn('flex p-10')}>
+                    <Card class={cn('flex p-10 max-sm:p-5 max-xs:flex-col max-xs:items-center max-xs:py-8')}>
                       <div
                         class={cn(
-                          'size-28 bg-white rounded-3xl flex items-center justify-center shrink-0',
+                          'size-28 max-sm:size-20 bg-white rounded-3xl flex items-center justify-center shrink-0',
                         )}
                       >
                         <img
@@ -153,16 +154,16 @@ export default defineComponent({
                         />
                       </div>
 
-                      <div class={cn('flex flex-col ml-5')}>
+                      <div class={cn('flex flex-col ml-5 max-xs:ml-0 max-xs:text-center')}>
                         <span
                           class={cn(
-                            'text-xl font-medium mb-1',
+                            'text-xl font-medium mb-1 max-sm:text-lg max-xs:mt-3',
                           )}
                         >
                           {bio.value.collegeDegree.major}
                         </span>
 
-                        <HomePageSection.Highlight>
+                        <HomePageSection.Highlight class={cn('max-sm:text-sm')}>
                           {
                             bio.value.collegeDegree
                               .university

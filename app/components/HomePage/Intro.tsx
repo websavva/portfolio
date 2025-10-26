@@ -52,17 +52,12 @@ export default defineComponent({
 
             <h1
               class={cn(
-                'text-6xl font-bold flex items-center gap-2',
+                'text-6xl font-bold',
                 'relative z-10',
+                'max-xl:text-5xl max-2xs:text-4xl',
               )}
             >
-              <span>{bio.value.fullName}</span>
-
-              <span
-                class={cn('inline-block origin-[70%_70%]')}
-              >
-                👋
-              </span>
+              <span>{bio.value.fullName}&nbsp;👋</span>
             </h1>
 
             <div
@@ -91,7 +86,7 @@ export default defineComponent({
               </div>
             </div>
 
-            <p class={cn('mt-5 max-w-2/4 relative z-10')}>
+            <p class={cn('mt-5 max-w-2/4 relative z-10 max-sm:max-w-100')}>
               {content.value.intro.description}
             </p>
 

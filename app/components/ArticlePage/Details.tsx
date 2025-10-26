@@ -34,14 +34,14 @@ export default defineComponent({
       return (
         <div
           class={cn(
-            'grid grid-cols-1 md:grid-cols-3 gap-8 border border-editor-fg/20 border-l-0 border-r-0 *:not-first:border-l *:not-first:border-editor-fg/20 *:not-first:px-8',
+            'flex max-md:flex-col border border-editor-fg/20 border-l-0 border-r-0 *:not-first:border-l *:not-first:border-editor-fg/20 *:not-first:px-8  md:*:not-first:ml-8 max-md:*:not-first:border-l-0 max-md:*:not-first:border-t',
             props.class,
           )}
         >
           {metadata.value.map((item, index) => (
             <div
               key={index}
-              class={cn('flex flex-col gap-3', 'px-6 py-3')}
+              class={cn('flex flex-col gap-3 flex-1', 'px-6 py-3 max-md:py-5')}
             >
               <div class="flex items-center gap-3">
                 <div class="text-xs text-editor-fg/60 font-medium uppercase tracking-wider">

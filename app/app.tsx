@@ -19,7 +19,7 @@ export default defineComponent({
       titleTemplate: $t('titleTemplate'),
       htmlAttrs: {
         class:
-          'bg-editor-background text-white text-[16px] overflow-hidden',
+          'bg-editor-background overflow-hidden text-white [--root-font-size:16px] max-3xl:[--root-font-size:12px] text-(length:--root-font-size)',
       },
     }));
 

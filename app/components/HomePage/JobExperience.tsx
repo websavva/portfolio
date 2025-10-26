@@ -33,7 +33,7 @@ export default defineComponent({
             default: () => (
               <ul
                 class={cn(
-                  'flex flex-col gap-5 pl-10 border-l border-white/30',
+                  'flex flex-col gap-5 pl-10 max-xs:pl-0 max-sm:pl-7 border-l max-xs:border-none border-white/30',
                 )}
               >
                 {bio.value.jobExperience.map(
@@ -51,11 +51,11 @@ export default defineComponent({
                       }}
                       class={cn({ 'mt-10': index > 0 })}
                     >
-                      <div class={cn('flex gap-10')}>
+                      <div class={cn('flex max-sm:flex-col gap-10 max-sm:gap-2')}>
                         <div class={cn('flex flex-col')}>
                           <span
                             class={cn(
-                              'text-sm text-editor-fg',
+                              'text-sm text-editor-fg max-sm:my-0',
                               index > 0
                                 ? 'mt-7 mb-8'
                                 : 'mb-8 mt-1',
@@ -79,7 +79,7 @@ export default defineComponent({
                             alt=""
                             role="presentation"
                             class={cn(
-                              'h-28 w-auto rounded-xl',
+                              'h-28 w-auto rounded-xl max-lg:h-20 object-cover max-sm:hidden',
                             )}
                           />
                         </div>

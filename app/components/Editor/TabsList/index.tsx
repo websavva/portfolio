@@ -79,11 +79,11 @@ export default defineComponent({
       return (
         <div
           class={cn(
-            'flex items-center justify-between pr-3 border-b-2 border-editor-border',
+            'flex items-center justify-between pr-3 border-b-2 border-editor-border max-w-full overflow-hidden',
             props.class,
           )}
         >
-          <div class={cn('flex items-center')}>
+          <div class={cn('flex items-center hide-scrollbar max-w-full overflow-x-auto')}>
             {tabs.value.map((tab) => {
               return (
                 <EditorTabsListItem

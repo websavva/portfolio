@@ -3,7 +3,7 @@ iconName: material-icon-theme:nuxt
 industry: Development tools
 service: Nuxt module
 description: Tool for ignoring specific files in development mode for Nuxt projects
-imageUrl: https://static-production.npmjs.com/338e4905a2684ca96e08c7780fc68412.png
+imageUrl: /npm-package.png
 repoUrl: https://github.com/websavva/nuxtignore-dev
 previewUrl: https://npmjs.com/package/nuxtignore-dev
 date: 2024-03-30

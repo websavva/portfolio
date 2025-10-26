@@ -42,12 +42,6 @@ export default defineComponent({
 
     const currentToast = ref<Toast | null>(null);
 
-    const formFieldNames = computed(() => {
-      return Object.keys(
-        form.value,
-      ) as (keyof ContactDto)[];
-    });
-
     function showToast(
       message: string,
       type: 'success' | 'error',
@@ -160,6 +154,7 @@ export default defineComponent({
                       'rounded-xl',
                       'transition-all duration-200',
                       'disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed',
+                      'max-2xs:w-full'
                     )}
                   >
                     {content.value.contactMe.submit}

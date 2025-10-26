@@ -15,7 +15,6 @@ export default defineComponent({
 
   setup(props) {
     const canvasRef = ref<HTMLCanvasElement | null>(null);
-    const animationRef = ref<number | null>(null);
     const letters = ref<
       {
         char: string;
@@ -28,12 +27,7 @@ export default defineComponent({
     const context = ref<CanvasRenderingContext2D | null>(
       null,
     );
-    const lastGlitchTime = ref(Date.now());
     const rootElement = ref<HTMLElement | null>(null);
-
-    const fontSize = 16;
-    const charWidth = 10;
-    const charHeight = 20;
 
     const lettersAndSymbols = [
       'A',
@@ -110,9 +104,32 @@ export default defineComponent({
       ];
     };
 
+    const getCharConfig = () => {
+      const fontSize = calculateFontSize();
+
+      return {
+        fontSize,
+        charWidth: fontSize * 0.625,
+        charHeight: fontSize * 1.25,
+      };
+    };
+
+    const calculateFontSize = () => {
+      return parseInt(
+        getComputedStyle(
+          rootElement.value!,
+        ).getPropertyValue('--root-font-size'),
+        10,
+      );
+    };
+
     const calculateGrid = (
       width: number,
       height: number,
+      {
+        charWidth,
+        charHeight,
+      }: ReturnType<typeof getCharConfig>,
     ) => {
       const columns = Math.ceil(width / charWidth);
       const rows = Math.ceil(height / charHeight);
@@ -128,9 +145,9 @@ export default defineComponent({
       letters.value = Array.from(
         { length: totalLetters },
         () => ({
-          char: getRandomChar(),
-          color: getRandomColor(),
-          targetColor: getRandomColor(),
+          char: getRandomChar()!,
+          color: getRandomColor()!,
+          targetColor: getRandomColor()!,
           colorProgress: 1,
         }),
       );
@@ -166,21 +183,25 @@ export default defineComponent({
         context.value.setTransform(dpr, 0, 0, dpr, 0, 0);
       }
 
+      const charConfig = getCharConfig();
+
       const { columns, rows } = calculateGrid(
         width,
         height,
+        charConfig,
       );
       initializeLetters(columns, rows);
-      drawLetters();
+      drawLetters(charConfig);
     };
 
-    const drawLetters = () => {
+    const drawLetters = ({ charWidth, charHeight, fontSize }: ReturnType<typeof getCharConfig>) => {
       if (!context.value || letters.value.length === 0)
         return;
       const ctx = context.value;
       const { width, height } =
         canvasRef.value!.getBoundingClientRect();
       ctx.clearRect(0, 0, width, height);
+
       ctx.font = `${fontSize}px monospace`;
       ctx.textBaseline = 'top';
 
@@ -209,8 +230,8 @@ export default defineComponent({
         );
         if (!letters.value[index]) continue;
 
-        letters.value[index].char = getRandomChar();
-        letters.value[index].targetColor = getRandomColor();
+        letters.value[index].char = getRandomChar()!;
+        letters.value[index].targetColor = getRandomColor()!;
 
         letters.value[index].color =
           letters.value[index].targetColor;
@@ -222,12 +243,7 @@ export default defineComponent({
     const handleResize = () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
-        if (animationRef.value) {
-          cancelAnimationFrame(animationRef.value);
-        }
         resizeCanvas();
-        updateLetters();
-        drawLetters();
       }, 100);
     };
 
@@ -244,10 +260,6 @@ export default defineComponent({
     });
 
     onUnmounted(() => {
-      if (animationRef.value) {
-        cancelAnimationFrame(animationRef.value);
-      }
-
       resizeObserver?.disconnect();
       resizeObserver = null;
     });

@@ -82,8 +82,6 @@ export default defineComponent({
                             class={cn(
                               'w-full h-full object-cover',
                               'transition-all duration-700 ease-out opacity-70',
-                              'group-hover:scale-110',
-                              'group-hover:opacity-100',
                             )}
                           />
 

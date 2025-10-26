@@ -24,7 +24,7 @@ export default defineComponent({
           <EditorSidebarExplorer
             v-show={isSidebarOpen.value}
             class={cn(
-              'h-full w-[300px] border-r-2 border-editor-border',
+              'h-full w-75 border-r-2 border-editor-border max-lg:fixed max-lg:top-[var(--editor-top-bar-height)] max-lg:left-14 max-xs:left-12 bg-editor-background max-lg:z-50 max-lg:h-[var(--editor-body-height)]',
             )}
           />
         </aside>

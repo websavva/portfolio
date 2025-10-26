@@ -45,8 +45,8 @@ export default defineComponent({
                 {/* Skill Type Selector */}
                 <div
                   class={cn(
-                    'flex flex-wrap gap-3 justify-center',
-                    'p-2',
+                    'flex flex-wrap gap-3 justify-center max-xs:justify-start',
+                    'p-2 max-xs:p-3',
                     'bg-editor-background-secondary/40',
                     'rounded-2xl',
                   )}
@@ -62,7 +62,7 @@ export default defineComponent({
                           selectedSkillType.value = type;
                         }}
                         class={cn(
-                          'px-5 py-2.5 rounded-xl cursor-pointer',
+                          'px-5 py-2.5 rounded-xl cursor-pointer max-xs:px-3 max-xs:py-1',
                           'text-sm font-medium',
                           'transition-all duration-200 ease-out',
                           'capitalize',
