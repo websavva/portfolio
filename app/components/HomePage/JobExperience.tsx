@@ -48,6 +48,7 @@ export default defineComponent({
                       }}
                       inViewOptions={{
                         margin: '0px 0px -150px',
+                        once: true,
                       }}
                       class={cn({ 'mt-10': index > 0 })}
                     >

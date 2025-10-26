@@ -98,7 +98,7 @@ export default defineComponent({
             })}
           </div>
 
-          <div class={cn('flex items-center space-x-1')}>
+          <div class={cn('flex items-center space-x-1 max-xs:hidden')}>
             {actionIconsNames.map((iconName) => {
               return (
                 <button

@@ -30,6 +30,7 @@ export default defineComponent({
               transition={{ duration: 0.6 }}
               inViewOptions={{
                 margin: '0px 0px -150px',
+                once: true,
               }}
               class={cn('mb-12')}
             >
@@ -43,6 +44,7 @@ export default defineComponent({
               transition={{ duration: 0.5 }}
               inViewOptions={{
                 margin: '0px 0px -150px',
+                once: true,
               }}
               class={cn('mb-12')}
             >
@@ -55,6 +57,7 @@ export default defineComponent({
               whileInView={{ opacity: 1, scale: 1 }}
               inViewOptions={{
                 margin: '0px 0px -150px',
+                once: true,
               }}
               transition={{ duration: 0.5 }}
               class={cn('mb-12')}
@@ -67,6 +70,7 @@ export default defineComponent({
               whileInView={{ opacity: 1, y: 0 }}
               inViewOptions={{
                 margin: '0px 0px -150px',
+                once: true,
               }}
               transition={{ duration: 0.5 }}
               class={cn('mt-12')}
@@ -79,6 +83,7 @@ export default defineComponent({
               whileInView={{ opacity: 1, y: 0 }}
               inViewOptions={{
                 margin: '0px 0px -150px',
+                once: true,
               }}
               transition={{ duration: 0.5 }}
               class={cn('mt-12')}
@@ -92,6 +97,7 @@ export default defineComponent({
               whileInView={{ opacity: 1, y: 0 }}
               inViewOptions={{
                 margin: '0px 0px -150px',
+                once: true,
               }}
               transition={{ duration: 0.5 }}
               class={cn('mb-12 mt-15')}

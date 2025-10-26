@@ -82,6 +82,7 @@ export default defineComponent({
                       transition={{ duration: 1 }}
                       inViewOptions={{
                         margin: '0px 0px -150px',
+                        once: true,
                       }}
                     >
                       <HomePageSection.Highlight
@@ -134,6 +135,7 @@ export default defineComponent({
                     transition={{ duration: 1 }}
                     inViewOptions={{
                       margin: '0px 0px -150px',
+                      once: true,
                     }}
                     class={cn('flex-1 ml-auto cursor-pointer max-lg:ml-0 max-lg:mb-10 max-xs:mb-0 max-xs:mt-10')}
                   >

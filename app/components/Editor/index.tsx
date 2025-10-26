@@ -1,5 +1,6 @@
 import debounce from 'lodash-es/debounce';
 
+
 import {
   EditorTopBar,
   EditorFooter,
@@ -18,7 +19,7 @@ export default defineComponent({
   },
   setup(props, { slots }) {
     const $router = useRouter();
-    const $route = useRoute();
+    const $ua = useUa()
 
     const screenFullHeight = ref<string>('100dvh');
 
@@ -59,6 +60,8 @@ export default defineComponent({
       );
 
       routerAfterEachHookRemover = $router.afterEach(() => {
+        if ($ua.isDesktop) return;
+
         setTimeout(() => {
           closeSidebar();
         }, 50);

@@ -79,13 +79,14 @@ const HomePageSection = defineComponent({
           <header class={cn('flex items-center mt-15 max-sm:mt-10')}>
             <motion.div
               class={cn(
-                'size-7 mr-5 text-[var(--section-color)] brightness-125 rounded-full relative after:content-[""] after:absolute after:top-0 after:left-0 after:size-full after:shadow-[2px_2px_25px_var(--section-color)] after:blur-[15px]',
+                'size-7 mr-5 text-[var(--section-color)] brightness-125 rounded-full relative after:content-[""] after:absolute after:top-0 after:left-0 after:size-full after:shadow-[2px_2px_25px_var(--section-color)] max-md:after:shadow-[2px_2px_8px_var(--section-color)] after:blur-[15px]',
               )}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1 }}
               inViewOptions={{
                 margin: '0px 0px -150px',
+                once: true,
               }}
             >
               <NuxtIcon
@@ -100,6 +101,7 @@ const HomePageSection = defineComponent({
               transition={{ duration: 0.9 }}
               inViewOptions={{
                 margin: '0px 0px -150px',
+                once: true,
               }}
               class={cn('text-2xl')}
             >
@@ -113,6 +115,7 @@ const HomePageSection = defineComponent({
             transition={{ duration: 0.7 }}
             inViewOptions={{
               margin: '0px 0px -150px',
+              once: true,
             }}
             class={cn(
               'text-5xl font-medium mt-10 max-sm:text-4xl max-sm:mt-5',

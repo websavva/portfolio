@@ -89,6 +89,7 @@ export default defineComponent({
                   exit="exit"
                   inViewOptions={{
                     margin: '0px 0px -150px',
+                    once: true,
                   }}
                   variants={{
                     hidden: { opacity: 0 },
@@ -119,12 +120,12 @@ export default defineComponent({
                         visible: { opacity: 1, y: 0 },
                         exit: { opacity: 0, y: -20 },
                       }}
-                      class={cn(
+                    >
+                      <div class={cn(
                         'group relative',
                         'flex flex-col items-center gap-4',
                         'p-6',
                         'bg-editor-background-secondary/40',
-                        'backdrop-blur-sm',
                         'rounded-2xl',
                         'border border-editor-border/30',
                         'transition-all duration-300 ease-out',
@@ -133,20 +134,7 @@ export default defineComponent({
                         'hover:-translate-y-1',
                         'hover:shadow-xl hover:shadow-primary-500/5',
                         'cursor-default',
-                      )}
-                    >
-                      {/* Subtle top highlight */}
-                      <div
-                        class={cn(
-                          'absolute top-0 left-1/2 -translate-x-1/2',
-                          'w-12 h-0.5',
-                          'bg-gradient-to-r from-transparent via-primary-400/0 to-transparent',
-                          'group-hover:via-primary-400/60',
-                          'transition-all duration-300',
-                          'rounded-full',
-                        )}
-                      />
-
+                      )}>
                       <NuxtIcon
                         name={skill.icon}
                         class={cn(
@@ -167,6 +155,8 @@ export default defineComponent({
                       >
                         {skill.name}
                       </span>
+
+                      </div>
                     </motion.li>
                   ))}
                 </motion.ul>

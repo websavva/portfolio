@@ -51,7 +51,7 @@ export default defineComponent({
                   'relative overflow-hidden h-full',
                   'bg-editor-sidebar-bg/50 backdrop-blur-sm',
                   'border-1 border-editor-fg/20',
-                  'rounded-xl p-10',
+                  'rounded-xl p-10 max-md:p-8',
                   'transition-all duration-300',
                   '[--card-color:var(--color-primary)]',
                 )}

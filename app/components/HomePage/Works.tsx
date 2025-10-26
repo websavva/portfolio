@@ -52,6 +52,7 @@ export default defineComponent({
                     whileInView={{ opacity: 1, y: 0 }}
                     inViewOptions={{
                       margin: '0px 0px -150px',
+                      once: true,
                     }}
                     transition={{
                       duration: 0.6,

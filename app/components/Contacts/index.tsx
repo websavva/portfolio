@@ -34,6 +34,9 @@ export default defineComponent({
                 ease: 'easeOut',
               }}
               whileInView={{ opacity: 1, y: 0 }}
+              inViewOptions={{
+                once: true,
+              }}
             >
               <NuxtLink href={link.url}>
                 <NuxtIcon
@@ -52,6 +55,9 @@ export default defineComponent({
               ease: 'easeOut',
             }}
             whileInView={{ opacity: 1, y: 0 }}
+            inViewOptions={{
+              once: true,
+            }}
           >
             <NuxtLink
               href="/#contact-form"
