@@ -19,7 +19,7 @@ export default defineComponent({
     return () => {
       return (
         <aside class={cn('flex', props.class)}>
-          <EditorSidebarNav class={cn('h-full')} />
+          <EditorSidebarNav class={cn('h-full border-r border-editor-border')} />
 
           <EditorSidebarExplorer
             v-show={isSidebarOpen.value}

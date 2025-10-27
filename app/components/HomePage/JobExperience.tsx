@@ -79,6 +79,7 @@ export default defineComponent({
                             src={job.companyImageUrl}
                             alt=""
                             role="presentation"
+                            loading='lazy'
                             class={cn(
                               'h-28 w-auto rounded-xl max-lg:h-20 object-cover max-sm:hidden',
                             )}

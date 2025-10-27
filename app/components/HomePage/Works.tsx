@@ -80,6 +80,7 @@ export default defineComponent({
                           <img
                             src={work.imageUrl}
                             alt={work.title}
+                            loading='lazy'
                             class={cn(
                               'w-full h-full object-cover',
                               'transition-all duration-700 ease-out opacity-70',

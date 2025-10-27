@@ -118,7 +118,7 @@ const HomePageSection = defineComponent({
               once: true,
             }}
             class={cn(
-              'text-5xl font-medium mt-10 max-sm:text-4xl max-sm:mt-5',
+              'text-5xl font-medium mt-10 max-sm:text-4xl max-sm:mt-5 leading-[1.15]',
               props.class,
             )}
           >

@@ -13,6 +13,8 @@
   --breakpoint-2xl: 100rem;
   --breakpoint-3xl: 110rem;
   --breakpoint-4xl: 120rem;
+
+  --default-font-family: 'Inter', 'Helvetica Neue', sans-serif;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
