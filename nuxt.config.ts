@@ -60,7 +60,7 @@ export default defineNuxtConfig({
   vite: {
     define: publicDefine,
     server: {
-      allowedHosts: ['studwork.lcl'],
+      allowedHosts: true,
     },
 
     resolve: {

@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --no-fork",
     "dev:prepare": "nuxt prepare",
     "generate": "nuxt generate",
     "preview": "nuxt preview"
