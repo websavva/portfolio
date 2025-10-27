@@ -78,10 +78,21 @@ export default defineNuxtConfig({
   typescript: {
     tsConfig: {
       include: ['../config/**/*.ts'],
+      compilerOptions: {
+        allowImportingTsExtensions: true,
+      },
     },
   },
 
   nitro: {
+    typescript: {
+      tsConfig: {
+        compilerOptions: {
+          allowImportingTsExtensions: true,
+        },
+      },
+    },
+
     compressPublicAssets: {
       brotli: isProd,
     },

@@ -14,6 +14,9 @@
     "build": "nuxt build",
     "dev": "nuxt dev --no-fork",
     "dev:prepare": "nuxt prepare",
+    "typecheck:server": "vue-tsc --noEmit -p server",
+    "typecheck:app": "vue-tsc --noEmit",
+    "typecheck": "pnpm typecheck:server && pnpm typecheck:app",
     "generate": "nuxt generate",
     "preview": "nuxt preview"
   },
@@ -43,6 +46,7 @@
     "ip3country": "^5.0.0",
     "motion-v": "^1.7.2",
     "tailwindcss": "^4.1.14",
+    "vue-tsc": "^3.1.2",
     "zod": "^3.25.76"
   }
 }

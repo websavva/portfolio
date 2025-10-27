@@ -34,6 +34,7 @@
     "service": "Тип проекта",
     "industry": "Сфера",
     "technologies": "Технологии",
+    "description": "Описание",
     "visitWebsite": "Просмотреть сайт",
     "overview": "Описание",
     "visitRepository": "Исходный код"
