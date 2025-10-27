@@ -70,10 +70,16 @@ export default defineComponent({
                   </div>
 
                   <div
-                    class={cn(
-                      'size-48 bg-white/50 rounded-full mr-10 max-sm:self-center',
-                    )}
-                  />
+                    class={cn('mr-10 max-sm:self-center')}
+                  >
+                    <img
+                      src="/me.webp"
+                      role="presentation"
+                      class={cn(
+                        'w-64 h-auto rounded-2xl brightness-85 block',
+                      )}
+                    />
+                  </div>
                 </div>
 
                 <div
