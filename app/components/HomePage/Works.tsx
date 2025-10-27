@@ -35,7 +35,7 @@ export default defineComponent({
           class={props.class}
           subtitle={content.value.works.subtitle}
           iconName="codicon:layers"
-          color='indigo'
+          color="indigo"
         >
           {{
             title: () => content.value.works.title,
@@ -80,7 +80,7 @@ export default defineComponent({
                           <img
                             src={work.imageUrl}
                             alt={work.title}
-                            loading='lazy'
+                            loading="lazy"
                             class={cn(
                               'w-full h-full object-cover',
                               'transition-all duration-700 ease-out opacity-70',

@@ -41,5 +41,5 @@ export type GetI18DictionaryValueByPath<
     ? GetI18DictionaryValueByPath<T[K], Rest>
     : never
   : Path extends keyof T
-  ? T[Path]
-  : never;
+    ? T[Path]
+    : never;

@@ -3,9 +3,9 @@ import {
   Comment,
   defineComponent,
   mergeProps,
+  Fragment,
 } from 'vue';
 import type { VNode } from 'vue';
-import { Fragment } from 'vue';
 
 function renderSlotFragments(children?: VNode[]): VNode[] {
   if (!children) return [];
@@ -33,7 +33,7 @@ export default defineComponent({
         return children;
 
       const firstNonCommentChildren =
-        children[firstNonCommentChildrenIndex];
+        children[firstNonCommentChildrenIndex]!;
 
       delete firstNonCommentChildren.props?.ref;
 

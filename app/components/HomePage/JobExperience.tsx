@@ -52,7 +52,11 @@ export default defineComponent({
                       }}
                       class={cn({ 'mt-10': index > 0 })}
                     >
-                      <div class={cn('flex max-sm:flex-col gap-10 max-sm:gap-2')}>
+                      <div
+                        class={cn(
+                          'flex max-sm:flex-col gap-10 max-sm:gap-2',
+                        )}
+                      >
                         <div class={cn('flex flex-col')}>
                           <span
                             class={cn(
@@ -79,7 +83,7 @@ export default defineComponent({
                             src={job.companyImageUrl}
                             alt=""
                             role="presentation"
-                            loading='lazy'
+                            loading="lazy"
                             class={cn(
                               'h-28 w-auto rounded-xl max-lg:h-20 object-cover max-sm:hidden',
                             )}

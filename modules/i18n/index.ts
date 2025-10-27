@@ -7,6 +7,7 @@ import {
   addPlugin,
   addImportsDir,
 } from '@nuxt/kit';
+
 import type { ModuleOptions } from './types';
 
 export default defineNuxtModule<ModuleOptions>({

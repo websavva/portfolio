@@ -1,5 +1,6 @@
 import { defineNuxtPlugin } from '#app';
 import type { I18nDictionary, I18nLocale } from '#i18n';
+
 import { createI18nContext } from './imports';
 
 export default defineNuxtPlugin((nuxtApp) => {

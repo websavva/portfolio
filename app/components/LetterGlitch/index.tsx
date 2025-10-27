@@ -194,7 +194,11 @@ export default defineComponent({
       drawLetters(charConfig);
     };
 
-    const drawLetters = ({ charWidth, charHeight, fontSize }: ReturnType<typeof getCharConfig>) => {
+    const drawLetters = ({
+      charWidth,
+      charHeight,
+      fontSize,
+    }: ReturnType<typeof getCharConfig>) => {
       if (!context.value || letters.value.length === 0)
         return;
       const ctx = context.value;
@@ -231,7 +235,8 @@ export default defineComponent({
         if (!letters.value[index]) continue;
 
         letters.value[index].char = getRandomChar()!;
-        letters.value[index].targetColor = getRandomColor()!;
+        letters.value[index].targetColor =
+          getRandomColor()!;
 
         letters.value[index].color =
           letters.value[index].targetColor;

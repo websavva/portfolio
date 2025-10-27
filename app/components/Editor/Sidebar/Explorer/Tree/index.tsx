@@ -1,8 +1,8 @@
 import { NuxtIcon, NuxtLink } from '#components';
 
-import {
-  type ExplorerTreeFileItem,
-  type ExplorerTreeFolderItem,
+import type {
+  ExplorerTreeFileItem,
+  ExplorerTreeFolderItem,
 } from './types';
 
 const itemBaseClass = cn(
@@ -99,8 +99,8 @@ const EditorSidebarExplorerTree = defineComponent({
                 typeof item.icon === 'string'
                   ? item.icon
                   : isOpen
-                  ? item.icon.open
-                  : item.icon.closed;
+                    ? item.icon.open
+                    : item.icon.closed;
 
               return (
                 <>

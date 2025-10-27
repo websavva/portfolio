@@ -1,5 +1,4 @@
 import { Transition } from 'vue';
-
 import {
   HomePageSection,
   HomePageContactMeInput,
@@ -154,7 +153,7 @@ export default defineComponent({
                       'rounded-xl',
                       'transition-all duration-200',
                       'disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed',
-                      'max-2xs:w-full'
+                      'max-2xs:w-full',
                     )}
                   >
                     {content.value.contactMe.submit}

@@ -11,9 +11,9 @@ export const useCompValue = <
 >(
   emit: EmitFn<any>,
   props: P,
-  // @ts-ignore
+  // @ts-expect-error invalid type
   modelProp: K = 'modelValue',
-  // @ts-ignore
+  // @ts-expect-error invalid type
   event: string = `update:${modelProp}`,
 ) =>
   computed<P[K]>({

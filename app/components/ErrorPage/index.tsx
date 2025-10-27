@@ -11,7 +11,15 @@ export default defineComponent({
     },
 
     error: {
-      type: Object as PropType<Pick<NuxtError, 'statusCode' | 'statusMessage' | 'message' | 'stack'>>,
+      type: Object as PropType<
+        Pick<
+          NuxtError,
+          | 'statusCode'
+          | 'statusMessage'
+          | 'message'
+          | 'stack'
+        >
+      >,
       required: true,
     },
   },

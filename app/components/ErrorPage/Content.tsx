@@ -39,9 +39,12 @@ export default defineComponent({
     const errorTitle = computed(() => {
       const statusCode = props.error.statusCode;
 
-      if (statusCode === 404) return $t('errorPage.titles.404');
-      if (statusCode === 500) return $t('errorPage.titles.500');
-      if (statusCode === 403) return $t('errorPage.titles.403');
+      if (statusCode === 404)
+        return $t('errorPage.titles.404');
+      if (statusCode === 500)
+        return $t('errorPage.titles.500');
+      if (statusCode === 403)
+        return $t('errorPage.titles.403');
 
       return $t('errorPage.titles.default');
     });

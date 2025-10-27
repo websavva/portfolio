@@ -9,7 +9,6 @@ import ip3country from 'ip3country';
 import acceptLanguage from 'accept-language';
 // @ts-expect-error missing types
 import { getCountryLanguages } from 'country-language';
-
 import {
   type I18nLocale,
   i18nLocalesLoaders,

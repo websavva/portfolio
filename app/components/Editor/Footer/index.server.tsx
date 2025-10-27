@@ -121,9 +121,7 @@ export default defineComponent({
             class={cn('size-4')}
           />
 
-          <span class={cn('text-sm ml-1')}>
-            Go Live
-          </span>
+          <span class={cn('text-sm ml-1')}>Go Live</span>
         </button>
 
         <button

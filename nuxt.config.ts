@@ -14,7 +14,14 @@ export default defineNuxtConfig({
 
   buildDir: '.nuxt',
 
-  modules: ['@nuxt/icon', '@nuxt/content'],
+  modules: ['@nuxt/icon', '@nuxt/content', '@nuxt/eslint'],
+
+  eslint: {
+    config: {
+      typescript: true,
+      import: true,
+    },
+  },
 
   icon: {
     mode: 'svg',

@@ -40,10 +40,7 @@ export default defineComponent({
   },
 
   setup(props, { emit, attrs }) {
-    const compValue = useCompValue(
-      emit,
-      props,
-    );
+    const compValue = useCompValue(emit, props);
 
     return () => {
       return (

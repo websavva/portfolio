@@ -1,6 +1,4 @@
 import debounce from 'lodash-es/debounce';
-
-
 import {
   EditorTopBar,
   EditorFooter,
@@ -19,7 +17,7 @@ export default defineComponent({
   },
   setup(props, { slots }) {
     const $router = useRouter();
-    const $ua = useUa()
+    const $ua = useUa();
 
     const screenFullHeight = ref<string>('100dvh');
 
@@ -43,7 +41,10 @@ export default defineComponent({
       screenFullHeight.value = window.innerHeight + 'px';
     }
 
-    const onWindowResize = debounce(updateScreenFullHeight, 200);
+    const onWindowResize = debounce(
+      updateScreenFullHeight,
+      200,
+    );
 
     onMounted(() => {
       routerBeforeEachHookRemover = $router.beforeEach(

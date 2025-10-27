@@ -4,11 +4,10 @@ import {
   EditorSidebarExplorerTree,
 } from '#components';
 
-import {
-  type ExplorerTreeFileItem,
-  type ExplorerTreeFolderItem,
+import type {
+  ExplorerTreeFileItem,
+  ExplorerTreeFolderItem,
 } from './Tree/types';
-
 import { useExplorerTree } from './composable';
 
 const repoSectionActionIcons = [
@@ -125,7 +124,9 @@ export default defineComponent({
 
           <EditorSidebarExplorerSection
             v-model:isOpen={isTreeOpened.value}
-            class={cn('border-t-(length:--editor-section-delimiter-width) border-editor-border')}
+            class={cn(
+              'border-t-(length:--editor-section-delimiter-width) border-editor-border',
+            )}
           >
             {{
               title: () =>
@@ -161,7 +162,9 @@ export default defineComponent({
 
           <EditorSidebarExplorerSection
             disabled
-            class={cn('border-t-(length:--editor-section-delimiter-width) border-editor-border')}
+            class={cn(
+              'border-t-(length:--editor-section-delimiter-width) border-editor-border',
+            )}
           >
             {{
               title: () =>
@@ -173,7 +176,9 @@ export default defineComponent({
 
           <EditorSidebarExplorerSection
             disabled
-            class={cn('border-t-(length:--editor-section-delimiter-width) border-editor-border')}
+            class={cn(
+              'border-t-(length:--editor-section-delimiter-width) border-editor-border',
+            )}
           >
             {{
               title: () =>
@@ -185,7 +190,9 @@ export default defineComponent({
 
           <EditorSidebarExplorerSection
             disabled
-            class={cn('border-t-(length:--editor-section-delimiter-width) border-editor-border')}
+            class={cn(
+              'border-t-(length:--editor-section-delimiter-width) border-editor-border',
+            )}
           >
             {{
               title: () =>

@@ -51,7 +51,8 @@ export default defineComponent({
             initial={{ opacity: 0, y: 10 }}
             transition={{
               duration: 0.25,
-              delay: (bio.value.socialLinks.length + 1) * 0.2,
+              delay:
+                (bio.value.socialLinks.length + 1) * 0.2,
               ease: 'easeOut',
             }}
             whileInView={{ opacity: 1, y: 0 }}

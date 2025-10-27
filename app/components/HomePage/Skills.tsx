@@ -121,41 +121,42 @@ export default defineComponent({
                         exit: { opacity: 0, y: -20 },
                       }}
                     >
-                      <div class={cn(
-                        'group relative',
-                        'flex flex-col items-center gap-4',
-                        'p-6',
-                        'bg-editor-background-secondary/40',
-                        'rounded-2xl',
-                        'border border-editor-border/30',
-                        'transition-all duration-300 ease-out',
-                        'hover:bg-editor-background-secondary/60',
-                        'hover:border-primary-400/40',
-                        'hover:-translate-y-1',
-                        'hover:shadow-xl hover:shadow-primary-500/5',
-                        'cursor-default',
-                      )}>
-                      <NuxtIcon
-                        name={skill.icon}
+                      <div
                         class={cn(
-                          'size-14',
-                          'transition-all duration-300',
-                          'group-hover:scale-110',
-                          'text-gray-300 group-hover:text-primary-300',
-                        )}
-                      />
-
-                      <span
-                        class={cn(
-                          'text-sm font-medium text-center',
-                          'text-gray-400',
-                          'group-hover:text-gray-200',
-                          'transition-colors duration-300',
+                          'group relative',
+                          'flex flex-col items-center gap-4',
+                          'p-6',
+                          'bg-editor-background-secondary/40',
+                          'rounded-2xl',
+                          'border border-editor-border/30',
+                          'transition-all duration-300 ease-out',
+                          'hover:bg-editor-background-secondary/60',
+                          'hover:border-primary-400/40',
+                          'hover:-translate-y-1',
+                          'hover:shadow-xl hover:shadow-primary-500/5',
+                          'cursor-default',
                         )}
                       >
-                        {skill.name}
-                      </span>
+                        <NuxtIcon
+                          name={skill.icon}
+                          class={cn(
+                            'size-14',
+                            'transition-all duration-300',
+                            'group-hover:scale-110',
+                            'text-gray-300 group-hover:text-primary-300',
+                          )}
+                        />
 
+                        <span
+                          class={cn(
+                            'text-sm font-medium text-center',
+                            'text-gray-400',
+                            'group-hover:text-gray-200',
+                            'transition-colors duration-300',
+                          )}
+                        >
+                          {skill.name}
+                        </span>
                       </div>
                     </motion.li>
                   ))}

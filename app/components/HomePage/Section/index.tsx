@@ -1,5 +1,4 @@
 import { Fragment } from 'vue';
-
 import {
   Container,
   SectionDelimiter,
@@ -17,8 +16,7 @@ type Color =
   | 'gray'
   | 'white'
   | 'primary'
-  | 'indigo'
-  ;
+  | 'indigo';
 
 const colorsMap: Record<Color, string> = {
   green: '[--section-color:var(--color-green-400)]',
@@ -29,7 +27,7 @@ const colorsMap: Record<Color, string> = {
   yellow: '[--section-color:var(--color-yellow-200)]',
   gray: '[--section-color:var(--color-gray-400)]',
   white: '[--section-color:var(--color-white-400)]',
-  primary: '[--section-color:var(--color-primary)]',  
+  primary: '[--section-color:var(--color-primary)]',
   indigo: '[--section-color:var(--color-indigo-400)]',
 };
 
@@ -72,11 +70,19 @@ const HomePageSection = defineComponent({
     return () => {
       return (
         <Container
-          class={cn('py-16 max-sm:py-10 [--card-color:var(--section-color)]', colorClass.value, props.class)}
+          class={cn(
+            'py-16 max-sm:py-10 [--card-color:var(--section-color)]',
+            colorClass.value,
+            props.class,
+          )}
         >
           <SectionDelimiter />
 
-          <header class={cn('flex items-center mt-15 max-sm:mt-10')}>
+          <header
+            class={cn(
+              'flex items-center mt-15 max-sm:mt-10',
+            )}
+          >
             <motion.div
               class={cn(
                 'size-7 mr-5 text-[var(--section-color)] brightness-125 rounded-full relative after:content-[""] after:absolute after:top-0 after:left-0 after:size-full after:shadow-[2px_2px_25px_var(--section-color)] max-md:after:shadow-[2px_2px_8px_var(--section-color)] after:blur-[15px]',
@@ -139,7 +145,9 @@ const HomePageSection = defineComponent({
               : slots.subtitle?.()}
           </motion.h3>
 
-          <div class={cn('mt-18 max-sm:mt-15')}>{slots.default?.()}</div>
+          <div class={cn('mt-18 max-sm:mt-15')}>
+            {slots.default?.()}
+          </div>
         </Container>
       );
     };

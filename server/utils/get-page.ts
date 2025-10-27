@@ -1,13 +1,12 @@
 import { type H3Event, getQuery } from 'h3';
 import { queryCollection } from '@nuxt/content/server';
 
+import type { Page } from '#server/types';
+
 import {
   getPageSelectionParamsFromQuery,
   getPageDictionaryPath,
 } from './common';
-
-import type { Page } from '#server/types';
-
 import { fieldsToSelect } from './get-all-pages';
 
 export async function getPage(event: H3Event) {

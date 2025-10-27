@@ -29,17 +29,17 @@ export const isI18nWord = (
 export type FlattenI18nWord<D> = D extends I18nWord
   ? D[I18nLocale]
   : D extends Record<string, any>
-  ? {
-      [K in keyof D]: FlattenI18nWord<D[K]>;
-    }
-  : D;
+    ? {
+        [K in keyof D]: FlattenI18nWord<D[K]>;
+      }
+    : D;
 
 export function flattenI18nWord<D>(
   value: D,
   locale: I18nLocale,
 ): FlattenI18nWord<D> {
   let result: any;
-  
+
   if (isI18nWord(value)) {
     result = value[locale];
   } else if (Array.isArray(value)) {

@@ -86,7 +86,11 @@ export default defineComponent({
               </div>
             </div>
 
-            <p class={cn('mt-5 max-w-2/4 relative z-10 max-sm:max-w-100')}>
+            <p
+              class={cn(
+                'mt-5 max-w-2/4 relative z-10 max-sm:max-w-100',
+              )}
+            >
               {content.value.intro.description}
             </p>
 

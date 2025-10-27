@@ -34,11 +34,13 @@ export default defineContentConfig({
         industry: z.string(),
         service: z.string(),
         fileName: z.string().optional(),
-        technologies: z.array(z.object({
-          icon: z.string(),
-          name: z.string(),
-          inverted: z.boolean().optional(),
-        })),
+        technologies: z.array(
+          z.object({
+            icon: z.string(),
+            name: z.string(),
+            inverted: z.boolean().optional(),
+          }),
+        ),
         priority: z.number(),
       }),
     }),

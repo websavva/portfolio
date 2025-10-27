@@ -41,7 +41,10 @@ export default defineComponent({
           {metadata.value.map((item, index) => (
             <div
               key={index}
-              class={cn('flex flex-col gap-3 flex-1', 'px-6 py-3 max-md:py-3 max-md:pl-0 max-xs:items-center')}
+              class={cn(
+                'flex flex-col gap-3 flex-1',
+                'px-6 py-3 max-md:py-3 max-md:pl-0 max-xs:items-center',
+              )}
             >
               <div class="flex items-center gap-3">
                 <div class="text-xs text-editor-fg/60 font-medium uppercase tracking-wider">
