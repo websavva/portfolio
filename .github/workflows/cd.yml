@@ -129,7 +129,7 @@ jobs:
           host: websavva.dev
           username: ${{ secrets.DEPLOY_SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: 'deployment/docker-compose.yml'
+          source: './docker-compose.yml'
           target: /apps/portfolio
           strip_components: 1
 
@@ -139,7 +139,7 @@ jobs:
           host: websavva.dev
           username: ${{ secrets.DEPLOY_SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: 'deployment/nginx.conf'
+          source: './nginx.conf'
           target: /apps/portfolio
           strip_components: 1
 
