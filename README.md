@@ -1,75 +1,93 @@
-# Nuxt Minimal Starter
+![Portfolio Preview](./public/og.png)
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# 🚀 WebSavva Portfolio
 
-## Setup
+**Modern Frontend Developer Portfolio**
 
-Make sure to install dependencies:
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-websavva.dev-blue?style=for-the-badge)](https://websavva.dev)
+[![GitHub](https://img.shields.io/badge/GitHub-websavva-black?style=for-the-badge&logo=github)](https://github.com/websavva)
 
-```bash
-# npm
-npm install
+_A sleek, interactive portfolio showcasing frontend development expertise with modern technologies and elegant design._
 
-# pnpm
-pnpm install
+---
 
-# yarn
-yarn install
+## ✨ **About**
 
-# bun
-bun install
-```
+This portfolio website represents my journey as a frontend developer, featuring an **interactive VS Code-inspired interface** that showcases my projects, skills, and experience. Built with cutting-edge technologies and designed for performance, accessibility, and user engagement.
 
-## Development Server
+### 🎯 **Key Features**
 
-Start the development server on `http://localhost:3000`:
+- 🖥️ **VS Code Interface** - Familiar developer environment with file explorer, tabs, and editor
+- 🌍 **Internationalization** - Multi-language support (English/Russian)
+- 🎨 **Interactive Design** - Smooth animations and engaging user interactions
+- 📱 **Responsive Layout** - Optimized for all devices and screen sizes
+- ⚡ **Performance Optimized** - Fast loading with SSR and modern optimization techniques
+- 🔍 **SEO Friendly** - Structured data and meta optimization
+- 📧 **Contact Integration** - Direct contact form with email notifications
 
-```bash
-# npm
-npm run dev
+---
 
-# pnpm
-pnpm dev
+## 🛠️ **Tech Stack**
 
-# yarn
-yarn dev
+### **Frontend**
 
-# bun
-bun run dev
-```
+![Nuxt.js](https://img.shields.io/badge/Nuxt.js-00DC82?style=flat&logo=nuxt.js&logoColor=white)
+![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat&logo=vue.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
 
-## Production
+### **Backend & Infrastructure**
 
-Build the application for production:
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white)
+![Nitro](https://img.shields.io/badge/Nitro-00DC82?style=flat&logo=nuxt.js&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat&logo=nginx&logoColor=white)
 
-```bash
-# npm
-npm run build
+### **Development & Deployment**
 
-# pnpm
-pnpm build
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=github-actions&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=flat&logo=eslint&logoColor=white)
+![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=flat&logo=prettier&logoColor=black)
 
-# yarn
-yarn build
+---
 
-# bun
-bun run build
-```
+## 🌟 **Features Showcase**
 
-Locally preview production build:
+### **Interactive VS Code Interface**
 
-```bash
-# npm
-npm run preview
+- File explorer with project navigation
+- Tabbed editor interface
+- Syntax highlighting for code examples
+- Collapsible sidebar panels
 
-# pnpm
-pnpm preview
+### **Project Portfolio**
 
-# yarn
-yarn preview
+- Detailed project showcases with live demos
+- Technology stack highlights
+- GitHub integration
+- Interactive project filtering
 
-# bun
-bun run preview
-```
+### **Internationalization**
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- English and Russian language support
+- Dynamic content loading
+- Locale-specific routing
+- Cultural adaptations
+
+### **Performance & SEO**
+
+- Server-side rendering (SSR)
+- Automatic code splitting
+- Image optimization
+- Structured data markup
+- Open Graph integration
+
+---
+
+<div align="center">
+
+**⭐ Star this repository if you found it helpful!**
+
+_Built with ❤️ using modern web technologies_
+
+</div>
