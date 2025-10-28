@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/websavva/portfolio/compare/v1.0.1...v1.1.0) (2025-10-28)
+
+
+### Features
+
+* yandex metrika was integrated ([fec0813](https://github.com/websavva/portfolio/commit/fec0813f7e5f229002433d19726510c8e69870c7))
+
+
+### Bug Fixes
+
+* Dockerfile and CD takes into account Yandex Metrika id ([d011a5f](https://github.com/websavva/portfolio/commit/d011a5f12c571742a1d8dd9816ed4b400cfb1d65))
+
 ## [1.0.1](https://github.com/websavva/portfolio/compare/v1.0.0...v1.0.1) (2025-10-28)
 
 
