@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/websavva/portfolio/compare/v1.0.0...v1.0.1) (2025-10-28)
+
+
+### Bug Fixes
+
+* **cd:** Paths were fixed ([b623513](https://github.com/websavva/portfolio/commit/b6235130a586c7d3f9b5ddb4d7c651465f0759d9))
+
 ## [1.0.0](https://github.com/websavva/portfolio/compare/v0.0.1...v1.0.0) (2025-10-28)
 
 
