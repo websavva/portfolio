@@ -5,9 +5,6 @@ import { publicDefine } from './config/env';
 
 const { resolve } = createResolver(import.meta.url);
 
-const isProd = process.env.NODE_ENV === 'production';
-
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -104,10 +101,6 @@ export default defineNuxtConfig({
           allowImportingTsExtensions: true,
         },
       },
-    },
-
-    compressPublicAssets: {
-      brotli: isProd,
     },
 
     esbuild: {
