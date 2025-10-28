@@ -72,6 +72,9 @@ importers:
       country-language:
         specifier: ^0.1.7
         version: 0.1.7
+      defu:
+        specifier: ^6.1.4
+        version: 6.1.4
       eslint:
         specifier: ^9.35.0
         version: 9.38.0(jiti@2.6.1)
