@@ -72,13 +72,24 @@ export default defineComponent({
                   <div
                     class={cn('mr-10 max-sm:self-center')}
                   >
-                    <img
-                      src="/me.webp"
-                      role="presentation"
+                    <div
                       class={cn(
-                        'w-64 h-auto rounded-2xl brightness-85 block',
+                        'relative w-56 h-80',
+                        'rounded-3xl overflow-hidden',
+                        'shadow-2xl shadow-(color:--section-color)/50',
+                        'transform rotate-3 hover:rotate-0 transition-transform duration-500 border border-(--section-color)/50',
                       )}
-                    />
+                    >
+                      <img
+                        src="/me.webp"
+                        role="presentation"
+                        class={cn(
+                          'w-full h-full object-cover rounded-3xl',
+                          'filter saturate-125 contrast-110',
+                          'hover:scale-105 transition-transform duration-300',
+                        )}
+                      />
+                    </div>
                   </div>
                 </div>
 
