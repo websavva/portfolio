@@ -59,6 +59,12 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap',
         },
       ],
+      meta: [
+        {
+          name: 'og:image',
+          content: `${process.env.WS_PUBLIC_BASE_URL}/og.png`,
+        },
+      ],
     },
   },
 
