@@ -75,6 +75,7 @@ jobs:
             WS_PUBLIC_BIO_BIRTH_DATE=${{ secrets.WS_PUBLIC_BIO_BIRTH_DATE }}
             WS_PUBLIC_BIO_SOCIAL_LINK_TELEGRAM=${{ secrets.WS_PUBLIC_BIO_SOCIAL_LINK_TELEGRAM }}
             WS_PUBLIC_BIO_SOCIAL_LINK_GITHUB=${{ secrets.WS_PUBLIC_BIO_SOCIAL_LINK_GITHUB }}
+            WS_PUBLIC_YM_ID=${{ secrets.WS_PUBLIC_YM_ID }}
 
       - name: Inspect
         run: |
