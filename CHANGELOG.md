@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/websavva/portfolio/compare/v1.1.0...v1.1.1) (2025-10-29)
+
+
+### Bug Fixes
+
+* experimental features were configured as needed ([c7bac10](https://github.com/websavva/portfolio/commit/c7bac105080c43c7ac5880a2aab882d1c9dd7612))
+
 ## [1.1.0](https://github.com/websavva/portfolio/compare/v1.0.1...v1.1.0) (2025-10-28)
 
 
