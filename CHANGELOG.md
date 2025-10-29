@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/websavva/portfolio/compare/v1.1.1...v1.1.2) (2025-10-29)
+
+
+### Bug Fixes
+
+* OG image was compressed in order to keep the limit in WhatsApp ([ad42329](https://github.com/websavva/portfolio/commit/ad42329b7ea2db87f9cd59dde9bf1fe35e6362d1))
+
 ## [1.1.1](https://github.com/websavva/portfolio/compare/v1.1.0...v1.1.1) (2025-10-29)
 
 
