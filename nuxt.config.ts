@@ -22,6 +22,11 @@ export default defineNuxtConfig({
     },
   },
 
+  experimental: {
+    componentIslands: true,
+    entryImportMap: false,
+  },
+
   icon: {
     mode: 'svg',
     componentName: 'NuxtIcon',
