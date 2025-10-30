@@ -2,7 +2,7 @@
   "content": {
     "intro": {
       "lookingForJob": "Looking for job",
-      "description": "Software developer with a B.S. in Business Informatics with experience in Front-End and Back-End technologies."
+      "description": "Software developer with a B.S. in Business Informatics and experience in Front-End and Back-End technologies."
     },
     "aboutMe": {
       "title": "About Me",
@@ -51,11 +51,11 @@
       "present": "Present",
       "subtitle": [
         {
-          "text": "Middle Frontend Developer",
+          "text": "Middle/Senior Frontend Developer",
           "isHighlighted": true
         },
         {
-          "text": "with 4 years of experience",
+          "text": "with 4+ years of experience",
           "isHighlighted": false
         }
       ]
