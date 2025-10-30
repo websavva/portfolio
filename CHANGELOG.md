@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.2.0](https://github.com/websavva/portfolio/compare/v1.1.2...v1.2.0) (2025-10-30)
+
+
+### Features
+
+* Custom favicon was added ([14cf559](https://github.com/websavva/portfolio/commit/14cf55957772ae2540e7a7061318b74d502cab38))
+
+
+### Bug Fixes
+
+* Minor content improvement were made ([03e1817](https://github.com/websavva/portfolio/commit/03e181708430f2ea3c6890b2e2df4691632494ab))
+* Minor content improvement were made ([b5b54b7](https://github.com/websavva/portfolio/commit/b5b54b77a0e6a36c73cc3648548e61dbf78e796d))
+
 ## [1.1.2](https://github.com/websavva/portfolio/compare/v1.1.1...v1.1.2) (2025-10-29)
 
 
