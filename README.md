@@ -1,4 +1,4 @@
-![Portfolio Preview](./public/og.png)
+![Portfolio Preview](./packages/core/public/og.png)
 
 # 🚀 WebSavva Portfolio
 

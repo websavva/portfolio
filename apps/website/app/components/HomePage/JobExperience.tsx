@@ -20,13 +20,46 @@ export default defineComponent({
     const bio = useBio();
     const content = useCurrentPageContent();
 
+    const jobExperienceYears = computed(
+      () =>
+        timePassedSince(bio.value.careerStartDate).years,
+    );
+
+    const jobExperienceYearsLabel = computed(
+      () =>
+        `${jobExperienceYears.value}\u00A0${declineYears(
+          jobExperienceYears.value,
+          {
+            case: 'instrumental',
+            locale: locale.value,
+          },
+        )}`,
+    );
+
+    const subtitle = computed(() =>
+      content.value.jobExperience.subtitle.map(
+        (item: {
+          text: string;
+          isHighlighted: boolean;
+        }) => {
+          return {
+            ...item,
+            text: item.text.replace(
+              '{{years}}',
+              jobExperienceYearsLabel.value,
+            ),
+          };
+        },
+      ),
+    );
+
     return () => {
       return (
         <HomePageSection
           class={props.class}
           iconName="codicon:briefcase"
           color="primary"
-          subtitle={content.value.jobExperience.subtitle}
+          subtitle={subtitle.value}
         >
           {{
             title: () => content.value.jobExperience.title,

@@ -35,7 +35,7 @@
           "isHighlighted": true
         },
         {
-          "text": "с 4+ годами опыта работы",
+          "text": "с {{years}} опыта работы",
           "isHighlighted": false
         }
       ]
