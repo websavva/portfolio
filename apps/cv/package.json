@@ -1,0 +1,34 @@
+{
+  "name": "@websavva/portfolio-cv",
+  "version": "1.1.2",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.10.0",
+  "engines": {
+    "node": "22.x",
+    "pnpm": "10.10.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "jiti scripts/build.ts",
+    "dev": "nuxt dev --dotenv=../../.env --no-fork",
+    "dev:prepare": "nuxt prepare --dotenv=../../.env",
+    "typecheck:server": "tsc --noEmit -p server",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "dependencies": {
+    "nuxt": "4.1.3",
+    "vue": "3.5.22",
+    "@websavva/portfolio-core": "workspace:*"
+  },
+  "devDependencies": {
+    "@nuxt/kit": "^4.1.3",
+    "@types/node": "^24.7.1",
+    "jiti": "^2.6.1",
+    "typescript": "^5.9.3"
+  }
+}
