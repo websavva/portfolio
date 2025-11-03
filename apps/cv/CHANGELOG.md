@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/websavva/portfolio/compare/portfolio-cv-v1.0.1...portfolio-cv-v1.0.2) (2025-11-03)
+
+
+### Bug Fixes
+
+* Chromium is installed in Dockerfile ([02b44ed](https://github.com/websavva/portfolio/commit/02b44edefc238e7d592fb6345a3f37db58153224))
+
 ## [1.0.1](https://github.com/websavva/portfolio/compare/portfolio-cv-v1.0.0...portfolio-cv-v1.0.1) (2025-11-03)
 
 
