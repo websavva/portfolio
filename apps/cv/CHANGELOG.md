@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/websavva/portfolio/compare/portfolio-cv-v1.0.2...portfolio-cv-v1.0.3) (2025-11-03)
+
+
+### Bug Fixes
+
+* Chromium is installed duly ([fd59e95](https://github.com/websavva/portfolio/commit/fd59e95659b7ec3301e473364d69f9023b15c60b))
+
 ## [1.0.2](https://github.com/websavva/portfolio/compare/portfolio-cv-v1.0.1...portfolio-cv-v1.0.2) (2025-11-03)
 
 
