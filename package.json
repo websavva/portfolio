@@ -1,6 +1,6 @@
 {
   "name": "@websavva/portfolio-monorepo",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "private": true,
   "packageManager": "pnpm@10.10.0",
   "type": "module",
