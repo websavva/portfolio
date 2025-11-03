@@ -1,6 +1,5 @@
-import { defu } from 'defu';
 import plural from 'plural-ru';
-
+import { defu } from 'defu';
 import type { I18nLocale } from '#i18n';
 
 type Case =
@@ -35,7 +34,7 @@ const defaultCases: CasesRecord = {
 export interface GetYearLabelOptions {
   case: Case;
   locale: I18nLocale;
-  cases?: CasesRecord;
+  cases?: Partial<CasesRecord>;
 }
 
 export function declineYears(

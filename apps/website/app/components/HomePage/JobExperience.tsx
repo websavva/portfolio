@@ -16,6 +16,7 @@ export default defineComponent({
 
   setup(props) {
     const { locale } = useI18n();
+    const $t = useI18nTranslation();
 
     const bio = useBio();
     const content = useCurrentPageContent();
@@ -109,8 +110,7 @@ export default defineComponent({
                                   job.timerange.end,
                                   locale.value,
                                 )
-                              : content.value.jobExperience
-                                  .present}
+                              : $t('now')}
                           </span>
                           <img
                             src={job.companyImageUrl}

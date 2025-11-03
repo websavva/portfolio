@@ -1,5 +1,17 @@
 {
   "titleTemplate": "%s | WebSavva's Portfolio",
+
+  "age": "Age",
+  "jobExperience": "Job Experience",
+  "career": "Career Experience",
+  "education": "Education",
+  "skills": "Skills",
+  "aboutMe": "About Me",
+  "now": "Present",
+  "email": "Email",
+  "phoneNumber": "Phone Number",
+  "location": "Location",
+
   "topBar": {
     "titleTemplate": "%s - Portfolio",
     "menu": [

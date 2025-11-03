@@ -71,6 +71,7 @@ export default defineNuxtModule<ModuleOptions>({
           `export const availableLocales = ${JSON.stringify(
             options.locales.map((locale) => locale.code),
           )};`,
+          'export const isAvailableLocale = (locale: unknown): locale is I18nLocale => availableLocales.includes(locale as I18nLocale);',
         ].join('\n');
       },
     });

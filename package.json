@@ -12,12 +12,17 @@
     "pnpm": "10.10.0"
   },
   "scripts": {
+    "dev:prepare": "pnpm --filter=\"./**\" dev:prepare",
+    "typecheck": "pnpm --filter=\"./**\" typecheck",
+    "lint": "pnpm --filter=\"./**\" lint",
+    "lint:fix": "pnpm --filter=\"./**\" lint:fix",
     "website:build": "pnpm --filter @websavva/portfolio-website build",
     "website:dev": "pnpm --filter @websavva/portfolio-website dev",
     "website:dev:prepare": "pnpm --filter @websavva/portfolio-website dev:prepare",
     "cv:build": "pnpm --filter @websavva/portfolio-cv build",
     "cv:dev": "pnpm --filter @websavva/portfolio-cv dev",
     "cv:dev:prepare": "pnpm --filter @websavva/portfolio-cv dev:prepare",
-    "core:dev:prepare": "pnpm --filter @websavva/portfolio-core dev:prepare"
+    "core:dev:prepare": "pnpm --filter @websavva/portfolio-core dev:prepare",
+    "build": "pnpm cv:build && pnpm website:build"
   }
 }

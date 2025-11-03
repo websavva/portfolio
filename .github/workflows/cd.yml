@@ -4,20 +4,9 @@ on:
   release:
     types: ['released']
 
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Version of the app'
-        required: true
-        type: string
-
-      skip-build:
-        description: 'Skips build stage'
-        type: boolean
-        default: false
-
 jobs:
   infer-version:
+    if: github.event_name == 'release' && startsWith(github.event.release.tag_name, '@websavva/portfolio-website-v')
     runs-on: ubuntu-latest
     name: Infer version
     outputs:
@@ -30,7 +19,8 @@ jobs:
           # If a release tag is present, use it; otherwise, use the input version
           if [ -n "${{ github.event.release.tag_name }}" ]; then
             VERSION_TAG="${{ github.event.release.tag_name }}"
-            VERSION="${VERSION_TAG:1}"
+            # Remove @websavva/portfolio-website-v prefix
+            VERSION="${VERSION_TAG#@websavva/portfolio-website-v}"
           else
             VERSION="${{ inputs.version }}"
           fi
@@ -39,155 +29,11 @@ jobs:
           # Set the output for the current step
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
-  build:
-    name: Run build and push to registry
+  website-cd:
+    if: github.event_name == 'release' && startsWith(github.event.release.tag_name, '@websavva/portfolio-website-v')
+    name: Website CD
     needs: infer-version
-    runs-on: ubuntu-latest
-    if: github.event_name == 'release' || inputs.skip-build == 'true'
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: v${{ needs.infer-version.outputs.version }}
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Login to ghcr.io
-        uses: docker/login-action@v3
-        with:
-          registry: https://ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.DOCKER_REGISTRY_TOKEN }}
-
-      - name: Build and push to ghcr.io
-        uses: docker/build-push-action@v6
-        with:
-          push: true
-          tags: ghcr.io/websavva/portfolio:${{ needs.infer-version.outputs.version }}
-          build-args: |
-            WS_PUBLIC_BASE_URL=https://websavva.dev
-            WS_PUBLIC_BIO_FULL_NAME_EN=${{ secrets.WS_PUBLIC_BIO_FULL_NAME_EN }}
-            WS_PUBLIC_BIO_FULL_NAME_RU=${{ secrets.WS_PUBLIC_BIO_FULL_NAME_RU }}
-            WS_PUBLIC_BIO_CAREER_START_DATE=${{ secrets.WS_PUBLIC_BIO_CAREER_START_DATE }}
-            WS_PUBLIC_BIO_BIRTH_DATE=${{ secrets.WS_PUBLIC_BIO_BIRTH_DATE }}
-            WS_PUBLIC_BIO_SOCIAL_LINK_TELEGRAM=${{ secrets.WS_PUBLIC_BIO_SOCIAL_LINK_TELEGRAM }}
-            WS_PUBLIC_BIO_SOCIAL_LINK_GITHUB=${{ secrets.WS_PUBLIC_BIO_SOCIAL_LINK_GITHUB }}
-            WS_PUBLIC_YM_ID=${{ secrets.WS_PUBLIC_YM_ID }}
-
-      - name: Inspect
-        run: |
-          docker buildx imagetools inspect ghcr.io/websavva/portfolio:${{ needs.infer-version.outputs.version }}
-
-  deploy:
-    name: Deploy the app with Docker Compose
-    runs-on: ubuntu-latest
-    needs: [infer-version, build]
-
-    environment:
-      name: Production
-      url: https://websavva.dev
-
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: v${{ needs.infer-version.outputs.version }}
-
-      - name: Pulling image
-        uses: appleboy/ssh-action@v1.1.0
-        with:
-          host: websavva.dev
-          username: ${{ secrets.DEPLOY_SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            cd /apps/portfolio
-            docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.DOCKER_REGISTRY_TOKEN }}
-            docker image pull ghcr.io/websavva/portfolio:${{ needs.infer-version.outputs.version }}
-
-      - name: Executing docker compose down
-        uses: appleboy/ssh-action@v1.1.0
-        with:
-          host: websavva.dev
-          username: ${{ secrets.DEPLOY_SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            cd /apps/portfolio
-            docker ps -q \
-            --filter "label=com.docker.compose.project=portfolio" \
-            | \
-            xargs -r docker stop
-            docker ps -aq \
-            --filter "label=com.docker.compose.project=portfolio" \
-            | \
-            xargs -r docker rm
-            docker network ls --filter "name=portfolio" --format "{{.Name}}" | xargs -r docker network rm
-
-      - name: Copy docker-compose.yml
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: websavva.dev
-          username: ${{ secrets.DEPLOY_SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: './docker-compose.yml'
-          target: /apps/portfolio
-          strip_components: 1
-
-      - name: Copy nginx.conf
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: websavva.dev
-          username: ${{ secrets.DEPLOY_SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: './nginx.conf'
-          target: /apps/portfolio
-          strip_components: 1
-
-      - name: Deploy
-        uses: appleboy/ssh-action@v1.1.0
-        with:
-          host: websavva.dev
-          username: ${{ secrets.DEPLOY_SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            export WS_PUBLIC_RELEASE_VERSION="${{ needs.infer-version.outputs.version }}"
-            export WS_PUBLIC_BIO_FULL_NAME_EN="${{ secrets.WS_PUBLIC_BIO_FULL_NAME_EN }}"
-            export WS_PUBLIC_BIO_FULL_NAME_RU="${{ secrets.WS_PUBLIC_BIO_FULL_NAME_RU }}"
-            export WS_PUBLIC_BIO_CAREER_START_DATE="${{ secrets.WS_PUBLIC_BIO_CAREER_START_DATE }}"
-            export WS_PUBLIC_BIO_BIRTH_DATE="${{ secrets.WS_PUBLIC_BIO_BIRTH_DATE }}"
-            export WS_PUBLIC_BIO_SOCIAL_LINK_TELEGRAM="${{ secrets.WS_PUBLIC_BIO_SOCIAL_LINK_TELEGRAM }}"
-            export WS_PUBLIC_BIO_SOCIAL_LINK_GITHUB="${{ secrets.WS_PUBLIC_BIO_SOCIAL_LINK_GITHUB }}"
-            export WS_PRIVATE_TELEGRAM_BOT_API_KEY="${{ secrets.WS_PRIVATE_TELEGRAM_BOT_API_KEY }}"
-            export WS_PRIVATE_TELEGRAM_BOT_CHAT_ID="${{ secrets.WS_PRIVATE_TELEGRAM_BOT_CHAT_ID }}"
-            cd /apps/portfolio
-            docker compose up -d
-
-      - name: Cleanup old Docker images
-        uses: appleboy/ssh-action@v1.1.0
-        with:
-          host: websavva.dev
-          username: ${{ secrets.DEPLOY_SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            echo "Cleaning up old Docker images..."
-            IMAGE_NAME="ghcr.io/websavva/portfolio"
-            KEEP_COUNT=3
-            
-            IMAGE_IDS=$(docker images "$IMAGE_NAME" --format "{{.ID}}" | uniq)
-            TOTAL=$(echo "$IMAGE_IDS" | wc -l | tr -d ' ')
-            
-            echo "Found $TOTAL images"
-            
-            if [ "$TOTAL" -le "$KEEP_COUNT" ]; then
-              echo "Only $TOTAL images exist. Nothing to delete."
-              exit 0
-            fi
-            
-            KEEP=$(echo "$IMAGE_IDS" | head -n $KEEP_COUNT)
-            TO_DELETE=$(echo "$IMAGE_IDS" | grep -v -F "$KEEP")
-            
-            echo "Deleting old images..."
-            echo "$TO_DELETE" | xargs -r docker rmi -f
-            
-            echo "Cleanup complete!"
+    uses: ./.github/workflows/website-cd.yml
+    secrets: inherit
+    with:
+      version: ${{ needs.infer-version.outputs.version }}

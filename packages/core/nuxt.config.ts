@@ -19,11 +19,6 @@ export default defineNuxtConfig({
 
   i18n: i18nConfig,
 
-  features: {
-    noScripts: true,
-    inlineStyles: true,
-  },
-
   experimental: {
     componentIslands: true,
     entryImportMap: false,

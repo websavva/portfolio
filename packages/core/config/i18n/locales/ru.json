@@ -1,6 +1,18 @@
 {
   "titleTemplate": "%s | Портфолио WebSavva",
 
+  "age": "Возраст",
+  "jobExperience": "Опыт работы",
+  "career": "Опыт работы",
+  "education": "Образование",
+  "skills": "Навыки",
+  "aboutMe": "Обо мне",
+  "now": "Настоящее время",
+
+  "email": "Email",
+  "phoneNumber": "Телефон",
+  "location": "Город",
+
   "topBar": {
     "titleTemplate": "%s - Портфолио",
     "menu": [

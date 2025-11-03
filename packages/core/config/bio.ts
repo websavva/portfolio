@@ -1,4 +1,7 @@
 import { defineI18nWord } from '#imports';
+import studworkLogoUrl from '@websavva/portoflio-core/public/studwork.png?inline';
+import work24LogoUrl from '@websavva/portoflio-core/public/work24.png?inline';
+import uniLogoUrl from '@websavva/portoflio-core/public/uni-logo.svg?inline';
 
 export const bioConfig = {
   fullName: defineI18nWord({
@@ -22,12 +25,14 @@ export const bioConfig = {
 
   isLookingForJob: true,
 
+  email: process.env.WS_PUBLIC_BIO_EMAIL!,
+  phoneNumber: process.env.WS_PUBLIC_BIO_PHONE_NUMBER!,
+  location: defineI18nWord({
+    en: process.env.WS_PUBLIC_BIO_LOCATION_EN!,
+    ru: process.env.WS_PUBLIC_BIO_LOCATION_RU!,
+  }),
+
   socialLinks: [
-    {
-      name: 'Email',
-      url: `mailto:${process.env.WS_PUBLIC_SOCIAL_LINK_EMAIL!}`,
-      icon: 'logos:google-gmail',
-    },
     {
       name: 'GitHub',
       url: process.env.WS_PUBLIC_BIO_SOCIAL_LINK_GITHUB!,
@@ -66,6 +71,11 @@ export const bioConfig = {
   ],
 
   collegeDegree: {
+    timerange: {
+      start: '2017-09-01',
+      end: '2021-06-01',
+    },
+
     major: defineI18nWord({
       en: 'B.S in Business Informatics',
       ru: 'Бакалавр - Бизнес-Информатика',
@@ -74,7 +84,12 @@ export const bioConfig = {
       en: 'Saint-Petersburg State University',
       ru: 'Санкт-Петербургский государственный университет',
     }),
-    uniLogoUrl: '/uni-logo.svg',
+    uniLogoUrl: uniLogoUrl,
+
+    description: defineI18nWord({
+      en: 'Specialized in software development, database management, and information systems. Gained comprehensive knowledge in business process modeling, enterprise architecture, and modern web technologies.',
+      ru: 'Специализация в разработке программного обеспечения, управлении базами данных и информационных систем. Получил комплексные знания в моделировании бизнес-процессов, корпоративной архитектуре и современных веб-технологиях.',
+    }),
 
     url: 'https://diploma.spbu.ru/s/?rn=2011114&bd=19990221&h=b4eec686154e479e9ca261c9c29010f5',
   },
@@ -82,15 +97,14 @@ export const bioConfig = {
   jobExperience: [
     {
       position: defineI18nWord({
-        en: 'Middle Frontend Developer',
-        ru: 'Middle Frontend Разработчик',
+        en: 'Middle/Senior Frontend Developer',
+        ru: 'Middle/Senior Frontend Разработчик',
       }),
       company: defineI18nWord({
         en: 'Studwork',
         ru: 'Студворк',
       }),
-      companyImageUrl:
-        'https://c5mdnuiqw2.a.trbcdn.net/img/og-image.png',
+      companyImageUrl: studworkLogoUrl,
 
       url: 'https://studwork.ru',
 
@@ -128,8 +142,8 @@ export const bioConfig = {
     },
     {
       position: defineI18nWord({
-        en: 'Middle Frontend Developer',
-        ru: 'Middle Frontend Разработчик',
+        en: 'Middle/Senior Frontend Developer',
+        ru: 'Middle/Senior Frontend Разработчик',
       }),
       timerange: {
         start: '2023-06-01',
@@ -139,8 +153,7 @@ export const bioConfig = {
         en: 'Work24',
         ru: 'Ворк24',
       }),
-      companyImageUrl:
-        'https://7jv3twknu4.a.trbcdn.net/img/og-image.png',
+      companyImageUrl: work24LogoUrl,
 
       url: 'https://work24.ru',
 
@@ -183,9 +196,9 @@ export const bioConfig = {
         en: 'Tools',
         ru: 'Инструменты',
       }),
-      deployment: defineI18nWord({
-        en: 'Deployment',
-        ru: 'Деплой',
+      devOps: defineI18nWord({
+        en: 'DevOps',
+        ru: 'DevOps',
       }),
     },
 
@@ -216,6 +229,14 @@ export const bioConfig = {
           icon: 'material-icon-theme:next',
         },
         {
+          name: 'Redux',
+          icon: 'logos:redux',
+        },
+        {
+          name: 'Zustand',
+          icon: 'local:zustand',
+        },
+        {
           name: 'Vue',
           icon: 'logos:vue',
         },
@@ -230,6 +251,14 @@ export const bioConfig = {
         {
           name: 'Vuex',
           icon: 'material-icon-theme:vuex-store',
+        },
+        {
+          name: 'Vuelidate',
+          icon: 'logos:vue',
+        },
+        {
+          name: 'VueUse',
+          icon: 'logos:vueuse',
         },
         {
           name: 'Zod',
@@ -362,8 +391,12 @@ export const bioConfig = {
           name: 'Jest',
           icon: 'logos:jest',
         },
+        {
+          name: 'React Testing Library',
+          icon: 'local:react-testing-library',
+        },
       ],
-      deployment: [
+      devOps: [
         {
           name: 'Docker',
           icon: 'logos:docker-icon',

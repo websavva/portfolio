@@ -13,15 +13,11 @@ import {
   i18nLocalesLoaders,
   defaultLocale,
   availableLocales,
+  isAvailableLocale,
 } from '#i18n';
 
 ip3country.init();
 acceptLanguage.languages(availableLocales);
-
-const isAvailableLocale = (
-  locale: unknown,
-): locale is I18nLocale =>
-  availableLocales.includes(locale as I18nLocale);
 
 async function loadInitialLocale(event?: H3Event) {
   if (!event) return defaultLocale;
