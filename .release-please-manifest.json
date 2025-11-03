@@ -1,5 +1,5 @@
 {
   "packages/core": "1.0.0",
-  "apps/website": "2.0.0",
+  "apps/website": "2.1.0",
   "apps/cv": "1.0.0"
 }
