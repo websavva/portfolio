@@ -33,7 +33,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: '@websavva/portfolio-website-v${{ inputs.version }}'
+          ref: 'portfolio-website-v${{ inputs.version }}'
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -84,7 +84,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: '@websavva/portfolio-website-v${{ inputs.version }}'
+          ref: 'portfolio-website-v${{ inputs.version }}'
 
       - name: Pulling image
         uses: appleboy/ssh-action@v1.1.0

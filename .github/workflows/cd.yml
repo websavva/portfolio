@@ -6,7 +6,7 @@ on:
 
 jobs:
   infer-version:
-    if: github.event_name == 'release' && startsWith(github.event.release.tag_name, '@websavva/portfolio-website-v')
+    if: github.event_name == 'release' && startsWith(github.event.release.tag_name, 'portfolio-website-v')
     runs-on: ubuntu-latest
     name: Infer version
     outputs:
@@ -19,8 +19,8 @@ jobs:
           # If a release tag is present, use it; otherwise, use the input version
           if [ -n "${{ github.event.release.tag_name }}" ]; then
             VERSION_TAG="${{ github.event.release.tag_name }}"
-            # Remove @websavva/portfolio-website-v prefix
-            VERSION="${VERSION_TAG#@websavva/portfolio-website-v}"
+            # Remove portfolio-website-v prefix
+            VERSION="${VERSION_TAG#portfolio-website-v}"
           else
             VERSION="${{ inputs.version }}"
           fi
@@ -30,7 +30,7 @@ jobs:
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
   website-cd:
-    if: github.event_name == 'release' && startsWith(github.event.release.tag_name, '@websavva/portfolio-website-v')
+    if: github.event_name == 'release' && startsWith(github.event.release.tag_name, 'portfolio-website-v')
     name: Website CD
     needs: infer-version
     uses: ./.github/workflows/website-cd.yml
