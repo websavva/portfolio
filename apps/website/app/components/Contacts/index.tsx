@@ -15,6 +15,17 @@ export default defineComponent({
 
     const bio = useBio();
 
+    const socialLinks = computed(() => {
+      return [
+        {
+          name: 'Email',
+          url: `mailto:${bio.value.email}`,
+          icon: 'codicon:mail',
+        },
+        ...bio.value.socialLinks,
+      ];
+    });
+
     function onContactMeClick() {
       scrollToElement('contact-form');
     }
@@ -24,7 +35,7 @@ export default defineComponent({
         <div
           class={cn('flex items-center gap-3', props.class)}
         >
-          {bio.value.socialLinks.map((link, index) => (
+          {socialLinks.value.map((link, index) => (
             <motion.div
               key={link.name}
               initial={{ opacity: 0, y: 10 }}
