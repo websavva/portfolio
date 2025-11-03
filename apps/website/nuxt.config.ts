@@ -6,7 +6,6 @@ const isProd = process.env.NODE_ENV === 'production';
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
 
   extends: ['@websavva/portfolio-core/nuxt.config'],
 
