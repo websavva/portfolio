@@ -8,7 +8,7 @@ FROM base as build
 
 WORKDIR /app-build
 
-RUN apk add --no-cache chromium-browser
+RUN apk add --no-cache chromium
 
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY packages/core/package.json packages/core/package.json
@@ -48,6 +48,7 @@ ENV WS_PUBLIC_BIO_LOCATION_EN=${WS_PUBLIC_BIO_LOCATION_EN}
 ENV WS_PUBLIC_BIO_LOCATION_RU=${WS_PUBLIC_BIO_LOCATION_RU}
 ENV WS_PUBLIC_BIO_PHONE_NUMBER=${WS_PUBLIC_BIO_PHONE_NUMBER}
 ENV WS_PUBLIC_BIO_EMAIL=${WS_PUBLIC_BIO_EMAIL}
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
 RUN pnpm dev:prepare
 
