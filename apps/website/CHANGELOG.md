@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.0](https://github.com/websavva/portfolio/compare/portfolio-website-v2.0.0...portfolio-website-v2.1.0) (2025-11-03)
+
+
+### Features
+
+* Email was added to Intro ([1766073](https://github.com/websavva/portfolio/commit/17660734ee32a157f4d71a883fb4634783f0bdd9))
+* Email was added to Intro ([3dbe4fd](https://github.com/websavva/portfolio/commit/3dbe4fd366e2928d1ac9e29bb3117345506b1a1d))
+
 ## [2.0.0](https://github.com/websavva/portfolio/compare/portfolio-website-v1.2.0...portfolio-website-v2.0.0) (2025-11-03)
 
 
