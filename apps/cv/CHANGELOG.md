@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/websavva/portfolio/compare/portfolio-cv-v1.0.3...portfolio-cv-v1.1.0) (2025-11-03)
+
+
+### Features
+
+* Puppeeteer args was set ([27ea43d](https://github.com/websavva/portfolio/commit/27ea43d25da01089ab93ca810ee4be487e5ad7c7))
+
 ## [1.0.3](https://github.com/websavva/portfolio/compare/portfolio-cv-v1.0.2...portfolio-cv-v1.0.3) (2025-11-03)
 
 
