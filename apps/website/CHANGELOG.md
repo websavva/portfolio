@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.1.1](https://github.com/websavva/portfolio/compare/portfolio-website-v2.1.0...portfolio-website-v2.1.1) (2025-11-03)
+
+
+### Bug Fixes
+
+* devtools were disabled ([6b65b5b](https://github.com/websavva/portfolio/commit/6b65b5bf0d9c2d6b04cecc9b2c48a623db08ed7a))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @websavva/portfolio-core bumped to 1.0.1
+    * @websavva/portfolio-cv bumped to 1.0.1
+
 ## [2.1.0](https://github.com/websavva/portfolio/compare/portfolio-website-v2.0.0...portfolio-website-v2.1.0) (2025-11-03)
 
 
