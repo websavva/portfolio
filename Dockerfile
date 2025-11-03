@@ -8,6 +8,8 @@ FROM base as build
 
 WORKDIR /app-build
 
+RUN apk add --no-cache chromium-browser
+
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY packages/core/package.json packages/core/package.json
 COPY apps/cv/package.json apps/cv/package.json

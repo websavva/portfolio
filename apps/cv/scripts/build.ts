@@ -27,7 +27,12 @@ async function build() {
 
   await buildNuxt(nuxt);
 
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    executablePath:
+      process.env.NODE_ENV === 'production'
+        ? '/usr/bin/chromium-browser'
+        : undefined,
+  });
   const page = await browser.newPage();
 
   await rmdir(resolve('../docs'), {
