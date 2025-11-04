@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/websavva/portfolio/compare/portfolio-cv-v1.2.0...portfolio-cv-v1.2.1) (2025-11-04)
+
+
+### Bug Fixes
+
+* **cv:** headless option is set to false ([caf6349](https://github.com/websavva/portfolio/commit/caf6349334b7dbe43a9e161a7f897394d38413e3))
+
 ## [1.2.0](https://github.com/websavva/portfolio/compare/portfolio-cv-v1.1.0...portfolio-cv-v1.2.0) (2025-11-04)
 
 

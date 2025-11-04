@@ -1,6 +1,6 @@
 {
   "name": "@websavva/portfolio-cv",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "type": "module",
   "private": true,
   "packageManager": "pnpm@10.10.0",
