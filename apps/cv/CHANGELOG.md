@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/websavva/portfolio/compare/portfolio-cv-v1.2.2...portfolio-cv-v1.3.0) (2025-11-04)
+
+
+### Features
+
+* **cv:** title was set for cv pdf files ([f8cef43](https://github.com/websavva/portfolio/commit/f8cef4312f0a53dc89dc020bd3d6e2e580fb74be))
+
 ## [1.2.2](https://github.com/websavva/portfolio/compare/portfolio-cv-v1.2.1...portfolio-cv-v1.2.2) (2025-11-04)
 
 
