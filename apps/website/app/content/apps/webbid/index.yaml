@@ -24,8 +24,8 @@ technologies:
   - icon: local:shadcn
     name: Shadcn
 
-  - icon: local:zustand
-    name: Zustand
+  - icon: logos:redux
+    name: Redux
 
   - icon: logos:postgresql
     name: PostgreSQL

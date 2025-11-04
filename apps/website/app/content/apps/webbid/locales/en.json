@@ -21,7 +21,7 @@
         },
         {
           "tag": "p",
-          "children": ["WebBid represents a mature, production-ready application with a 96% TypeScript codebase, demonstrating modern React patterns, component-driven development, and optimal state management with Zustand."]
+          "children": ["WebBid represents a mature, production-ready application with a 96% TypeScript codebase, demonstrating modern React patterns, component-driven development, and optimal state management with Redux."]
         }
       ]
     }
