@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.3.2](https://github.com/websavva/portfolio/compare/portfolio-website-v2.3.1...portfolio-website-v2.3.2) (2025-11-04)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @websavva/portfolio-core bumped to 1.1.1
+    * @websavva/portfolio-cv bumped to 1.2.2
+
 ## [2.3.1](https://github.com/websavva/portfolio/compare/portfolio-website-v2.3.0...portfolio-website-v2.3.1) (2025-11-04)
 
 
