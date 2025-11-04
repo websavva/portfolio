@@ -1,6 +1,6 @@
 {
   "name": "@websavva/portfolio-website",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "type": "module",
   "private": true,
   "packageManager": "pnpm@10.10.0",

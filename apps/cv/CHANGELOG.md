@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.2](https://github.com/websavva/portfolio/compare/portfolio-cv-v1.2.1...portfolio-cv-v1.2.2) (2025-11-04)
+
+
+### Bug Fixes
+
+* **cv:** Title was changed in CV ([8802ac5](https://github.com/websavva/portfolio/commit/8802ac5750e79103a16ac8dc0dcd04fb0588ad63))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @websavva/portfolio-core bumped to 1.1.1
+
 ## [1.2.1](https://github.com/websavva/portfolio/compare/portfolio-cv-v1.2.0...portfolio-cv-v1.2.1) (2025-11-04)
 
 
