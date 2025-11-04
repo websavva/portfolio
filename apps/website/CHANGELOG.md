@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.2.0](https://github.com/websavva/portfolio/compare/portfolio-website-v2.1.4...portfolio-website-v2.2.0) (2025-11-04)
+
+
+### Features
+
+* **webbid:** Webbid content was updated ([f8c86dd](https://github.com/websavva/portfolio/commit/f8c86dd45a9a77375fa42dc447db6e48d60dcd5b))
+* **webbid:** Webbid content was updated ([21ab67f](https://github.com/websavva/portfolio/commit/21ab67f354145748ecbd57f691f1fdb8518e618d))
+
 ## [2.1.4](https://github.com/websavva/portfolio/compare/portfolio-website-v2.1.3...portfolio-website-v2.1.4) (2025-11-03)
 
 
