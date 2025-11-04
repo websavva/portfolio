@@ -72,6 +72,11 @@ async function build() {
       });
     });
 
+    // Set PDF title
+    await page.evaluate(() => {
+      document.title = 'cv.pdf';
+    });
+
     // Get page height to calculate scale
     const { height, width } = await page.evaluate(() => {
       const { scrollHeight: height, offsetWidth: width } =
