@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/websavva/portfolio/compare/portfolio-core-v1.0.1...portfolio-core-v1.1.0) (2025-11-04)
+
+
+### Features
+
+* **cv:** Build was refactored ([d2feeb4](https://github.com/websavva/portfolio/commit/d2feeb4e932e0a53b5b358f5d588d1da06c1eba8))
+* **cv:** Build was refactored ([6cbdb4b](https://github.com/websavva/portfolio/commit/6cbdb4bf785b0788b2af7ab47a5e1ee455bed6e0))
+
+
+### Bug Fixes
+
+* Job experience was renamed to work experience ([bfe94d9](https://github.com/websavva/portfolio/commit/bfe94d9a7cf91b6c7c7d94c5a1df04ed32031d71))
+
 ## [1.0.1](https://github.com/websavva/portfolio/compare/portfolio-core-v1.0.0...portfolio-core-v1.0.1) (2025-11-03)
 
 

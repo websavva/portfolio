@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.2.0](https://github.com/websavva/portfolio/compare/portfolio-cv-v1.1.0...portfolio-cv-v1.2.0) (2025-11-04)
+
+
+### Features
+
+* **cv:** Build was refactored ([d2feeb4](https://github.com/websavva/portfolio/commit/d2feeb4e932e0a53b5b358f5d588d1da06c1eba8))
+* **cv:** Build was refactored ([6cbdb4b](https://github.com/websavva/portfolio/commit/6cbdb4bf785b0788b2af7ab47a5e1ee455bed6e0))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @websavva/portfolio-core bumped to 1.1.0
+
 ## [1.1.0](https://github.com/websavva/portfolio/compare/portfolio-cv-v1.0.3...portfolio-cv-v1.1.0) (2025-11-03)
 
 
