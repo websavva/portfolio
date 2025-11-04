@@ -26,7 +26,7 @@ export default defineComponent({
     return () => (
       <section>
         <h2 class="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-gray-200">
-          {$t('career')}
+          {$t('jobExperience')}
         </h2>
         <div class="space-y-5">
           {jobExperience.value.map((job, index) => (
