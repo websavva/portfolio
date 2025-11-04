@@ -1,7 +1,4 @@
 import { defineI18nWord } from '#imports';
-import studworkLogoUrl from '@websavva/portoflio-core/public/studwork.png?inline';
-import work24LogoUrl from '@websavva/portoflio-core/public/work24.png?inline';
-import uniLogoUrl from '@websavva/portoflio-core/public/uni-logo.svg?inline';
 
 export const bioConfig = {
   fullName: defineI18nWord({
@@ -84,7 +81,7 @@ export const bioConfig = {
       en: 'Saint-Petersburg State University',
       ru: 'Санкт-Петербургский государственный университет',
     }),
-    uniLogoUrl: uniLogoUrl,
+    uniLogoUrl: '/uni-logo.svg',
 
     description: defineI18nWord({
       en: 'Specialized in software development, database management, and information systems. Gained comprehensive knowledge in business process modeling, enterprise architecture, and modern web technologies.',
@@ -104,7 +101,7 @@ export const bioConfig = {
         en: 'Studwork',
         ru: 'Студворк',
       }),
-      companyImageUrl: studworkLogoUrl,
+      companyImageUrl: '/studwork.png',
 
       url: 'https://studwork.ru',
 
@@ -153,7 +150,7 @@ export const bioConfig = {
         en: 'Work24',
         ru: 'Ворк24',
       }),
-      companyImageUrl: work24LogoUrl,
+      companyImageUrl: '/work24.png',
 
       url: 'https://work24.ru',
 

@@ -1,6 +1,7 @@
-import { pathToFileURL } from 'node:url';
 import { mkdir, rmdir } from 'node:fs/promises';
+import { createServer } from 'node:http';
 
+import handler from 'serve-handler';
 import {
   loadNuxt,
   buildNuxt,
@@ -27,8 +28,27 @@ async function build() {
 
   await buildNuxt(nuxt);
 
+  const server = createServer(async (req, res) => {
+    await handler(req, res, {
+      public: resolve(
+        nuxt.options.nitro.output!.publicDir!,
+      ),
+    });
+  });
+
+  await new Promise<void>((resolve) =>
+    server.listen(3e3, () => resolve()),
+  );
+
+  await rmdir(resolve('../docs'), {
+    recursive: true,
+  }).catch(() => {});
+
+  await mkdir(resolve('../docs'), { recursive: true });
+
   const browser = await puppeteer.launch({
     executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
+    headless: false,
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox',
@@ -38,22 +58,20 @@ async function build() {
   });
   const page = await browser.newPage();
 
-  await rmdir(resolve('../docs'), {
-    recursive: true,
-  }).catch(() => {});
-
-  await mkdir(resolve('../docs'), { recursive: true });
-
   // @ts-expect-error missing types
   for (const { code } of nuxt.options.runtimeConfig.i18n
     .locales) {
-    const indexHtmlPath = resolve(
-      `../.output/public/${code}/index.html`,
-    );
+    await page.goto(`http://localhost:3000/${code}`);
 
-    await page.goto(
-      pathToFileURL(indexHtmlPath).toString(),
-    );
+    await page.evaluate(() => {
+      return new Promise<void>((resolve) => {
+        if (document.readyState === 'complete') {
+          resolve();
+        } else {
+          window.addEventListener('load', () => resolve());
+        }
+      });
+    });
 
     // Get page height to calculate scale
     const { height, width } = await page.evaluate(() => {
@@ -65,6 +83,7 @@ async function build() {
         width,
       };
     });
+
     await page.pdf({
       path: resolve(`../docs/${code}.pdf`),
       width,
@@ -72,6 +91,9 @@ async function build() {
     });
   }
   await browser.close();
+  await new Promise<void>((resolve, reject) =>
+    server.close((err) => (err ? reject(err) : resolve())),
+  );
 }
 
 build();
