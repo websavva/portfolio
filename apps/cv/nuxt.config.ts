@@ -1,3 +1,7 @@
+import { createResolver } from '@nuxt/kit';
+
+const { resolve } = createResolver(import.meta.url);
+
 export default defineNuxtConfig({
   buildDir: '.nuxt',
 
@@ -8,5 +12,12 @@ export default defineNuxtConfig({
   features: {
     noScripts: true,
     inlineStyles: true,
+  },
+
+  nitro: {
+    output: {
+      dir: resolve('../.output'),
+      publicDir: resolve('../.output/public'),
+    },
   },
 });

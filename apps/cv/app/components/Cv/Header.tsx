@@ -1,5 +1,4 @@
 import { NuxtIcon, NuxtLink } from '#components';
-import meImageUrl from '@websavva/portoflio-core/public/me.webp?inline';
 
 export default defineComponent({
   name: 'CvHeader',
@@ -152,7 +151,7 @@ export default defineComponent({
           {/* Personal Photo */}
           <div class="size-34 rounded-full overflow-hidden border-3 border-blue-600 flex-shrink-0">
             <img
-              src={meImageUrl}
+              src="/me.webp"
               role="presentation"
               class="w-full h-auto -translate-y-[2.5px]"
             />
