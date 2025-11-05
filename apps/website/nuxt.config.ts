@@ -40,4 +40,10 @@ export default defineNuxtConfig({
       include: ['../config/**/*.ts'],
     },
   },
+
+  nitro: {
+    compressPublicAssets: {
+      brotli: isProd,
+    },
+  },
 });
