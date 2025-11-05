@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/websavva/portfolio/compare/portfolio-website-v2.3.3...portfolio-website-v2.4.0) (2025-11-05)
+
+
+### Features
+
+* brotli compression was set for production ([15d0cc5](https://github.com/websavva/portfolio/commit/15d0cc5ca8c5535b180b68eb89e5ee248c6a63d5))
+
 ## [2.3.3](https://github.com/websavva/portfolio/compare/portfolio-website-v2.3.2...portfolio-website-v2.3.3) (2025-11-04)
 
 
