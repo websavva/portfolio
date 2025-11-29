@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/websavva/portfolio/compare/portfolio-core-v1.1.1...portfolio-core-v1.2.0) (2025-11-29)
+
+
+### Features
+
+* Starships app was added ([8091482](https://github.com/websavva/portfolio/commit/80914821359f65921477b5c1a1c04e7443d697b8))
+
 ## [1.1.1](https://github.com/websavva/portfolio/compare/portfolio-core-v1.1.0...portfolio-core-v1.1.1) (2025-11-04)
 
 
