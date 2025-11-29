@@ -7,7 +7,7 @@ repoUrl: https://github.com/websavva/home-dash
 previewUrl: https://chromewebstore.google.com/detail/homedash-enhanced-new-tab/ndnbhanjlibkgnalfbojjmjlpnnedojf
 date: 2024-12-20
 imageUrl: /home-dash.png
-priority: 3
+priority: 4
 technologies:
   - icon: logos:typescript-icon
     name: TypeScript

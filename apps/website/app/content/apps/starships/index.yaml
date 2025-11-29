@@ -1,0 +1,34 @@
+title: 'Starships'
+description: Sophisticated microfrontend application demonstrating Webpack Module Federation
+iconName: logos:react
+industry: Cinema
+service: Microfrontend-based SPA
+imageUrl: https://websavva.github.io/starships/og.jpg
+repoUrl: https://github.com/websavva/starships
+previewUrl: https://websavva.github.io/starships/
+date: 2025-11-29
+priority: 2
+technologies:
+  - icon: logos:typescript-icon
+    name: TypeScript
+
+  - icon: logos:react
+    name: React
+
+  - icon: local:styled-components
+    name: Styled Components
+
+  - icon: logos:webpack
+    name: Webpack
+
+  - icon: logos:nodejs-icon
+    name: Node.js
+
+  - icon: logos:eslint
+    name: ESLint
+
+  - icon: logos:prettier
+    name: Prettier
+
+  - icon: logos:pnpm
+    name: pnpm

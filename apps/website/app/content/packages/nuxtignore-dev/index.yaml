@@ -7,7 +7,7 @@ imageUrl: /npm-package.png
 repoUrl: https://github.com/websavva/nuxtignore-dev
 previewUrl: https://npmjs.com/package/nuxtignore-dev
 date: 2024-03-30
-priority: 4
+priority: 5
 technologies:
   - icon: logos:typescript-icon
     name: TypeScript

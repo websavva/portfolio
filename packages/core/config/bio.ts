@@ -218,6 +218,10 @@ export const bioConfig = {
           icon: 'logos:tailwindcss-icon',
         },
         {
+          name: 'Styled Components',
+          icon: 'local:styled-components',
+        },
+        {
           name: 'React',
           icon: 'logos:react',
         },

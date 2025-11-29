@@ -124,7 +124,7 @@ export default defineComponent({
                       <div
                         class={cn(
                           'group relative',
-                          'flex flex-col items-center gap-4',
+                          'flex flex-col items-center gap-4 h-full',
                           'p-6',
                           'bg-editor-background-secondary/40',
                           'rounded-2xl',

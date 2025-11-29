@@ -1,0 +1,88 @@
+{
+  "content": [
+    {
+      "tag": "p",
+      "children": [
+        "Starships is a sophisticated microfrontend application that demonstrates the power of Webpack Module Federation for building distributed, scalable frontend architectures. The application showcases starships from the Star Wars universe with a space-themed UI built using React 19.2 and TypeScript 5.5."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The architecture follows a microfrontend pattern where different parts of the application are developed, built, and deployed independently as separate packages. The host application orchestrates multiple remote microfrontends, including a home page with starship list and search functionality, and a ship detail page for individual starship information."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The project uses Webpack 5.101 with Module Federation for runtime integration of remote modules. Shared packages include API client with TypeScript types, React hooks for data fetching, reusable UI component library with Styled Components, shared styles and utilities, and centralized webpack configuration."
+      ]
+    },
+    {
+      "tag": "ul",
+      "children": [
+        {
+          "tag": "li",
+          "children": [
+            "React 19.2 with TypeScript 5.5 frontend"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Webpack 5.101 with Module Federation"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Styled Components for themeable UI"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "React Router for navigation"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Monorepo structure with pnpm workspaces"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Hot Module Replacement for development"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Type-safe component library with generated types"
+          ]
+        },
+        {
+          "tag": "li",
+          "children": [
+            "Independent deployable microfrontends"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The build process supports both development mode with HMR and production builds that bundle all microfrontends into a single distribution. Code quality is maintained with ESLint 9 and Prettier, and the project structure is organized into apps (host), pages (microfrontend pages), and packages (shared microfrontends)."
+      ]
+    },
+    {
+      "tag": "p",
+      "children": [
+        "The codebase is 88.2% TypeScript, 9.3% JavaScript, with full type safety across all microfrontends. Each microfrontend can be developed and deployed independently while sharing common dependencies through Module Federation's shared scope configuration."
+      ]
+    }
+  ]
+}
+
