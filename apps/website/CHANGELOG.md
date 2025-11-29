@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.5.0](https://github.com/websavva/portfolio/compare/portfolio-website-v2.4.0...portfolio-website-v2.5.0) (2025-11-29)
+
+
+### Features
+
+* Starships app was added ([8091482](https://github.com/websavva/portfolio/commit/80914821359f65921477b5c1a1c04e7443d697b8))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @websavva/portfolio-core bumped to 1.2.0
+    * @websavva/portfolio-cv bumped to 1.3.1
+
 ## [2.4.0](https://github.com/websavva/portfolio/compare/portfolio-website-v2.3.3...portfolio-website-v2.4.0) (2025-11-05)
 
 
