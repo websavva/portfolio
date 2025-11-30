@@ -16,8 +16,8 @@ export const bioConfig = {
   }),
 
   position: defineI18nWord({
-    en: 'Middle/Senior Frontend Developer',
-    ru: 'Middle/Senior Frontend Разработчик',
+    en: 'Senior Frontend Developer',
+    ru: 'Senior Frontend Разработчик',
   }),
 
   isLookingForJob: true,
@@ -107,43 +107,55 @@ export const bioConfig = {
 
       timerange: {
         start: '2021-10-01',
-        end: null,
+        end: '2024-05-30',
       },
 
       responsibilities: [
         defineI18nWord({
-          en: 'TypeScript integration',
-          ru: 'Внедрения TypeScript',
+          en: 'Monolith splitting into monorepo and microservices + migration to Nuxt3/4. For application scaling and logic reuse in other applications.',
+          ru: 'Разделение монолита в монорепо и микросервисы + миграция на Nuxt3/4. Для масштабирования приложения и переиспользования логики в других приложениях.',
         }),
         defineI18nWord({
           en: 'Migration from Nuxt2 to Nuxt3 and Nuxt4',
-          ru: 'Миграция c Nuxt2 на Nuxt3 и Nuxt4',
+          ru: 'Разработка и внедрение новых разделов приложения (ИИ-помощник, Портфолио, Журнал, История изменений)',
         }),
         defineI18nWord({
-          en: 'Monorepo splitting into small modules, distributed across different domains, within a monorepo',
-          ru: 'Разделение монолита на небольшие модули, раскиданные по разным доменам, в рамках монорепозитория',
+          en: 'Cross-browser SSR-friendly landing pages development and optimization of them for SEO using Lighthouse (Accessibility, Image Optimization, etc.)',
+          ru: 'Кроссбраузерная верстка лендингов c учетом SSR и их оптимизация для SEO с использованием Lighthouse (Accessibility, Image Optimization, etc.)',
         }),
         defineI18nWord({
-          en: 'Finding and fixing vulnerabilities in the code (XSS, CSP and etc.)',
-          ru: 'Поиск и исправление уязвимостей в коде (XSS, CSP и тд)',
+          en: 'Finding and fixing vulnerabilities in the code (XSS, CSP, CORS, Cookies Flags, Access Control List and etc.)',
+          ru: 'Поиск и исправление уязвимостей в коде (XSS, CSP, CORS, Cookies Flags, Access Control List и т.д.)',
         }),
         defineI18nWord({
-          en: 'Code optimization using Lighthouse',
-          ru: 'Оптимизация кода с использованием Lighthouse',
+          en: 'Creating and maintaining a development stand for CI/CD via Telegram Bot',
+          ru: 'Создание и поддержка девстенда для CI/CD через Telegram Bot',
         }),
         defineI18nWord({
           en: 'Writing unit and E2E tests',
           ru: 'Написание юнит и E2E тестов',
         }),
+        defineI18nWord({
+          en: 'Reworking of all 120 modal windows of the application and introduction of a new approach to work with modal windows through the Promise API',
+          ru: 'Переработка всех 120 модальных окон приложения и внедрение нового подхода работы с модальными окнами через Promise API',
+        }),
+        defineI18nWord({
+          en: 'Introduction of animated charts and tables using Chart.js',
+          ru: 'Внедрение анимированных графиков и таблиц с использованием Chart.js',
+        }),
+        defineI18nWord({
+          en: 'Introduction of animation using Vue Transition and Animation API',
+          ru: 'Внедрение анимации с использованием Vue Transition и Animation API',
+        }),
       ],
     },
     {
       position: defineI18nWord({
-        en: 'Middle/Senior Frontend Developer',
-        ru: 'Middle/Senior Frontend Разработчик',
+        en: 'Senior Frontend Developer',
+        ru: 'Senior Frontend Разработчик',
       }),
       timerange: {
-        start: '2023-06-01',
+        start: '2024-06-01',
         end: null,
       },
       company: defineI18nWord({
@@ -156,20 +168,40 @@ export const bioConfig = {
 
       responsibilities: [
         defineI18nWord({
-          en: 'Adaptation of existing business logic',
-          ru: 'Адаптация существующей бизнес-логики',
+          en: 'Adaptation and reuse of existing business logic of Studwork through microservices and Nuxt modules',
+          ru: 'Адаптация и переиспользование существующей бизнес-логики Студворка через микросервисы и Nuxt модули',
         }),
         defineI18nWord({
-          en: 'Setting up CI/CD using Github Actions',
-          ru: 'Настройка CI/СD с использованием Github Actions',
+          en: 'Development of new features and improvements, oriented on freelance exchange (Transfer of contact data, Freelancer Directory)',
+          ru: 'Разработка новых функций и фич, ориентированных на фриланс биржу (Передача контактных данных, Справочник фрилансера) ',
+        }),
+        defineI18nWord({
+          en: 'Setting up CI/CD using Github Actions and Docker',
+          ru: 'Настройка CI/СD с использованием Github Actions и Docker',
         }),
         defineI18nWord({
           en: 'Writing unit and E2E tests',
           ru: 'Написание юнит и E2E тестов',
         }),
         defineI18nWord({
+          en: 'Reworking of the approach to working with third-party analytics services (Google Analytics, Yandex Metrica, etc.) based on OOP',
+          ru: 'Переработка подхода к работе со сторонними сервисами аналитики (Google Analytics, Yandex Metrica, etc.) на основе ООП',
+        }),
+        defineI18nWord({
+          en: "Introduction of Drag'n Drop for managing the order of elements in lists",
+          ru: "Внедрение Drag'n Drop для управление порядком отображения элементов в списках",
+        }),
+        defineI18nWord({
           en: 'Code reviews',
           ru: 'Проведение ревью кода',
+        }),
+        defineI18nWord({
+          en: 'Introduction of progressive hydration for page loading acceleration',
+          ru: 'Внедрение прогрессивной гидратации для ускорения загрузки страниц',
+        }),
+        defineI18nWord({
+          en: 'Form validation using Vuelidate',
+          ru: 'Валидация форм с использованием Vuelidate',
         }),
       ],
     },
