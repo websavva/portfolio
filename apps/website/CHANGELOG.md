@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.6.0](https://github.com/websavva/portfolio/compare/portfolio-website-v2.5.0...portfolio-website-v2.6.0) (2025-11-30)
+
+
+### Features
+
+* Personal info was made more detailed and specific ([417324a](https://github.com/websavva/portfolio/commit/417324a3e09846a0c949ba7f3a0c834a00666783))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @websavva/portfolio-core bumped to 1.3.0
+    * @websavva/portfolio-cv bumped to 1.3.2
+
 ## [2.5.0](https://github.com/websavva/portfolio/compare/portfolio-website-v2.4.0...portfolio-website-v2.5.0) (2025-11-29)
 
 
